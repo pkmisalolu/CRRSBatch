@@ -1,0 +1,9 @@
+REPORT #  P09360-A                             ARKANSAS BLUE CROSS AND BLUE SHIELD                                        PAGE     1
+RUN DATE: 10/03/25                               FEP  CRRS  JOURNAL ENTRY REPORT                                  RUN TIME: 12:27:06
+REFUND TYPE:        REPORT DATE:       
+REFUND       CONTROL                                   MEMBER        ACTIVITY         ACTIVITY             CROSS REFERENCE
+ TYPE     DATE   NUMBER       PATIENT'S NAME          ID NUMBER    CODE    DATE        AMOUNT    TYPE   DATE          NUMBER
+------  -------- ------  --------------------------  ------------  ---- -------- ---------------- ---- -------- --------------------
+                                               ******  NO  DATA  TO  REPORT  ******
+
+****************************************************  END OF P09360-A REPORT  ******************************************************

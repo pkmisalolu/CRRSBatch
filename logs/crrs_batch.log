@@ -1,0 +1,156 @@
+2026-01-29 21:00:04 INFO  com.abcbs.crrs.CrrsBatchApplication - Starting CrrsBatchApplication using Java 21.0.6 with PID 8616 (started by SXBUDDAREDDYGARI in \\LRD1FIL2\ISAMISYS\srivani\STS_BATCH\CRRSBatch)
+2026-01-29 21:00:04 DEBUG com.abcbs.crrs.CrrsBatchApplication - Running with Spring Boot v3.5.5, Spring v6.2.10
+2026-01-29 21:00:04 INFO  com.abcbs.crrs.CrrsBatchApplication - No active profile set, falling back to 1 default profile: "default"
+2026-01-29 21:00:21 INFO  com.abcbs.crrs.config.P09186Config - Creating step: P09186Step
+2026-01-29 21:00:21 INFO  com.abcbs.crrs.config.P09186Config - Creating job: P09186Job
+2026-01-29 21:00:26 INFO  com.abcbs.crrs.config.P09373Config - Configuring Step: P09373Step with chunk size = 50
+2026-01-29 21:00:27 INFO  com.abcbs.crrs.config.P09373Config - Configuring Job: P09373Job
+2026-01-29 21:00:27 INFO  com.abcbs.crrs.config.P09375Config - Creating step: P09375Step (as tasklet)
+2026-01-29 21:00:27 INFO  com.abcbs.crrs.config.P09375Config - Creating job: P09375Job
+2026-01-29 21:00:27 INFO  com.abcbs.crrs.config.P09320Config - Configuring step: P09320Step
+2026-01-29 21:00:27 INFO  com.abcbs.crrs.config.P09320Config - Configuring job: P09320Job
+2026-01-29 21:00:27 INFO  com.abcbs.crrs.config.P09321Config - Configuring step: P09321Step
+2026-01-29 21:00:27 INFO  com.abcbs.crrs.config.P09321Config - Configuring job: P09321Job
+2026-01-29 21:00:27 INFO  com.abcbs.crrs.config.P09185Config - Building step: p09185Step
+2026-01-29 21:00:27 INFO  com.abcbs.crrs.config.P09185Config - Building job: p09185Job
+2026-01-29 21:00:27 INFO  com.abcbs.crrs.config.P09310Config - Entered into Step 1
+2026-01-29 21:00:27 INFO  com.abcbs.crrs.config.P09310Config - Entered into Step 2
+2026-01-29 21:00:27 INFO  com.abcbs.crrs.config.P09310Config - Entered into Job
+2026-01-29 21:00:27 INFO  com.abcbs.crrs.config.P09305Config - P09305 Chkp Step started
+2026-01-29 21:00:27 INFO  com.abcbs.crrs.config.P09305Config - P09305 Step job started 
+2026-01-29 21:00:27 INFO  com.abcbs.crrs.config.P09305Config - P09305 job started 
+2026-01-29 21:00:27 INFO  com.abcbs.crrs.config.P09325Config - Entered into P09325 Step
+2026-01-29 21:00:27 INFO  com.abcbs.crrs.config.P09325Config - Entered into P09325 Job
+2026-01-29 21:00:27 INFO  com.abcbs.crrs.config.P09376Config - Creating step: p09376Step (as tasklet)
+2026-01-29 21:00:27 INFO  com.abcbs.crrs.config.P09376Config - Creating job: p09376Job
+2026-01-29 21:00:27 INFO  com.abcbs.crrs.config.P09330Config - Creating step: p09330Step (tasklet)
+2026-01-29 21:00:27 INFO  com.abcbs.crrs.config.P09330Config - Creating job: p09330Job
+2026-01-29 21:00:27 INFO  com.abcbs.crrs.config.P09183Config - Building Step 'p09183Step' with chunk size 100
+2026-01-29 21:00:28 INFO  com.abcbs.crrs.config.P09183Config - Building Job 'p09183Job'
+2026-01-29 21:00:28 INFO  com.abcbs.crrs.config.P09180Config - Creating step: P09186Step
+2026-01-29 21:00:28 INFO  com.abcbs.crrs.config.P09180Config - Creating job: P09180Job
+2026-01-29 21:00:28 INFO  com.abcbs.crrs.config.P09345Config - Creating step: p09345Step (tasklet)
+2026-01-29 21:00:28 INFO  com.abcbs.crrs.config.P09345Config - Creating job: p09345Job
+2026-01-29 21:00:31 INFO  com.abcbs.crrs.config.P09372Config - Creating ItemReader for P09CashReceipt using repository method: findOffCashReceipts
+2026-01-29 21:00:31 INFO  com.abcbs.crrs.config.P09372Config - Configuring Step: P09372Step with chunk size 2000
+2026-01-29 21:00:31 INFO  com.abcbs.crrs.config.P09372Config - Initializing Job: P09372Job
+2026-01-29 21:00:31 INFO  com.abcbs.crrs.config.P09175Config - Creating step: P09175Step (tasklet)
+2026-01-29 21:00:31 INFO  com.abcbs.crrs.config.P09175Config - Creating job: P09175Job
+2026-01-29 21:00:31 INFO  com.abcbs.crrs.lock.P09TableLocker - P09TableLocker initialized. Detected DB dialect=org.hibernate.dialect.sqlserverdialect
+2026-01-29 21:00:31 INFO  com.abcbs.crrs.config.RetryConfig - Entered into RetryTemplate
+2026-01-29 21:00:32 INFO  com.abcbs.crrs.CrrsBatchApplication - Started CrrsBatchApplication in 31.756 seconds (process running for 36.008)
+2026-01-29 21:00:32 INFO  com.abcbs.crrs.config.JobLauncherRunner - Entered into run
+2026-01-29 21:00:32 INFO  com.abcbs.crrs.config.JobLauncherRunner - Requested job: P09372
+2026-01-29 21:00:34 INFO  com.abcbs.crrs.config.P09372Config - Instantiating P09372Writer with parameters: letterFile=output/letterFile.txt, letterXml=output/letterXml.txt, deleteFile=output/deleteFile.txt, suspenseFile=output/suspenseFile.txt, letterCntFile=output/letterCntFile.txt
+2026-01-29 21:00:34 INFO  com.abcbs.crrs.jobs.P09372.P09372Writer - P09372Writer initialized with files: letter=output/letterFile.txt, xml=output/letterXml.txt, delete=output/deleteFile.txt, suspense=output/suspenseFile.txt, cnt=output/letterCntFile.txt
+2026-01-29 21:00:34 INFO  com.abcbs.crrs.jobs.P09372.P09372Writer - Opening writers for job execution context: {batch.version=5.2.2}
+2026-01-29 21:00:34 DEBUG com.abcbs.crrs.jobs.P09372.P09372Writer - Successfully opened all output files
+2026-01-29 21:00:34 INFO  com.abcbs.crrs.jobs.P09372.P09372Writer - Writing chunk of size 5
+2026-01-29 21:00:34 DEBUG com.abcbs.crrs.jobs.P09372.P09372Writer - Processing cash receipt: id=CashReceiptPK(crRefundType=OFF, crCntrlDate=2025-02-24, crCntrlNbr=200), checkNbr=00517211, amount=515.90
+2026-01-29 21:00:34 INFO  com.abcbs.crrs.jobs.P09372.P09372Writer - Creating letter for remittorTitle=OF1, remittorName=KIDS FOR THE FUTURE INC
+2026-01-29 21:00:34 DEBUG com.abcbs.crrs.jobs.P09372.P09372Writer - Using current system date: 2026-01-29
+2026-01-29 21:00:34 DEBUG com.abcbs.crrs.jobs.P09372.P09372Writer - Entering createDearLine1 with checkAmount=515.90 
+2026-01-29 21:00:34 INFO  com.abcbs.crrs.jobs.P09372.P09372Writer - Successfully created DearLine1 for amount=$515.90
+2026-01-29 21:00:34 DEBUG com.abcbs.crrs.jobs.P09372.P09372Writer - Entering createLetter2
+2026-01-29 21:00:34 INFO  com.abcbs.crrs.jobs.P09372.P09372Writer - Successfully created Letter2 block
+2026-01-29 21:00:34 INFO  com.abcbs.crrs.jobs.P09372.P09372Writer - Letter creation completed for receipt CashReceiptPK(crRefundType=OFF, crCntrlDate=2025-02-24, crCntrlNbr=200)
+2026-01-29 21:00:34 DEBUG com.abcbs.crrs.jobs.P09372.P09372Writer - Letter count incremented to 1
+2026-01-29 21:00:34 INFO  com.abcbs.crrs.jobs.P09372.P09372Writer - UPDATE-OFFSET-CODE input → refundType='OFF' (len=3), cntrlDate='2025-02-24', cntrlNbr='200' (len=3)
+2026-01-29 21:00:35 INFO  com.abcbs.crrs.jobs.P09372.P09372Writer - UPDATE-OFFSET-CODE rowsUpdated=1
+2026-01-29 21:00:35 INFO  com.abcbs.crrs.jobs.P09372.P09372Writer - 240000-GET-DELETE-FIELDS start → refundType='OFF'(len=3), cntrlDate='2025-02-24', cntrlNbr='200'(len=3)
+2026-01-29 21:00:35 INFO  com.abcbs.crrs.jobs.P09372.P09372Writer - ******************************************
+2026-01-29 21:00:35 INFO  com.abcbs.crrs.jobs.P09372.P09372Writer - **  NO SUSPENSE RECORD FOUND FOR DELETE  **
+2026-01-29 21:00:35 INFO  com.abcbs.crrs.jobs.P09372.P09372Writer - **  REFUND TYPE  = OFF (len=3)
+2026-01-29 21:00:35 INFO  com.abcbs.crrs.jobs.P09372.P09372Writer - **  CNTRL DATE   = 2025-02-24
+2026-01-29 21:00:35 INFO  com.abcbs.crrs.jobs.P09372.P09372Writer - **  CNTRL NBR    = 200 (len=3)
+2026-01-29 21:00:35 INFO  com.abcbs.crrs.jobs.P09372.P09372Writer - ******************************************
+2026-01-29 21:00:35 DEBUG com.abcbs.crrs.jobs.P09372.P09372Writer - Processed suspense/delete for receipt CashReceiptPK(crRefundType=OFF, crCntrlDate=2025-02-24, crCntrlNbr=200)
+2026-01-29 21:00:35 DEBUG com.abcbs.crrs.jobs.P09372.P09372Writer - Processing cash receipt: id=CashReceiptPK(crRefundType=OFF, crCntrlDate=2025-02-24, crCntrlNbr=201), checkNbr=00515927, amount=798.20
+2026-01-29 21:00:35 INFO  com.abcbs.crrs.jobs.P09372.P09372Writer - Creating letter for remittorTitle=OF2, remittorName=MEMPHIS PHYSICIANS RADIOLOGICA
+2026-01-29 21:00:35 DEBUG com.abcbs.crrs.jobs.P09372.P09372Writer - Using current system date: 2026-01-29
+2026-01-29 21:00:35 DEBUG com.abcbs.crrs.jobs.P09372.P09372Writer - Entering createDearLine1 with checkAmount=798.20 
+2026-01-29 21:00:35 INFO  com.abcbs.crrs.jobs.P09372.P09372Writer - Successfully created DearLine1 for amount=$798.20
+2026-01-29 21:00:35 DEBUG com.abcbs.crrs.jobs.P09372.P09372Writer - Entering createLetter2
+2026-01-29 21:00:35 INFO  com.abcbs.crrs.jobs.P09372.P09372Writer - Successfully created Letter2 block
+2026-01-29 21:00:35 INFO  com.abcbs.crrs.jobs.P09372.P09372Writer - Letter creation completed for receipt CashReceiptPK(crRefundType=OFF, crCntrlDate=2025-02-24, crCntrlNbr=201)
+2026-01-29 21:00:35 DEBUG com.abcbs.crrs.jobs.P09372.P09372Writer - Letter count incremented to 2
+2026-01-29 21:00:35 INFO  com.abcbs.crrs.jobs.P09372.P09372Writer - UPDATE-OFFSET-CODE input → refundType='OFF' (len=3), cntrlDate='2025-02-24', cntrlNbr='201' (len=3)
+2026-01-29 21:00:35 INFO  com.abcbs.crrs.jobs.P09372.P09372Writer - UPDATE-OFFSET-CODE rowsUpdated=1
+2026-01-29 21:00:35 INFO  com.abcbs.crrs.jobs.P09372.P09372Writer - 240000-GET-DELETE-FIELDS start → refundType='OFF'(len=3), cntrlDate='2025-02-24', cntrlNbr='201'(len=3)
+2026-01-29 21:00:35 INFO  com.abcbs.crrs.jobs.P09372.P09372Writer - ******************************************
+2026-01-29 21:00:35 INFO  com.abcbs.crrs.jobs.P09372.P09372Writer - **  NO SUSPENSE RECORD FOUND FOR DELETE  **
+2026-01-29 21:00:35 INFO  com.abcbs.crrs.jobs.P09372.P09372Writer - **  REFUND TYPE  = OFF (len=3)
+2026-01-29 21:00:35 INFO  com.abcbs.crrs.jobs.P09372.P09372Writer - **  CNTRL DATE   = 2025-02-24
+2026-01-29 21:00:35 INFO  com.abcbs.crrs.jobs.P09372.P09372Writer - **  CNTRL NBR    = 201 (len=3)
+2026-01-29 21:00:35 INFO  com.abcbs.crrs.jobs.P09372.P09372Writer - ******************************************
+2026-01-29 21:00:35 DEBUG com.abcbs.crrs.jobs.P09372.P09372Writer - Processed suspense/delete for receipt CashReceiptPK(crRefundType=OFF, crCntrlDate=2025-02-24, crCntrlNbr=201)
+2026-01-29 21:00:35 DEBUG com.abcbs.crrs.jobs.P09372.P09372Writer - Processing cash receipt: id=CashReceiptPK(crRefundType=OFF, crCntrlDate=2025-02-24, crCntrlNbr=202), checkNbr=00516554, amount=531.99
+2026-01-29 21:00:35 INFO  com.abcbs.crrs.jobs.P09372.P09372Writer - Creating letter for remittorTitle=OF3, remittorName=DAWN L LINDSEY CNP
+2026-01-29 21:00:35 DEBUG com.abcbs.crrs.jobs.P09372.P09372Writer - Using current system date: 2026-01-29
+2026-01-29 21:00:35 DEBUG com.abcbs.crrs.jobs.P09372.P09372Writer - Entering createDearLine1 with checkAmount=531.99 
+2026-01-29 21:00:35 INFO  com.abcbs.crrs.jobs.P09372.P09372Writer - Successfully created DearLine1 for amount=$531.99
+2026-01-29 21:00:35 DEBUG com.abcbs.crrs.jobs.P09372.P09372Writer - Entering createLetter2
+2026-01-29 21:00:35 INFO  com.abcbs.crrs.jobs.P09372.P09372Writer - Successfully created Letter2 block
+2026-01-29 21:00:35 INFO  com.abcbs.crrs.jobs.P09372.P09372Writer - Letter creation completed for receipt CashReceiptPK(crRefundType=OFF, crCntrlDate=2025-02-24, crCntrlNbr=202)
+2026-01-29 21:00:35 DEBUG com.abcbs.crrs.jobs.P09372.P09372Writer - Letter count incremented to 3
+2026-01-29 21:00:35 INFO  com.abcbs.crrs.jobs.P09372.P09372Writer - UPDATE-OFFSET-CODE input → refundType='OFF' (len=3), cntrlDate='2025-02-24', cntrlNbr='202' (len=3)
+2026-01-29 21:00:35 INFO  com.abcbs.crrs.jobs.P09372.P09372Writer - UPDATE-OFFSET-CODE rowsUpdated=1
+2026-01-29 21:00:35 INFO  com.abcbs.crrs.jobs.P09372.P09372Writer - 240000-GET-DELETE-FIELDS start → refundType='OFF'(len=3), cntrlDate='2025-02-24', cntrlNbr='202'(len=3)
+2026-01-29 21:00:35 INFO  com.abcbs.crrs.jobs.P09372.P09372Writer - ******************************************
+2026-01-29 21:00:35 INFO  com.abcbs.crrs.jobs.P09372.P09372Writer - **  NO SUSPENSE RECORD FOUND FOR DELETE  **
+2026-01-29 21:00:35 INFO  com.abcbs.crrs.jobs.P09372.P09372Writer - **  REFUND TYPE  = OFF (len=3)
+2026-01-29 21:00:35 INFO  com.abcbs.crrs.jobs.P09372.P09372Writer - **  CNTRL DATE   = 2025-02-24
+2026-01-29 21:00:35 INFO  com.abcbs.crrs.jobs.P09372.P09372Writer - **  CNTRL NBR    = 202 (len=3)
+2026-01-29 21:00:35 INFO  com.abcbs.crrs.jobs.P09372.P09372Writer - ******************************************
+2026-01-29 21:00:35 DEBUG com.abcbs.crrs.jobs.P09372.P09372Writer - Processed suspense/delete for receipt CashReceiptPK(crRefundType=OFF, crCntrlDate=2025-02-24, crCntrlNbr=202)
+2026-01-29 21:00:35 DEBUG com.abcbs.crrs.jobs.P09372.P09372Writer - Processing cash receipt: id=CashReceiptPK(crRefundType=OFF, crCntrlDate=2025-02-24, crCntrlNbr=203), checkNbr=00519279, amount=1222.53
+2026-01-29 21:00:35 INFO  com.abcbs.crrs.jobs.P09372.P09372Writer - Creating letter for remittorTitle=OF5, remittorName=DARIN CABOT BELL OT
+2026-01-29 21:00:35 DEBUG com.abcbs.crrs.jobs.P09372.P09372Writer - Using current system date: 2026-01-29
+2026-01-29 21:00:35 DEBUG com.abcbs.crrs.jobs.P09372.P09372Writer - Entering createDearLine2 with checkAmount=1222.53
+2026-01-29 21:00:35 INFO  com.abcbs.crrs.jobs.P09372.P09372Writer - Successfully created DearLine2 for amount=$1,222.53
+2026-01-29 21:00:35 DEBUG com.abcbs.crrs.jobs.P09372.P09372Writer - Entering createLetter4 for receipt id=CashReceiptPK(crRefundType=OFF, crCntrlDate=2025-02-24, crCntrlNbr=203)
+2026-01-29 21:00:35 DEBUG com.abcbs.crrs.jobs.P09372.P09372Writer - Retrieving suspense for refundType=OFF, cntrlDate=2025-02-24, cntrlNbr=203
+2026-01-29 21:00:35 INFO  com.abcbs.crrs.jobs.P09372.P09372Writer - Successfully created Letter4 block for receipt id=CashReceiptPK(crRefundType=OFF, crCntrlDate=2025-02-24, crCntrlNbr=203)
+2026-01-29 21:00:35 INFO  com.abcbs.crrs.jobs.P09372.P09372Writer - Letter creation completed for receipt CashReceiptPK(crRefundType=OFF, crCntrlDate=2025-02-24, crCntrlNbr=203)
+2026-01-29 21:00:35 DEBUG com.abcbs.crrs.jobs.P09372.P09372Writer - Letter count incremented to 4
+2026-01-29 21:00:35 INFO  com.abcbs.crrs.jobs.P09372.P09372Writer - UPDATE-OFFSET-CODE input → refundType='OFF' (len=3), cntrlDate='2025-02-24', cntrlNbr='203' (len=3)
+2026-01-29 21:00:35 INFO  com.abcbs.crrs.jobs.P09372.P09372Writer - UPDATE-OFFSET-CODE rowsUpdated=1
+2026-01-29 21:00:35 INFO  com.abcbs.crrs.jobs.P09372.P09372Writer - 240000-GET-DELETE-FIELDS start → refundType='OFF'(len=3), cntrlDate='2025-02-24', cntrlNbr='203'(len=3)
+2026-01-29 21:00:35 DEBUG com.abcbs.crrs.jobs.P09372.P09372Writer - Entering writeSuspenseFile for suspense id=SuspensePK(crRefundType=OFF, crCntrlDate=2025-02-24, crCntrlNbr=203)
+2026-01-29 21:00:35 INFO  com.abcbs.crrs.jobs.P09372.P09372Writer - WRITE-SUSPENSE-FILE length=518
+2026-01-29 21:00:35 DEBUG com.abcbs.crrs.jobs.P09372.P09372Writer - Suspense record written successfully
+2026-01-29 21:00:35 DEBUG com.abcbs.crrs.jobs.P09372.P09372Writer - Entering writeDeleteFile for suspense id=SuspensePK(crRefundType=OFF, crCntrlDate=2025-02-24, crCntrlNbr=203)
+2026-01-29 21:00:35 INFO  com.abcbs.crrs.jobs.P09372.P09372Writer - DELETE-FILE value='OFFRSG12262501' len=14
+2026-01-29 21:00:35 INFO  com.abcbs.crrs.jobs.P09372.P09372Writer - WRITE-DELETE-FILE length=14
+2026-01-29 21:00:35 DEBUG com.abcbs.crrs.jobs.P09372.P09372Writer - Delete record written successfully
+2026-01-29 21:00:35 INFO  com.abcbs.crrs.jobs.P09372.P09372Writer - GET-DELETE-FIELDS completed OK
+2026-01-29 21:00:35 DEBUG com.abcbs.crrs.jobs.P09372.P09372Writer - Processed suspense/delete for receipt CashReceiptPK(crRefundType=OFF, crCntrlDate=2025-02-24, crCntrlNbr=203)
+2026-01-29 21:00:35 DEBUG com.abcbs.crrs.jobs.P09372.P09372Writer - Processing cash receipt: id=CashReceiptPK(crRefundType=OFF, crCntrlDate=2025-02-24, crCntrlNbr=204), checkNbr=00515401, amount=639.43
+2026-01-29 21:00:35 INFO  com.abcbs.crrs.jobs.P09372.P09372Writer - Creating letter for remittorTitle=OF4, remittorName=DONNA MELISSA GRAHAM MD
+2026-01-29 21:00:35 DEBUG com.abcbs.crrs.jobs.P09372.P09372Writer - Using current system date: 2026-01-29
+2026-01-29 21:00:35 DEBUG com.abcbs.crrs.jobs.P09372.P09372Writer - Entering createDearLine2 with checkAmount=639.43
+2026-01-29 21:00:35 INFO  com.abcbs.crrs.jobs.P09372.P09372Writer - Successfully created DearLine2 for amount=$639.43
+2026-01-29 21:00:35 DEBUG com.abcbs.crrs.jobs.P09372.P09372Writer - Entering createLetter3
+2026-01-29 21:00:35 INFO  com.abcbs.crrs.jobs.P09372.P09372Writer - Successfully created Letter3 block
+2026-01-29 21:00:35 INFO  com.abcbs.crrs.jobs.P09372.P09372Writer - Letter creation completed for receipt CashReceiptPK(crRefundType=OFF, crCntrlDate=2025-02-24, crCntrlNbr=204)
+2026-01-29 21:00:35 DEBUG com.abcbs.crrs.jobs.P09372.P09372Writer - Letter count incremented to 5
+2026-01-29 21:00:35 INFO  com.abcbs.crrs.jobs.P09372.P09372Writer - UPDATE-OFFSET-CODE input → refundType='OFF' (len=3), cntrlDate='2025-02-24', cntrlNbr='204' (len=3)
+2026-01-29 21:00:35 INFO  com.abcbs.crrs.jobs.P09372.P09372Writer - UPDATE-OFFSET-CODE rowsUpdated=1
+2026-01-29 21:00:35 INFO  com.abcbs.crrs.jobs.P09372.P09372Writer - 240000-GET-DELETE-FIELDS start → refundType='OFF'(len=3), cntrlDate='2025-02-24', cntrlNbr='204'(len=3)
+2026-01-29 21:00:35 INFO  com.abcbs.crrs.jobs.P09372.P09372Writer - ******************************************
+2026-01-29 21:00:35 INFO  com.abcbs.crrs.jobs.P09372.P09372Writer - **  NO SUSPENSE RECORD FOUND FOR DELETE  **
+2026-01-29 21:00:35 INFO  com.abcbs.crrs.jobs.P09372.P09372Writer - **  REFUND TYPE  = OFF (len=3)
+2026-01-29 21:00:35 INFO  com.abcbs.crrs.jobs.P09372.P09372Writer - **  CNTRL DATE   = 2025-02-24
+2026-01-29 21:00:35 INFO  com.abcbs.crrs.jobs.P09372.P09372Writer - **  CNTRL NBR    = 204 (len=3)
+2026-01-29 21:00:35 INFO  com.abcbs.crrs.jobs.P09372.P09372Writer - ******************************************
+2026-01-29 21:00:35 DEBUG com.abcbs.crrs.jobs.P09372.P09372Writer - Processed suspense/delete for receipt CashReceiptPK(crRefundType=OFF, crCntrlDate=2025-02-24, crCntrlNbr=204)
+2026-01-29 21:00:35 INFO  com.abcbs.crrs.jobs.P09372.P09372Writer - Closing P09372Writer resources
+2026-01-29 21:00:35 INFO  com.abcbs.crrs.jobs.P09372.P09372Writer - Letter count 5 written successfully
+2026-01-29 21:00:35 DEBUG com.abcbs.crrs.jobs.P09372.P09372Writer - letterFile closed
+2026-01-29 21:00:35 DEBUG com.abcbs.crrs.jobs.P09372.P09372Writer - letterXmlFile closed
+2026-01-29 21:00:35 DEBUG com.abcbs.crrs.jobs.P09372.P09372Writer - deleteFile closed
+2026-01-29 21:00:35 DEBUG com.abcbs.crrs.jobs.P09372.P09372Writer - suspenseFile closed
+2026-01-29 21:00:35 DEBUG com.abcbs.crrs.jobs.P09372.P09372Writer - letterCntFile closed
+2026-01-29 21:00:35 INFO  com.abcbs.crrs.jobs.P09372.P09372Writer - P09372Writer closed successfully
+2026-01-29 21:00:35 DEBUG com.abcbs.crrs.jobs.P09372.P09372Writer - close() already executed, skipping
+2026-01-29 21:00:36 INFO  com.abcbs.crrs.config.JobLauncherRunner - Job P09372 finished with status COMPLETED

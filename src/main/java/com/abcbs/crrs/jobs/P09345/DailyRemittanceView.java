@@ -1,0 +1,53 @@
+package com.abcbs.crrs.jobs.P09345;
+
+import java.time.LocalDate;
+
+// ---------------------------------------------------------------------
+// PX01 equivalent: fetch control rows (open controls, excluding 'PER') greater than checkpoint refund-type
+// (COBOL used lexical compare on refund-type only for PX01).
+// ---------------------------------------------------------------------
+
+public interface DailyRemittanceView {
+
+    String getCrRefundType();
+
+    LocalDate getCrCntrlDate();
+
+    String getCrCntrlNbr();
+
+    String getCrRemDailyInd();
+
+    String getCrRemIdType();
+
+    String getCrRemIdNbr();
+
+    String getCrRemittorName();
+
+    String getCrRemAddressee();
+
+    String getCrRemAddress1();
+
+    String getCrRemAddress2();
+
+    String getCrRemCity();
+
+    String getCrRemState();
+
+    String getCrRemZip5();
+
+    String getCrRemZip4();
+
+    String getCrChkAddress1();
+
+    String getCrChkAddress2();
+
+    String getCrChkCity();
+
+    String getCrChkState();
+
+    String getCrChkZip5();
+
+    String getCrChkZip4();
+
+    String getCrUserId();
+}

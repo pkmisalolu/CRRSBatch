@@ -1,0 +1,255 @@
+                                     
+<mailer>                             
+ API                                 
+ 08/31/25          0001              
+ REMITTOR ONE                        
+                                     
+</mailer>                            
+                                     
+<label>                              
+ REMITTOR ONE                        
+ REM_ADDR1                           
+ REM_ADDR2                           
+ REMIT_CITY       AR  72201-1234     
+                                     
+</label>                             
+                                     
+<mailer>                             
+ API                                 
+ 10/31/25          0003              
+ REMITTOR THREE                      
+                                     
+</mailer>                            
+                                     
+<label>                              
+ REMITTOR THREE                      
+ REM_ADDR1                           
+ REM_ADDR2                           
+ REMIT_CITY       AR  72201-3456     
+                                     
+</label>                             
+                                     
+<mailer>                             
+ API                                 
+ 10/31/25          0006              
+ REMITTOR SIX                        
+                                     
+</mailer>                            
+                                     
+<label>                              
+ REMITTOR SIX                        
+ REM_ADDR1                           
+ REM_ADDR2                           
+ REMIT_CITY       AR  72201-6789     
+                                     
+</label>                             
+                                     
+<mailer>                             
+ API                                 
+ 10/31/25          0009              
+ REMITTOR NINE                       
+                                     
+</mailer>                            
+                                     
+<label>                              
+ REMITTOR NINE                       
+ REM_ADDR1                           
+ REM_ADDR2                           
+ REMIT_CITY       AR  72201-9012     
+                                     
+</label>                             
+                                     
+<mailer>                             
+ API                                 
+ 10/31/25          0012              
+ REMITTOR TWELVE                     
+                                     
+</mailer>                            
+                                     
+<label>                              
+ REMITTOR TWELVE                     
+ REM_ADDR1                           
+ REM_ADDR2                           
+ REMIT_CITY       AR  72201-2345     
+                                     
+</label>                             
+                                     
+<mailer>                             
+ API                                 
+ 10/31/25          0015              
+ REMITTOR FIFTEEN                    
+                                     
+</mailer>                            
+                                     
+<label>                              
+ REMITTOR FIFTEEN                    
+ REM_ADDR1                           
+ REM_ADDR2                           
+ REMIT_CITY       AR  72201-5678     
+                                     
+</label>                             
+                                     
+<mailer>                             
+ API                                 
+ 10/31/25          0018              
+ REMITTOR EIGHTEEN                   
+                                     
+</mailer>                            
+                                     
+<label>                              
+ REMITTOR EIGHTEEN                   
+ REM_ADDR1                           
+ REM_ADDR2                           
+ REMIT_CITY       AR  72201-8901     
+                                     
+</label>                             
+                                     
+<mailer>                             
+ API                                 
+ 10/31/25          0021              
+ REMITTOR TWENTYONE                  
+                                     
+</mailer>                            
+                                     
+<label>                              
+ REMITTOR TWENTYONE                  
+ REM_ADDR1                           
+ REM_ADDR2                           
+ REMIT_CITY       AR  72201-1234     
+                                     
+</label>                             
+                                     
+<mailer>                             
+ API                                 
+ 10/31/25          0024              
+ REMITTOR OTHER                      
+                                     
+</mailer>                            
+                                     
+<label>                              
+ REMITTOR OTHER                      
+ REM_ADDR1                           
+ REM_ADDR2                           
+ REMIT_CITY       AR  72201-4567     
+                                     
+</label>                             
+                                     
+<mailer>                             
+ API                                 
+ 10/31/25          0103              
+ REMITTOR THREE                      
+                                     
+</mailer>                            
+                                     
+<label>                              
+ REMITTOR THREE                      
+ REM_ADDR1                           
+ REM_ADDR2                           
+ REMIT_CITY       AR  72201-3456     
+                                     
+</label>                             
+                                     
+<mailer>                             
+ API                                 
+ 10/31/25          0106              
+ REMITTOR SIX                        
+                                     
+</mailer>                            
+                                     
+<label>                              
+ REMITTOR SIX                        
+ REM_ADDR1                           
+ REM_ADDR2                           
+ REMIT_CITY       AR  72201-6789     
+                                     
+</label>                             
+                                     
+<mailer>                             
+ API                                 
+ 10/31/25          0109              
+ REMITTOR NINE                       
+                                     
+</mailer>                            
+                                     
+<label>                              
+ REMITTOR NINE                       
+ REM_ADDR1                           
+ REM_ADDR2                           
+ REMIT_CITY       AR  72201-9012     
+                                     
+</label>                             
+                                     
+<mailer>                             
+ API                                 
+ 10/31/25          0112              
+ REMITTOR TWELVE                     
+                                     
+</mailer>                            
+                                     
+<label>                              
+ REMITTOR TWELVE                     
+ REM_ADDR1                           
+ REM_ADDR2                           
+ REMIT_CITY       AR  72201-2345     
+                                     
+</label>                             
+                                     
+<mailer>                             
+ API                                 
+ 10/31/25          0115              
+ REMITTOR FIFTEEN                    
+                                     
+</mailer>                            
+                                     
+<label>                              
+ REMITTOR FIFTEEN                    
+ REM_ADDR1                           
+ REM_ADDR2                           
+ REMIT_CITY       AR  72201-5678     
+                                     
+</label>                             
+                                     
+<mailer>                             
+ API                                 
+ 10/31/25          0118              
+ REMITTOR EIGHTEEN                   
+                                     
+</mailer>                            
+                                     
+<label>                              
+ REMITTOR EIGHTEEN                   
+ REM_ADDR1                           
+ REM_ADDR2                           
+ REMIT_CITY       AR  72201-8901     
+                                     
+</label>                             
+                                     
+<mailer>                             
+ API                                 
+ 10/31/25          0121              
+ REMITTOR TWENTYONE                  
+                                     
+</mailer>                            
+                                     
+<label>                              
+ REMITTOR TWENTYONE                  
+ REM_ADDR1                           
+ REM_ADDR2                           
+ REMIT_CITY       AR  72201-1234     
+                                     
+</label>                             
+                                     
+<mailer>                             
+ API                                 
+ 10/31/25          0124              
+ REMITTOR OTHER                      
+                                     
+</mailer>                            
+                                     
+<label>                              
+ REMITTOR OTHER                      
+ REM_ADDR1                           
+ REM_ADDR2                           
+ REMIT_CITY       AR  72201-4567     
+                                     
+</label>                             

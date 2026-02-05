@@ -1,0 +1,230 @@
+ <of1_letter>                                                                   
+                                                                                
+ <date>JANUARY 29, 2026  </date>                                                
+                                                                                
+                                                                                
+ <name>KIDS FOR THE FUTURE INC             </name>                              
+ <addr1>205 INGRAM BLVD.                    </addr1>                            
+ <addr3>WEST MEMPHIS AR 72301              </addr3>                             
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+ <patient>RE: COMP REMIT               </patient>                               
+ <checknbr>    Check # 00517211</checknbr>                                      
+                                                                                
+ <paragraph>                                                                    
+                                                                                
+                                                                                
+ Please find enclosed your check in the amount of $515.90.                      
+                                                                                
+                                                                                
+ Our research indicates that your overpayment will be satisfied through our     
+ automatic offset process.                                                      
+                                                                                
+                                                                                
+ Therefore, we are returning your voided check.                                 
+ </paragraph>                                                                   
+                                                                                
+                                                                                
+                                                                                
+ <closing>Thank You</closing>                                                   
+                                                                                
+                                                                                
+                                                                                
+ <paragraph2>                                                                   
+ Sherry Cole                                                                    
+ Supervisor, Payments/Claims Refunds                                            
+ Corporate Accounting                                                           
+ Arkansas Blue Cross and Blue Shield                                            
+ 501.399.3952                                                                   
+ </paragraph2>                                                                  
+ </of1_letter>                                                                  
+                                                                                
+ <of2_letter>                                                                   
+                                                                                
+ <date>JANUARY 29, 2026  </date>                                                
+                                                                                
+                                                                                
+ <name>MEMPHIS PHYSICIANS RADIOLOGICA      </name>                              
+ <addr1>10 LITTLE BROOK RD.                 </addr1>                            
+ <addr3>WEST WAREHAM MA 02756              </addr3>                             
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+ <patient>RE: COMP REMIT               </patient>                               
+ <checknbr>    Check # 00515927</checknbr>                                      
+                                                                                
+ <paragraph>                                                                    
+                                                                                
+                                                                                
+ Please find enclosed your check in the amount of $798.20.                      
+                                                                                
+                                                                                
+ Our research indicates that your overpayment was offset prior to receiving your
+ refund.                                                                        
+                                                                                
+                                                                                
+ Therefore, we are returning your voided check.                                 
+ </paragraph>                                                                   
+                                                                                
+                                                                                
+                                                                                
+ <closing>Thank You</closing>                                                   
+                                                                                
+                                                                                
+                                                                                
+ <paragraph2>                                                                   
+ Sherry Cole                                                                    
+ Supervisor, Payments/Claims Refunds                                            
+ Corporate Accounting                                                           
+ Arkansas Blue Cross and Blue Shield                                            
+ 501.399.3952                                                                   
+ </paragraph2>                                                                  
+ </of2_letter>                                                                  
+                                                                                
+ <of3_letter>                                                                   
+                                                                                
+ <date>JANUARY 29, 2026  </date>                                                
+                                                                                
+                                                                                
+ <name>DAWN L LINDSEY CNP                  </name>                              
+ <addr1>2796 S. 2ND ST., STE E              </addr1>                            
+ <addr3>CABOT AR 72023                     </addr3>                             
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+ <patient>RE: COMP REMIT               </patient>                               
+ <checknbr>    Check # 00516554</checknbr>                                      
+                                                                                
+ <paragraph>                                                                    
+                                                                                
+                                                                                
+ Please find enclosed your check in the amount of $531.99.                      
+                                                                                
+                                                                                
+ Our research indicates that your overpayment has already been received.        
+                                                                                
+                                                                                
+ Therefore, we are returning your voided check.                                 
+ </paragraph>                                                                   
+                                                                                
+                                                                                
+                                                                                
+ <closing>Thank You</closing>                                                   
+                                                                                
+                                                                                
+                                                                                
+ <paragraph2>                                                                   
+ Sherry Cole                                                                    
+ Supervisor, Payments/Claims Refunds                                            
+ Corporate Accounting                                                           
+ Arkansas Blue Cross and Blue Shield                                            
+ 501.399.3952                                                                   
+ </paragraph2>                                                                  
+ </of3_letter>                                                                  
+                                                                                
+ <of5_letter>                                                                   
+                                                                                
+ <date>JANUARY 29, 2026  </date>                                                
+                                                                                
+                                                                                
+ <name>DARIN CABOT BELL OT                 </name>                              
+ <addr1>3612 W SOUTHERN HILLS BLVD 6        </addr1>                            
+ <addr3>ROGERS AR 72758                    </addr3>                             
+                                                                                
+                                                                                
+ <greeting>Dear Payee:</greeting>                                               
+                                                                                
+                                                                                
+                                                                                
+ <patient>RE: COMP REMIT               </patient>                               
+ <checknbr>    Check # 00519279</checknbr>                                      
+                                                                                
+ <paragraph>                                                                    
+                                                                                
+                                                                                
+ Please find enclosed your voided check in the amount of $1,222.53.             
+ Our research indicates that your overpayment was sent to the incorrect Blue    
+ Cross Plan.                                                                    
+ Please forward overpayment to correct plan at the address below:               
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+0If you have any questions or need additional information, please contact       
+ If you have any questions or need additional information, please contact       
+ Arkansas Blue Cross Blue Shield.                                               
+                                                                                
+                                                                                
+                                                                                
+ </paragraph>                                                                   
+ <closing>Thank You</closing>                                                   
+                                                                                
+                                                                                
+                                                                                
+ <paragraph2>                                                                   
+ Sherry Cole                                                                    
+ Supervisor, Payments/Claims Refunds                                            
+ Corporate Accounting                                                           
+ Arkansas Blue Cross and Blue Shield                                            
+ 501.399.3952                                                                   
+ </paragraph2>                                                                  
+ </of5_letter>                                                                  
+                                                                                
+ <of4_letter>                                                                   
+                                                                                
+ <date>JANUARY 29, 2026  </date>                                                
+                                                                                
+                                                                                
+ <name>DONNA MELISSA GRAHAM MD             </name>                              
+ <addr1>500 S UNIVERSITY AVE STE 215        </addr1>                            
+ <addr3>LITTLE ROCK AR 72205               </addr3>                             
+                                                                                
+                                                                                
+ <greeting>Dear Payee:</greeting>                                               
+                                                                                
+                                                                                
+                                                                                
+ <patient>RE: COMP REMIT               </patient>                               
+ <checknbr>    Check # 00515401</checknbr>                                      
+                                                                                
+ <paragraph>                                                                    
+                                                                                
+                                                                                
+ Please find enclosed your voided check in the amount of $639.43.               
+                                                                                
+                                                                                
+ Our research indicates that your payment was sent to Arkansas Blue Cross Blue  
+ Shield in error.                                                               
+                                                                                
+                                                                                
+ Please refer to your Personal Health Statement; the attached payment may need  
+ to be sent to your provider of service.                                        
+                                                                                
+                                                                                
+ If you have any questions or need additional information, please contact       
+ your provider.                                                                 
+                                                                                
+                                                                                
+                                                                                
+ </paragraph>                                                                   
+ <closing>Thank You</closing>                                                   
+                                                                                
+                                                                                
+                                                                                
+ <paragraph2>                                                                   
+ Sherry Cole                                                                    
+ Supervisor, Payments/Claims Refunds                                            
+ Corporate Accounting                                                           
+ Arkansas Blue Cross and Blue Shield                                            
+ 501.399.3952                                                                   
+ </paragraph2>                                                                  
+ </of4_letter>                                                                  
+                                                                                

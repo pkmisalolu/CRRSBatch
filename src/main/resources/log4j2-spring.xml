@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="DEBUG">
+	<Appenders>
+		<Console name="Console" target="SYSTEM_OUT">
+			<ThresholdFilter level="debug" onMatch="ACCEPT" onMismatch="DENY" />
+			<PatternLayout
+				pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />
+		</Console>
+
+		<!-- All Hibernate SQL file appender -->
+		<!--<File name="HibernateQueryFile" fileName="logs/DMLqueries.log"
+			append="true">
+			<PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} %-5p %c{1} - %m%n" />
+		</File>-->
+
+
+		<RollingFile name="File"
+			fileName="logs/crrs_batch.log"
+			filePattern="logs/crrs_batch-%d{yyyy-MM-dd}.log.gz">
+			<PatternLayout
+				pattern="%d{yyyy-MM-dd HH:mm:ss} %-5level %logger{36} - %msg%n" />
+
+			<Policies>
+				<!-- Roll log file once per day -->
+				<TimeBasedTriggeringPolicy interval="1" modulate="true" />
+			</Policies>
+
+			<DefaultRolloverStrategy max="100" fileIndex="min"
+				compressionLevel="5" />
+		</RollingFile>
+
+		<!--<RollingFile name="TraceSQL"
+			fileName="logs/traces.log"
+			filePattern="logs/traces-%d{yyyy-MM-dd}.log.gz">
+
+			<PatternLayout pattern="%m%n"/>
+
+			<Policies>
+				<TimeBasedTriggeringPolicy interval="1" modulate="true" />
+			</Policies>
+			<DefaultRolloverStrategy max="30" />
+		</RollingFile>-->
+
+		<RollingFile name="AuditFile" fileName="logs/audit.log"
+			filePattern="logs/audit-%d{yyyy-MM-dd}.log.gz">
+			<PatternLayout pattern="%msg%n" />
+			<Policies>
+				<TimeBasedTriggeringPolicy interval="1" />
+			</Policies>
+
+		</RollingFile>
+		<RollingFile name="AuditDB2File" fileName="logs/auditDb2.log"
+			filePattern="logs/auditDB2-%d{yyyy-MM-dd}.log.gz">
+			<PatternLayout pattern="%msg%n" />
+
+			<Policies>
+				<TimeBasedTriggeringPolicy interval="1" />
+			</Policies>
+
+		</RollingFile>
+
+	</Appenders>
+
+
+	<Loggers>
+
+		<Logger name="com.abcbs.crrs" level="debug" additivity="false">
+			<AppenderRef ref="Console" />
+			<AppenderRef ref="File" />
+		</Logger>
+
+		<!--<Logger name="com.abcbs.occs.traces.QueryCaptureStmtInspector"
+			level="info" additivity="false">
+			<AppenderRef ref="HibernateQueryFile" />
+		</Logger>-->
+
+		<Logger name="p6spy" level="info" additivity="false">
+			<AppenderRef ref="TraceSQL" />
+		</Logger>
+
+		<Logger name="AUDIT_LOG" level="info" additivity="false">
+			<AppenderRef ref="AuditFile" />
+		</Logger>
+
+		<Logger name="AUDIT_DB2_LOG" level="info" additivity="false">
+			<AppenderRef ref="AuditDB2File" />
+		</Logger>
+
+		<!--<Logger name="p6spy-success" level="info" additivity="false">
+			<AppenderRef ref="HibernateQueryFile" />
+		</Logger>-->
+
+		<!-- Framework logs: Only console, no file -->
+		<Logger name="org.springframework" level="info" additivity="false">
+			<AppenderRef ref="Console" />
+		</Logger>
+
+		<Logger name="org.hibernate" level="info" additivity="false">
+			<AppenderRef ref="Console" />
+		</Logger>
+
+
+		<Root level="debug">
+			<AppenderRef ref="Console" />
+			<AppenderRef ref="File" />
+		</Root>
+
+	</Loggers>
+</Configuration>

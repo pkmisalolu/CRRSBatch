@@ -1,0 +1,136 @@
+
+ REPORT #  P09320-A                             ARKANSAS BLUE CROSS AND BLUE SHIELD                                        PAGE     1
+ RUN DATE: 11/27/25                             MONTHLY CASH RECEIPT CONTROL REPORT                                RUN TIME: 12:45:24
+                                                FOR REFUND TYPE: API - API          
+                                                FOR MONTH ENDING    OCTOBER 31, 2025
+
+
+
+                          CASH RECEIPTS BEGINNING BALANCE  .........................        12          $123.00
+
+                          CASH RECEIPTS ADDED           COUNT        AMOUNT
+                               REQUESTED                     0            $0.00
+                               UNREQUESTED                  50       $19,374.02
+
+                          TOTAL ADDITIONS  .........................................        50       $19,374.02
+
+                          RESOLVED CASH RECEIPTS:
+                                                        COUNT          AMOUNT
+                               DELETION                      0            $0.00                                                      
+                               ACCEPTED/CANCELED             3       $19,224.02                                                      
+                               APPLIED TO A/R                0            $0.00                                                      
+                               FULL REISSUE                  0            $0.00                                                      
+                               PARTIAL REISSUE               0            $0.00                                                      
+                               CHECK REMAILED                0            $0.00                                                      
+                               LOGOUT                        0            $0.00                                                      
+                          TOTAL RESOLVED  ..........................................         3       $19,224.02
+
+                          CASH RECEIPTS ENDING BALANCE  ............................        59          $273.00
+
+ REPORT #  P09320-A                             ARKANSAS BLUE CROSS AND BLUE SHIELD                                        PAGE     2
+ RUN DATE: 11/27/25                             MONTHLY CASH RECEIPT CONTROL REPORT                                RUN TIME: 12:45:24
+                                                FOR REFUND TYPE: API - API          
+                                                FOR MONTH ENDING    OCTOBER 31, 2025
+
+
+
+ AGING OF ENDING BALANCE:              T O T A L
+                                   COUNT       AMOUNT
+
+       0 DAYS - 15 DAYS               46       $18,774.02
+      16 DAYS -  1 MONTH               0            $0.00
+      OVER  1 -  2 MONTHS              0            $0.00
+      OVER  2 -  3 MONTHS              1          $150.00
+      OVER  3 -  4 MONTHS              0            $0.00
+      OVER       4 MONTHS              0            $0.00
+                 T O T A L            47       $18,924.02
+                                 =======  ===============
+
+
+ ENDING BALANCE               R E Q U E S T E D       U N R E Q U E S T E D          T O T A L
+   BY CLAIM TYPES             COUNT       AMOUNT          COUNT       AMOUNT          COUNT       AMOUNT
+
+   BANK                           0           $0.00           0           $0.00           0           $0.00
+   CENTRAL CERTIFICATION          0           $0.00           1         $250.50           1         $250.50
+   FEDERAL EMPLY PRGM             0           $0.00           1         $345.75           1         $345.75
+   REGULAR GCPS CLAIM             0           $0.00           1         $400.00           1         $400.00
+   MEDICARE CLAIM                 0           $0.00           1          $50.25           1          $50.25
+   MEDIPAK CLAIM                  0           $0.00           1         $678.90           1         $678.90
+   RECIPROCITY                    0           $0.00           1       $1,200.00           1       $1,200.00
+   SCHOOL GROUP CLAIM             0           $0.00           1          $33.33           1          $33.33
+   ACCOUNTS PAYABLE               0           $0.00           1         $999.99           1         $999.99
+   PHYSICIANS PAYABLE             0           $0.00           1          $75.00           1          $75.00
+   OTHER                          0           $0.00           1         $210.10           1         $210.10
+   IRS BKUP WITHHODING            0           $0.00           1         $321.00           1         $321.00
+   INTERPLAN TELEPROCESS          0           $0.00           1          $45.00           1          $45.00
+   CS                             0           $0.00           1          $88.88           1          $88.88
+   HCPS                           0           $0.00           1       $1,000.00           1       $1,000.00
+   SEG                            0           $0.00           1         $666.66           1         $666.66
+   DENTAL                         0           $0.00           1          $12.34           1          $12.34
+   DRUG                           0           $0.00           1         $222.22           1         $222.22
+   MEDIPAK ADVANTAGE              0           $0.00           1         $333.33           1         $333.33
+   MEDIPAK ADVANTAGE PPO          0           $0.00           1         $444.44           1         $444.44
+   MEDIPAK ADVANTAGE PART D       0           $0.00           1         $555.55           1         $555.55
+   PREMIUM REBATES                0           $0.00           0           $0.00           0           $0.00
+   HMO PARTNERS                   0           $0.00           1         $777.77           1         $777.77
+   FEP POSTAL CLAIM               0           $0.00           0           $0.00           0           $0.00
+   UNDEFINED                      1         $150.00          25      $10,063.01          26      $10,213.01
+
+         T O T A L                1         $150.00          46      $18,774.02          47      $18,924.02
+                            ======= ===============     ======= ===============     ======= ===============
+
+
+
+
+ REPORT #  P09320-A                             ARKANSAS BLUE CROSS AND BLUE SHIELD                                        PAGE     3
+ RUN DATE: 11/27/25                             MONTHLY CASH RECEIPT CONTROL REPORT                                RUN TIME: 12:45:24
+                                                FOR REFUND TYPE: API - API          
+                                                FOR MONTH ENDING    OCTOBER 31, 2025
+
+
+
+ RESOLVED CASH RECEIPTS       R E Q U E S T E D       U N R E Q U E S T E D          T O T A L
+   BY CLAIM TYPES             COUNT       AMOUNT          COUNT       AMOUNT          COUNT       AMOUNT
+
+   BANK                           0           $0.00           3         $450.00           3         $450.00
+   CENTRAL CERTIFICATION          0           $0.00           0         $250.50           0         $250.50
+   FEDERAL EMPLY PRGM             0           $0.00           0         $345.75           0         $345.75
+   REGULAR GCPS CLAIM             0           $0.00           0         $400.00           0         $400.00
+   MEDICARE CLAIM                 0           $0.00           0          $50.25           0          $50.25
+   MEDIPAK CLAIM                  0           $0.00           0         $678.90           0         $678.90
+   RECIPROCITY                    0           $0.00           0       $1,200.00           0       $1,200.00
+   SCHOOL GROUP CLAIM             0           $0.00           0          $33.33           0          $33.33
+   ACCOUNTS PAYABLE               0           $0.00           0         $999.99           0         $999.99
+   PHYSICIANS PAYABLE             0           $0.00           0          $75.00           0          $75.00
+   OTHER                          0           $0.00           0         $210.10           0         $210.10
+   IRS BKUP WITHHODING            0           $0.00           0         $321.00           0         $321.00
+   INTERPLAN TELEPROCESS          0           $0.00           0          $45.00           0          $45.00
+   CS                             0           $0.00           0          $88.88           0          $88.88
+   HCPS                           0           $0.00           0       $1,000.00           0       $1,000.00
+   SEG                            0           $0.00           0         $666.66           0         $666.66
+   DENTAL                         0           $0.00           0          $12.34           0          $12.34
+   DRUG                           0           $0.00           0         $222.22           0         $222.22
+   MEDIPAK ADVANTAGE              0           $0.00           0         $333.33           0         $333.33
+   MEDIPAK ADVANTAGE PPO          0           $0.00           0         $444.44           0         $444.44
+   MEDIPAK ADVANTAGE PART D       0           $0.00           0         $555.55           0         $555.55
+   PREMIUM REBATES                0           $0.00           0           $0.00           0           $0.00
+   HMO PARTNERS                   0           $0.00           0         $777.77           0         $777.77
+   FEP POSTAL CLAIM               0           $0.00           0           $0.00           0           $0.00
+   UNDEFINED                      0           $0.00           0      $10,063.01           0      $10,063.01
+
+         T O T A L                0           $0.00           3      $19,224.02           3      $19,224.02
+                            ======= ===============     ======= ===============     ======= ===============
+
+
+
+
+
+
+
+
+
+
+
+
+
+***********************************************************    END OF REPORT P09320-A    ********************************************
