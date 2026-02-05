@@ -1,0 +1,152 @@
+REPORT #  P09345-A                             ARKANSAS BLUE CROSS AND BLUE SHIELD                                        PAGE     1 
+RUN DATE: 2026-02-06                          CARRYOVER REPORT OF OPEN CASH RECEIPTS                              RUN TIME: 01:37:00 
+CORP 04 - ABCBS MEDIPAK ADVANTAGE           ENDING BALANCE AS OF       2026-02-06                                                    
+                                               FOR REFUND TYPE: RET - RET                                                            
+  C/R CONTROL      CONTROL      CASH RECEIPT   CHECK    CHECK      CHECK                     PATIENT NAME               REAS  LETTER 
+   DATE   NBR      AMOUNT          BALANCE     NUMBER   DATE       AMOUNT        REMITTOR  LAST     FIRST   MEMBER ID   CODE   DATE  
+-------- ---- --------------- --------------- -------- -------- --------------- -------- -------- ------- ------------ ---- -------- 
+                                                                                                                                     
+05/03/24 201          $143.45         $143.45 00515742 05/03/24         $143.45 JOSHUA R MULITPLE PATIENT PPA822493738 PWP           
+06/04/25 1             $50.00          $50.00 00520686 06/04/25          $50.00 LAUREN S MCKEE    JANA    DNT801875179 OTH           
+09/29/25 1            $401.96         $401.96 00522379 09/29/25         $401.96 CHELSEA  ROMOSER  KARI    YUP826366549 OTH           
+10/06/25 2          $1,258.75       $1,258.75 00522551 10/06/25       $1,258.75 CHELSEA  ROMOSER  KARI    YUP826366549 PWP           
+10/13/25 1          $2,217.00       $2,217.00 00522650 10/13/25       $2,217.00 CHELSEA  REMIT    COMP    UNR756W04789 PWP           
+10/28/25 2             $59.07          $59.07 00522774 10/28/25          $59.07 KRISTY N BEAVERS  JACKSON TEA806372876 OTH           
+12/01/25 1             $21.38          $21.38 00002103 12/01/25          $21.38 LINDA L  LAWRENCE LINDA   R59054987    PWP           
+12/01/25 2             $21.38          $21.38 00002102 12/01/25          $21.38 LINDA L  LAWRENCE LINDA   R59054987    OTH           
+12/15/25 700           $37.86          $37.86 00009847 12/15/25          $37.86 BOSTON M DUNAWAY  JAMES   R57851611    OTH           
+12/15/25 701           $56.25          $56.25 00528200 12/15/25          $56.25 PROVIDER CONLEY   ANTHONY R61204076    BA            
+12/15/25 702           $24.00          $24.00 00009889 12/15/25          $24.00 MICHAEL  JODON    SUSAN   R20696175    OTH           
+01/22/26 700           $11.76          $11.76 00009677 01/22/26          $11.76 BILLY R  WILSON   BILLY   R57776070    PWP           
+01/22/26 701            $6.67           $6.67 00002875 01/22/26           $6.67 ALLEN D  CRANFORD ALLEN   R57708793    BA            
+01/22/26 702          $241.91         $241.91 00523284 01/22/26         $241.91 LAUREN N PRICE    LAUREN               PWP           
+01/22/26 703          $793.40         $793.40 00010781 01/22/26         $793.40 WILLIAM  MCCOLGAN WILLIAM              BA            
+01/23/26 101          $173.00         $173.00 00523676 01/23/26         $173.00 SAMUEL W LOWE     BRENTON NLM140120713 PWP           
+01/23/26 102           $24.00          $24.00 00011044 01/23/26          $24.00 CHRIS CO CORY     KELLIE  R60656253    OTH           
+                                                                                                                                     
+                                                                                                                                     
+                                                                         CONTROLLED     CASH RECEIPT                                 
+                                                              NUMBER       AMOUNT         BALANCE AMOUNT                             
+        TOTAL  CASH RECEIPT RECORDS FOR REFUND TYPE - RET         17      $5,541.84      $5,541.84                                   
+                                                                                                                                     
+        TOTAL  CHECK        RECORDS FOR REFUND TYPE - RET         17                                                                 
+                                                                                                                                     
+                                                                                                                                     
+REPORT #  P09345-A                             ARKANSAS BLUE CROSS AND BLUE SHIELD                                        PAGE     1 
+RUN DATE: 2026-02-06                          CARRYOVER REPORT OF OPEN CASH RECEIPTS                              RUN TIME: 01:37:01 
+CORP 04 - ABCBS MEDIPAK ADVANTAGE           ENDING BALANCE AS OF       2026-02-06                                                    
+                                               FOR REFUND TYPE: SPO - SPO                                                            
+  C/R CONTROL      CONTROL      CASH RECEIPT   CHECK    CHECK      CHECK                     PATIENT NAME               REAS  LETTER 
+   DATE   NBR      AMOUNT          BALANCE     NUMBER   DATE       AMOUNT        REMITTOR  LAST     FIRST   MEMBER ID   CODE   DATE  
+-------- ---- --------------- --------------- -------- -------- --------------- -------- -------- ------- ------------ ---- -------- 
+                                                                                                                                     
+09/10/25 200        $1,360.00       $1,360.00 61168518 09/10/25       $1,360.00 ESTATE O BORNHOFE JOHN                 OTH           
+                                                                                                                                     
+                                                                                                                                     
+                                                                         CONTROLLED     CASH RECEIPT                                 
+                                                              NUMBER       AMOUNT         BALANCE AMOUNT                             
+        TOTAL  CASH RECEIPT RECORDS FOR REFUND TYPE - SPO          1      $1,360.00      $1,360.00                                   
+                                                                                                                                     
+        TOTAL  CHECK        RECORDS FOR REFUND TYPE - SPO          1                                                                 
+                                                                                                                                     
+                                                                                                                                     
+REPORT #  P09345-A                             ARKANSAS BLUE CROSS AND BLUE SHIELD                                        PAGE     1 
+RUN DATE: 2026-02-06                          CARRYOVER REPORT OF OPEN CASH RECEIPTS                              RUN TIME: 01:37:01 
+CORP 04 - ABCBS MEDIPAK ADVANTAGE           ENDING BALANCE AS OF       2026-02-06                                                    
+                                               FOR REFUND TYPE: UND - UNDELIVERABLE                                                  
+  C/R CONTROL      CONTROL      CASH RECEIPT   CHECK    CHECK      CHECK                     PATIENT NAME               REAS  LETTER 
+   DATE   NBR      AMOUNT          BALANCE     NUMBER   DATE       AMOUNT        REMITTOR  LAST     FIRST   MEMBER ID   CODE   DATE  
+-------- ---- --------------- --------------- -------- -------- --------------- -------- -------- ------- ------------ ---- -------- 
+                                                                                                                                     
+07/22/20 803        $3,935.50       $3,935.50 61095152 07/22/20       $3,935.50 BC BS OF                  Z68609       BA            
+07/22/20 872          $141.40         $141.40 61097653 07/22/20         $141.40 WILLIAM  NA       NA      C19407       BA            
+12/17/24 200        $1,156.12       $1,156.12 00519205 12/17/24       $1,156.12 DARIN CA MULTIPLE PATIENT WRY821M83007 BA            
+12/17/24 201          $251.80         $251.80 00517892 12/17/24         $251.80 ACCUPATH KEITH    BRANDY  PVF908701622 BA            
+12/17/24 202          $306.90         $306.90 00519221 12/17/24         $306.90 ARIAL HA MILCHLIN MYKAYLA AUM811058999 BA            
+12/17/24 210          $128.40         $128.40 00519118 12/17/24         $128.40 JORDAN K WOODRUFF EASTER  JWO522W07860 BA            
+02/05/25 1            $347.06         $347.06 00519625 02/05/25         $347.06 DARIN CA REMIT    COMP    WRY821M83007 BA            
+02/19/25 103           $70.11          $70.11 00519715 02/19/25          $70.11 MODERN M COMP     REMIT   H4G912M97893 BA            
+02/19/25 104          $105.08         $105.08 00519673 02/19/25         $105.08 JEPPSEN  COMP     REMIT   MBG869173516 BA            
+02/20/25 2            $115.06         $115.06 00519780 02/20/25         $115.06 DARIN CA SLUSS    COLLEEN EAV838358655 BA            
+02/20/25 3             $82.00          $82.00 00519813 02/20/25          $82.00 SAMANTHA REMIT    COMP    BXK656W11647 BA            
+02/20/25 4             $55.11          $55.11 00519793 02/20/25          $55.11 MODERN M MCBETH   DAPHNE  AQT603565747 BA            
+02/20/25 5            $413.74         $413.74 00519872 02/20/25         $413.74 MEGAN EL WISER    ANNABEL F7U8468669CH BA            
+03/17/25 2             $85.60          $85.60 00520096 03/17/25          $85.60 7 SENSES REMIT    COMP    WLC836743779 BA            
+04/02/25 6            $122.78         $122.78 00520256 04/02/25         $122.78 RYAN A S GRAYSON  PICCIRI TEA806351721 BA            
+04/07/25 1            $176.89         $176.89 00520443 04/07/25         $176.89 MODERN M REMIT    COMP    LOF367M98034 BA            
+06/24/25 9            $393.57         $393.57 00520552 06/24/25         $393.57 KENDYL H REMIT    COMP    EXQ189W23351 BA            
+07/23/25 1            $199.90         $199.90 00521619 07/23/25         $199.90 MODERN M REMIT    COMP    JQU950M90549 BA            
+07/23/25 2          $1,229.63       $1,229.63 00517802 07/23/25       $1,229.63 REFRESH  REMIT    COMP    YUQ947141646 BA            
+07/24/25 1              $7.49           $7.49 00520864 07/24/25           $7.49 MOBILEX  SCHLATKA LINDA   XXU986437399 BA            
+08/04/25 4             $36.85          $36.85 00521815 08/04/25          $36.85 MODERN M MCBETH   DAPHNE  AQT603565747 BA            
+09/03/25 2            $260.00         $260.00 00522152 09/03/25         $260.00 DONNA SU CARLI    PATTY   XOF814920237 BA            
+09/03/25 3            $146.19         $146.19 00522107 09/03/25         $146.19 KENDYL H SPRINGST LINDSEY CNHEB0022391 BA            
+09/29/25 3             $81.55          $81.55 00522413 09/29/25          $81.55 RIVER OF MCFARLAN BRANDY  M2E836330089 BA            
+09/29/25 4            $154.12         $154.12 00522490 09/29/25         $154.12 RIVER OF RORICK   DESTANY S4U003956050 BA            
+10/13/25 1            $101.55         $101.55 00522690 10/13/25         $101.55 RIVER OF RORICK   DESTANY NEI800878772 BA            
+11/04/25 7            $143.45         $143.45 00518245 11/04/25         $143.45 JUST WAD HARRIS   MATTIE  BSU100011428 BA            
+11/13/25 11            $14.28          $14.28 00009520 11/13/25          $14.28 JAMES D  LEMASTER JAMES   R50798591    BA            
+12/02/25 11           $471.00         $471.00 00517555 12/02/25         $471.00 MATTHEW  MCCLELLA BRADLEE C2B129606239 BA            
+12/17/25 104           $42.84          $42.84 00010753 12/17/25          $42.84 JAMES D                   R50798591    BA            
+12/17/25 111           $88.25          $88.25 00002431 12/17/25          $88.25 CALOWAY                   R59722007    BA            
+01/05/26 100          $183.10         $183.10 00001423 01/05/26         $183.10 MEDEXPRE REMIT    COMP    R60881919    BA            
+01/15/26 100          $133.00         $133.00 00010425 01/15/26         $133.00 MICHAEL  COMP     REMIT   R26396367    BA            
+01/15/26 101          $105.15         $105.15 00528209 01/15/26         $105.15 AR BLUE  BRONSON  ROBERT  R59632299    BA            
+01/15/26 102           $14.28          $14.28 00011668 01/15/26          $14.28 JAMES D  LEMASTER JAMES   R50798591    BA            
+01/15/26 103            $8.85           $8.85 00011667 01/15/26           $8.85 JAMES D  LEMASTER JAMES   R50798591    BA            
+01/15/26 104           $51.73          $51.73 00000263 01/15/26          $51.73 JOHN ERI HELMS    NOLAN   R61668434    BA            
+01/15/26 105          $136.08         $136.08 00000261 01/15/26         $136.08 JOHN ERI HELMS    NOLAN   R61668434    BA            
+01/15/26 106           $51.73          $51.73 00000262 01/15/26          $51.73 JOHN ERI HELMS    NOLAN   R61668434    BA            
+01/15/26 107           $22.01          $22.01 00011132 01/15/26          $22.01 HELEN L  LONESOME HELEN   R21096993    BA            
+01/15/26 108            $8.85           $8.85 00011436 01/15/26           $8.85 JAMES D  LEMASTER JAMES   R50798591    BA            
+01/15/26 700           $14.98          $14.98 00003060 01/15/26          $14.98 LARRY D  STEELE   LARRY   R30320443    BA            
+01/15/26 701           $36.89          $36.89 00003064 01/15/26          $36.89 LARRY D  STEELE   LARRY   R30320443    BA            
+01/15/26 702           $11.79          $11.79 00003063 01/15/26          $11.79 LARRY D                   R30320443    BA            
+01/15/26 703           $30.38          $30.38 00003062 01/15/26          $30.38 LARRY D  STEELE   LARRY   R30320443    BA            
+01/15/26 704           $18.14          $18.14 03247547 01/15/26          $18.14 PATRICK  SCHLUCK  PATRICK R50509177    BA            
+01/15/26 705          $111.44         $111.44 00010752 01/15/26         $111.44 PATRICK  SCHLUCK  PATRICK R50509177    BA            
+01/15/26 706           $14.98          $14.98 00003059 01/15/26          $14.98 LARRY D  STEELE   LARRY   R30320443    BA            
+01/15/26 707           $11.79          $11.79 00003061 01/15/26          $11.79 LARRY D  STEELE   LARRY   R30320443    BA            
+01/15/26 708           $35.52          $35.52 00003107 01/15/26          $35.52 LARRY D  STEELE   LARRY   R30320443    BA            
+01/15/26 709           $46.74          $46.74 00003108 01/15/26          $46.74 LARRY D  STEELE   LARRY   R30320443    BA            
+01/15/26 710           $52.84          $52.84 00011009 01/15/26          $52.84 CHARLES  BOECKMAN CHARLES R61013778    BA            
+01/16/26 100           $48.50          $48.50 00003216 01/16/26          $48.50 RACHAEL  LEWIS    RACHAEL R61563244    BA            
+01/16/26 101           $67.57          $67.57 00003209 01/16/26          $67.57 BRENDA R WHITTMOR BRENDA  R57854136    BA            
+01/16/26 102           $20.41          $20.41 00003201 01/16/26          $20.41 LARRY D  STEELE   LINDA   R30320443    BA            
+01/16/26 103           $11.79          $11.79 00003203 01/16/26          $11.79 LARRY D  STEELE   LINDA   R30320443    BA            
+01/16/26 104           $11.79          $11.79 00003202 01/16/26          $11.79 LARRY D  STEELE   LARRY   R30320443    BA            
+01/16/26 105           $22.01          $22.01 00011308 01/16/26          $22.01 LILLIAN  HARDEN   LILLIAN R02245797    BA            
+01/16/26 106           $28.45          $28.45 00011241 01/16/26          $28.45 LINDA C  LYON     LINDA   R50140218    BA            
+01/16/26 107           $74.55          $74.55 00011238 01/16/26          $74.55 LARRY W  WOMACK   LARRY   R14951330    BA            
+01/16/26 108          $103.46         $103.46 00000264 01/16/26         $103.46 JOHN ERI HELMS    NOLAN   R61668434    BA            
+01/16/26 109            $8.85           $8.85 00011747 01/16/26           $8.85 JAMES D  LEMASTER JAMES   R50798591    BA            
+01/22/26 700          $160.00         $160.00 03247544 01/22/26         $160.00 AR BLUE  AR BLUE  BLUE SH              BA            
+01/23/26 100           $33.76          $33.76 00003234 01/23/26          $33.76 LARRY D  STEELE   LINDA   R30320443    BA            
+                                                                                                                                     
+                                                                                                                                     
+                                                                         CONTROLLED     CASH RECEIPT                                 
+                                                              NUMBER       AMOUNT         BALANCE AMOUNT                             
+        TOTAL  CASH RECEIPT RECORDS FOR REFUND TYPE - UND         64     $12,555.63     $12,555.63                                   
+                                                                                                                                     
+        TOTAL  CHECK        RECORDS FOR REFUND TYPE - UND         64                                                                 
+                                                                                                                                     
+                                                                                                                                     
+REPORT #  P09345-A                             ARKANSAS BLUE CROSS AND BLUE SHIELD                                        PAGE     2 
+RUN DATE: 2026-02-06                          CARRYOVER REPORT OF OPEN CASH RECEIPTS                              RUN TIME: 01:37:01 
+                                                                                                                                     
+                                                                                       CONTROLLED     CASH RECEIPT                   
+                                                                            NUMBER       AMOUNT     BALANCE AMO                      
+        G R A N D    T O T A L    OF ALL CASH RECEIPT RECORDS IS                82     $19,457.47     $19,457.47                     
+                                                                                                                                     
+        G R A N D    T O T A L    OF ALL    CHECK RECORDS     IS                82                                                   
+                                                                                                                                     
+                                                                                                                                     
+                                                                                                                                     
+                                                                                                                                     
+                                                                                                                                     
+                                                                                                                                     
+                                                                                                                                     
+                                                                                                                                     
+                                                                                                                                     
+                                                                                                                                     
+****************************************************  END OF P09345-A REPORT  ****************************************************** 

@@ -154,3 +154,204 @@
 2026-01-29 21:00:35 INFO  com.abcbs.crrs.jobs.P09372.P09372Writer - P09372Writer closed successfully
 2026-01-29 21:00:35 DEBUG com.abcbs.crrs.jobs.P09372.P09372Writer - close() already executed, skipping
 2026-01-29 21:00:36 INFO  com.abcbs.crrs.config.JobLauncherRunner - Job P09372 finished with status COMPLETED
+2026-02-06 01:27:03 INFO  com.abcbs.crrs.CrrsBatchApplication - Starting CrrsBatchApplication using Java 21.0.6 with PID 6508 (Z:\Praveen\Workspace_crrs\Spring_Batch_Project\CRRSBatch\target\classes started by pkmisalolu in Z:\Praveen\Workspace_crrs\Spring_Batch_Project\CRRSBatch)
+2026-02-06 01:27:03 DEBUG com.abcbs.crrs.CrrsBatchApplication - Running with Spring Boot v3.5.5, Spring v6.2.10
+2026-02-06 01:27:03 INFO  com.abcbs.crrs.CrrsBatchApplication - No active profile set, falling back to 1 default profile: "default"
+2026-02-06 01:27:38 INFO  com.abcbs.crrs.config.P09186Config - Creating step: P09186Step
+2026-02-06 01:27:38 INFO  com.abcbs.crrs.config.P09186Config - Creating job: P09186Job
+2026-02-06 01:27:43 INFO  com.abcbs.crrs.config.P09373Config - Configuring Step: P09373Step with chunk size = 50
+2026-02-06 01:27:43 INFO  com.abcbs.crrs.config.P09373Config - Configuring Job: P09373Job
+2026-02-06 01:27:43 INFO  com.abcbs.crrs.config.P09375Config - Creating step: P09375Step (as tasklet)
+2026-02-06 01:27:43 INFO  com.abcbs.crrs.config.P09375Config - Creating job: P09375Job
+2026-02-06 01:27:44 INFO  com.abcbs.crrs.config.P09320Config - Configuring step: P09320Step
+2026-02-06 01:27:44 INFO  com.abcbs.crrs.config.P09320Config - Configuring job: P09320Job
+2026-02-06 01:27:44 INFO  com.abcbs.crrs.config.P09321Config - Configuring step: P09321Step
+2026-02-06 01:27:44 INFO  com.abcbs.crrs.config.P09321Config - Configuring job: P09321Job
+2026-02-06 01:27:44 INFO  com.abcbs.crrs.config.P09185Config - Building step: p09185Step
+2026-02-06 01:27:44 INFO  com.abcbs.crrs.config.P09185Config - Building job: p09185Job
+2026-02-06 01:27:44 INFO  com.abcbs.crrs.config.P09310Config - Entered into Step 1
+2026-02-06 01:27:44 INFO  com.abcbs.crrs.config.P09310Config - Entered into Step 2
+2026-02-06 01:27:44 INFO  com.abcbs.crrs.config.P09310Config - Entered into Job
+2026-02-06 01:27:45 INFO  com.abcbs.crrs.config.P09305Config - P09305 Chkp Step started
+2026-02-06 01:27:45 INFO  com.abcbs.crrs.config.P09305Config - P09305 Step job started 
+2026-02-06 01:27:45 INFO  com.abcbs.crrs.config.P09305Config - P09305 job started 
+2026-02-06 01:27:45 INFO  com.abcbs.crrs.config.P09325Config - Entered into P09325 Step
+2026-02-06 01:27:45 INFO  com.abcbs.crrs.config.P09325Config - Entered into P09325 Job
+2026-02-06 01:27:45 INFO  com.abcbs.crrs.config.P09376Config - Creating step: p09376Step (as tasklet)
+2026-02-06 01:27:45 INFO  com.abcbs.crrs.config.P09376Config - Creating job: p09376Job
+2026-02-06 01:27:45 INFO  com.abcbs.crrs.config.P09330Config - Creating step: p09330Step (tasklet)
+2026-02-06 01:27:45 INFO  com.abcbs.crrs.config.P09330Config - Creating job: p09330Job
+2026-02-06 01:27:45 INFO  com.abcbs.crrs.config.P09183Config - Building Step 'p09183Step' with chunk size 100
+2026-02-06 01:27:45 INFO  com.abcbs.crrs.config.P09183Config - Building Job 'p09183Job'
+2026-02-06 01:27:45 INFO  com.abcbs.crrs.config.P09180Config - Creating step: P09186Step
+2026-02-06 01:27:45 INFO  com.abcbs.crrs.config.P09180Config - Creating job: P09180Job
+2026-02-06 01:27:45 INFO  com.abcbs.crrs.config.P09345Config - Creating step: p09345Step (tasklet)
+2026-02-06 01:27:45 INFO  com.abcbs.crrs.config.P09345Config - Creating job: p09345Job
+2026-02-06 01:27:48 INFO  com.abcbs.crrs.config.P09372Config - Creating ItemReader for P09CashReceipt using repository method: findOffCashReceipts
+2026-02-06 01:27:48 INFO  com.abcbs.crrs.config.P09372Config - Configuring Step: P09372Step with chunk size 2000
+2026-02-06 01:27:48 INFO  com.abcbs.crrs.config.P09372Config - Initializing Job: P09372Job
+2026-02-06 01:27:48 INFO  com.abcbs.crrs.config.P09175Config - Creating step: P09175Step (tasklet)
+2026-02-06 01:27:48 INFO  com.abcbs.crrs.config.P09175Config - Creating job: P09175Job
+2026-02-06 01:27:48 INFO  com.abcbs.crrs.lock.P09TableLocker - P09TableLocker initialized. Detected DB dialect=org.hibernate.dialect.sqlserverdialect
+2026-02-06 01:27:48 INFO  com.abcbs.crrs.config.RetryConfig - Entered into RetryTemplate
+2026-02-06 01:27:49 INFO  com.abcbs.crrs.CrrsBatchApplication - Started CrrsBatchApplication in 49.999 seconds (process running for 54.624)
+2026-02-06 01:27:49 INFO  com.abcbs.crrs.config.JobLauncherRunner - Entered into run
+2026-02-06 01:27:49 INFO  com.abcbs.crrs.config.JobLauncherRunner - Requested job: P09330
+2026-02-06 01:27:49 INFO  com.abcbs.crrs.config.JobLauncherRunner - Launching P09330 with outputFile=output/P09330Output.txt
+2026-02-06 01:27:51 INFO  com.abcbs.crrs.config.P09330Config - Instantiating P09330ReportTasklet outputFile=output/P09330Output.txt
+2026-02-06 01:27:51 INFO  com.abcbs.crrs.jobs.P09330.P09330ReportTasklet - P09330 execute() START (DB-only). Receipt types: [FE, HO, AP, MA, MU, GA, GU]
+2026-02-06 01:27:51 INFO  com.abcbs.crrs.jobs.P09330.P09330ReportTasklet - Control date cutoffs set: cntrlToDate=2026-02-06, ctdMinus15=2026-01-22, ctdMinus1Month=2026-01-07, ctdMinus2Months=2025-12-07, ctdMinus3Months=2025-11-07, ctdMinus4Months=2025-10-07
+2026-02-06 01:27:51 INFO  com.abcbs.crrs.jobs.P09330.P09330ReportTasklet - Processing RET for receiptType=FE
+2026-02-06 01:27:52 INFO  com.abcbs.crrs.jobs.P09330.P09330ReportTasklet - Processing RET for receiptType=HO
+2026-02-06 01:27:52 INFO  com.abcbs.crrs.jobs.P09330.P09330ReportTasklet - Processing RET for receiptType=AP
+2026-02-06 01:27:52 INFO  com.abcbs.crrs.jobs.P09330.P09330ReportTasklet - Processing RET for receiptType=MA
+2026-02-06 01:27:53 INFO  com.abcbs.crrs.jobs.P09330.P09330ReportTasklet - Processing RET for receiptType=MU
+2026-02-06 01:27:53 INFO  com.abcbs.crrs.jobs.P09330.P09330ReportTasklet - Processing RET for receiptType=GA
+2026-02-06 01:27:53 INFO  com.abcbs.crrs.jobs.P09330.P09330ReportTasklet - Processing RET for receiptType=GU
+2026-02-06 01:27:53 INFO  com.abcbs.crrs.jobs.P09330.P09330ReportTasklet - Processing refundType=UND
+2026-02-06 01:27:53 INFO  com.abcbs.crrs.jobs.P09330.P09330ReportTasklet - Processing refundType=OFF
+2026-02-06 01:27:54 INFO  com.abcbs.crrs.jobs.P09330.P09330ReportTasklet - Processing refundType=SPO
+2026-02-06 01:27:54 INFO  com.abcbs.crrs.jobs.P09330.P09330ReportTasklet - P09330 finished writing report
+2026-02-06 01:27:54 INFO  com.abcbs.crrs.config.JobLauncherRunner - Job P09330 finished with status COMPLETED
+2026-02-06 01:30:48 INFO  com.abcbs.crrs.CrrsBatchApplication - Starting CrrsBatchApplication using Java 21.0.6 with PID 12344 (Z:\Praveen\Workspace_crrs\Spring_Batch_Project\CRRSBatch\target\classes started by pkmisalolu in Z:\Praveen\Workspace_crrs\Spring_Batch_Project\CRRSBatch)
+2026-02-06 01:30:48 DEBUG com.abcbs.crrs.CrrsBatchApplication - Running with Spring Boot v3.5.5, Spring v6.2.10
+2026-02-06 01:30:48 INFO  com.abcbs.crrs.CrrsBatchApplication - No active profile set, falling back to 1 default profile: "default"
+2026-02-06 01:31:17 INFO  com.abcbs.crrs.config.P09186Config - Creating step: P09186Step
+2026-02-06 01:31:17 INFO  com.abcbs.crrs.config.P09186Config - Creating job: P09186Job
+2026-02-06 01:31:22 INFO  com.abcbs.crrs.config.P09373Config - Configuring Step: P09373Step with chunk size = 50
+2026-02-06 01:31:23 INFO  com.abcbs.crrs.config.P09373Config - Configuring Job: P09373Job
+2026-02-06 01:31:23 INFO  com.abcbs.crrs.config.P09375Config - Creating step: P09375Step (as tasklet)
+2026-02-06 01:31:23 INFO  com.abcbs.crrs.config.P09375Config - Creating job: P09375Job
+2026-02-06 01:31:23 INFO  com.abcbs.crrs.config.P09320Config - Configuring step: P09320Step
+2026-02-06 01:31:23 INFO  com.abcbs.crrs.config.P09320Config - Configuring job: P09320Job
+2026-02-06 01:31:23 INFO  com.abcbs.crrs.config.P09321Config - Configuring step: P09321Step
+2026-02-06 01:31:23 INFO  com.abcbs.crrs.config.P09321Config - Configuring job: P09321Job
+2026-02-06 01:31:23 INFO  com.abcbs.crrs.config.P09185Config - Building step: p09185Step
+2026-02-06 01:31:23 INFO  com.abcbs.crrs.config.P09185Config - Building job: p09185Job
+2026-02-06 01:31:23 INFO  com.abcbs.crrs.config.P09310Config - Entered into Step 1
+2026-02-06 01:31:23 INFO  com.abcbs.crrs.config.P09310Config - Entered into Step 2
+2026-02-06 01:31:23 INFO  com.abcbs.crrs.config.P09310Config - Entered into Job
+2026-02-06 01:31:24 INFO  com.abcbs.crrs.config.P09305Config - P09305 Chkp Step started
+2026-02-06 01:31:24 INFO  com.abcbs.crrs.config.P09305Config - P09305 Step job started 
+2026-02-06 01:31:24 INFO  com.abcbs.crrs.config.P09305Config - P09305 job started 
+2026-02-06 01:31:24 INFO  com.abcbs.crrs.config.P09325Config - Entered into P09325 Step
+2026-02-06 01:31:24 INFO  com.abcbs.crrs.config.P09325Config - Entered into P09325 Job
+2026-02-06 01:31:24 INFO  com.abcbs.crrs.config.P09376Config - Creating step: p09376Step (as tasklet)
+2026-02-06 01:31:24 INFO  com.abcbs.crrs.config.P09376Config - Creating job: p09376Job
+2026-02-06 01:31:24 INFO  com.abcbs.crrs.config.P09330Config - Creating step: p09330Step (tasklet)
+2026-02-06 01:31:24 INFO  com.abcbs.crrs.config.P09330Config - Creating job: p09330Job
+2026-02-06 01:31:24 INFO  com.abcbs.crrs.config.P09183Config - Building Step 'p09183Step' with chunk size 100
+2026-02-06 01:31:24 INFO  com.abcbs.crrs.config.P09183Config - Building Job 'p09183Job'
+2026-02-06 01:31:24 INFO  com.abcbs.crrs.config.P09180Config - Creating step: P09186Step
+2026-02-06 01:31:24 INFO  com.abcbs.crrs.config.P09180Config - Creating job: P09180Job
+2026-02-06 01:31:25 INFO  com.abcbs.crrs.config.P09345Config - Creating step: p09345Step (tasklet)
+2026-02-06 01:31:25 INFO  com.abcbs.crrs.config.P09345Config - Creating job: p09345Job
+2026-02-06 01:31:27 INFO  com.abcbs.crrs.config.P09372Config - Creating ItemReader for P09CashReceipt using repository method: findOffCashReceipts
+2026-02-06 01:31:27 INFO  com.abcbs.crrs.config.P09372Config - Configuring Step: P09372Step with chunk size 2000
+2026-02-06 01:31:27 INFO  com.abcbs.crrs.config.P09372Config - Initializing Job: P09372Job
+2026-02-06 01:31:27 INFO  com.abcbs.crrs.config.P09175Config - Creating step: P09175Step (tasklet)
+2026-02-06 01:31:27 INFO  com.abcbs.crrs.config.P09175Config - Creating job: P09175Job
+2026-02-06 01:31:27 INFO  com.abcbs.crrs.lock.P09TableLocker - P09TableLocker initialized. Detected DB dialect=org.hibernate.dialect.sqlserverdialect
+2026-02-06 01:31:27 INFO  com.abcbs.crrs.config.RetryConfig - Entered into RetryTemplate
+2026-02-06 01:31:28 INFO  com.abcbs.crrs.CrrsBatchApplication - Started CrrsBatchApplication in 43.717 seconds (process running for 47.706)
+2026-02-06 01:31:28 INFO  com.abcbs.crrs.config.JobLauncherRunner - Entered into run
+2026-02-06 01:31:28 INFO  com.abcbs.crrs.config.JobLauncherRunner - Requested job: P09345
+2026-02-06 01:31:28 INFO  com.abcbs.crrs.config.JobLauncherRunner - Requested job: P09345, Corp_File=input/P09345_Report_File_input.txt, Refund_Type_Card=input/P09345_Refund_Type_Input.txt, controlFile=input/P09345_Checkpoint_input_file.txt
+2026-02-06 01:31:30 INFO  com.abcbs.crrs.config.P09345Config - Instantiating P09345FileWriter
+2026-02-06 01:31:30 INFO  com.abcbs.crrs.config.P09345Config - P09345 reading control file from: input/P09345_Checkpoint_input_file.txt
+2026-02-06 01:31:31 INFO  com.abcbs.crrs.config.JobLauncherRunner - Job P09345 finished with status FAILED
+2026-02-06 01:36:16 INFO  com.abcbs.crrs.CrrsBatchApplication - Starting CrrsBatchApplication using Java 21.0.6 with PID 14592 (Z:\Praveen\Workspace_crrs\Spring_Batch_Project\CRRSBatch\target\classes started by pkmisalolu in Z:\Praveen\Workspace_crrs\Spring_Batch_Project\CRRSBatch)
+2026-02-06 01:36:16 DEBUG com.abcbs.crrs.CrrsBatchApplication - Running with Spring Boot v3.5.5, Spring v6.2.10
+2026-02-06 01:36:16 INFO  com.abcbs.crrs.CrrsBatchApplication - No active profile set, falling back to 1 default profile: "default"
+2026-02-06 01:36:46 INFO  com.abcbs.crrs.config.P09186Config - Creating step: P09186Step
+2026-02-06 01:36:47 INFO  com.abcbs.crrs.config.P09186Config - Creating job: P09186Job
+2026-02-06 01:36:53 INFO  com.abcbs.crrs.config.P09373Config - Configuring Step: P09373Step with chunk size = 50
+2026-02-06 01:36:53 INFO  com.abcbs.crrs.config.P09373Config - Configuring Job: P09373Job
+2026-02-06 01:36:53 INFO  com.abcbs.crrs.config.P09375Config - Creating step: P09375Step (as tasklet)
+2026-02-06 01:36:53 INFO  com.abcbs.crrs.config.P09375Config - Creating job: P09375Job
+2026-02-06 01:36:53 INFO  com.abcbs.crrs.config.P09320Config - Configuring step: P09320Step
+2026-02-06 01:36:53 INFO  com.abcbs.crrs.config.P09320Config - Configuring job: P09320Job
+2026-02-06 01:36:54 INFO  com.abcbs.crrs.config.P09321Config - Configuring step: P09321Step
+2026-02-06 01:36:54 INFO  com.abcbs.crrs.config.P09321Config - Configuring job: P09321Job
+2026-02-06 01:36:54 INFO  com.abcbs.crrs.config.P09185Config - Building step: p09185Step
+2026-02-06 01:36:54 INFO  com.abcbs.crrs.config.P09185Config - Building job: p09185Job
+2026-02-06 01:36:54 INFO  com.abcbs.crrs.config.P09310Config - Entered into Step 1
+2026-02-06 01:36:54 INFO  com.abcbs.crrs.config.P09310Config - Entered into Step 2
+2026-02-06 01:36:54 INFO  com.abcbs.crrs.config.P09310Config - Entered into Job
+2026-02-06 01:36:55 INFO  com.abcbs.crrs.config.P09305Config - P09305 Chkp Step started
+2026-02-06 01:36:55 INFO  com.abcbs.crrs.config.P09305Config - P09305 Step job started 
+2026-02-06 01:36:55 INFO  com.abcbs.crrs.config.P09305Config - P09305 job started 
+2026-02-06 01:36:55 INFO  com.abcbs.crrs.config.P09325Config - Entered into P09325 Step
+2026-02-06 01:36:55 INFO  com.abcbs.crrs.config.P09325Config - Entered into P09325 Job
+2026-02-06 01:36:55 INFO  com.abcbs.crrs.config.P09376Config - Creating step: p09376Step (as tasklet)
+2026-02-06 01:36:55 INFO  com.abcbs.crrs.config.P09376Config - Creating job: p09376Job
+2026-02-06 01:36:55 INFO  com.abcbs.crrs.config.P09330Config - Creating step: p09330Step (tasklet)
+2026-02-06 01:36:55 INFO  com.abcbs.crrs.config.P09330Config - Creating job: p09330Job
+2026-02-06 01:36:55 INFO  com.abcbs.crrs.config.P09183Config - Building Step 'p09183Step' with chunk size 100
+2026-02-06 01:36:55 INFO  com.abcbs.crrs.config.P09183Config - Building Job 'p09183Job'
+2026-02-06 01:36:55 INFO  com.abcbs.crrs.config.P09180Config - Creating step: P09186Step
+2026-02-06 01:36:55 INFO  com.abcbs.crrs.config.P09180Config - Creating job: P09180Job
+2026-02-06 01:36:55 INFO  com.abcbs.crrs.config.P09345Config - Creating step: p09345Step (tasklet)
+2026-02-06 01:36:55 INFO  com.abcbs.crrs.config.P09345Config - Creating job: p09345Job
+2026-02-06 01:36:57 INFO  com.abcbs.crrs.config.P09372Config - Creating ItemReader for P09CashReceipt using repository method: findOffCashReceipts
+2026-02-06 01:36:57 INFO  com.abcbs.crrs.config.P09372Config - Configuring Step: P09372Step with chunk size 2000
+2026-02-06 01:36:57 INFO  com.abcbs.crrs.config.P09372Config - Initializing Job: P09372Job
+2026-02-06 01:36:57 INFO  com.abcbs.crrs.config.P09175Config - Creating step: P09175Step (tasklet)
+2026-02-06 01:36:57 INFO  com.abcbs.crrs.config.P09175Config - Creating job: P09175Job
+2026-02-06 01:36:57 INFO  com.abcbs.crrs.lock.P09TableLocker - P09TableLocker initialized. Detected DB dialect=org.hibernate.dialect.sqlserverdialect
+2026-02-06 01:36:57 INFO  com.abcbs.crrs.config.RetryConfig - Entered into RetryTemplate
+2026-02-06 01:36:58 INFO  com.abcbs.crrs.CrrsBatchApplication - Started CrrsBatchApplication in 45.861 seconds (process running for 50.995)
+2026-02-06 01:36:58 INFO  com.abcbs.crrs.config.JobLauncherRunner - Entered into run
+2026-02-06 01:36:58 INFO  com.abcbs.crrs.config.JobLauncherRunner - Requested job: P09345
+2026-02-06 01:36:58 INFO  com.abcbs.crrs.config.JobLauncherRunner - Requested job: P09345, Corp_File=input/P09345_Corp_File.txt, Refund_Type_Card=input/P09345_Refund_Type_Card.txt, controlFile=input/P09345_Checkpoint_Card.txt
+2026-02-06 01:37:00 INFO  com.abcbs.crrs.config.P09345Config - Instantiating P09345FileWriter
+2026-02-06 01:37:00 INFO  com.abcbs.crrs.config.P09345Config - P09345 reading control file from: input/P09345_Checkpoint_Card.txt
+2026-02-06 01:37:00 INFO  com.abcbs.crrs.jobs.P09345.P09345FileWriter - Checkpoint frequency=1
+2026-02-06 01:37:00 DEBUG com.abcbs.crrs.jobs.P09345.P09345FileWriter - Fetched 3 control rows for refundType=PER
+2026-02-06 01:37:02 INFO  com.abcbs.crrs.config.JobLauncherRunner - Job P09345 finished with status COMPLETED
+2026-02-06 01:39:02 INFO  com.abcbs.crrs.CrrsBatchApplication - Starting CrrsBatchApplication using Java 21.0.6 with PID 2388 (Z:\Praveen\Workspace_crrs\Spring_Batch_Project\CRRSBatch\target\classes started by pkmisalolu in Z:\Praveen\Workspace_crrs\Spring_Batch_Project\CRRSBatch)
+2026-02-06 01:39:02 DEBUG com.abcbs.crrs.CrrsBatchApplication - Running with Spring Boot v3.5.5, Spring v6.2.10
+2026-02-06 01:39:02 INFO  com.abcbs.crrs.CrrsBatchApplication - No active profile set, falling back to 1 default profile: "default"
+2026-02-06 01:39:34 INFO  com.abcbs.crrs.config.P09186Config - Creating step: P09186Step
+2026-02-06 01:39:35 INFO  com.abcbs.crrs.config.P09186Config - Creating job: P09186Job
+2026-02-06 01:39:40 INFO  com.abcbs.crrs.config.P09373Config - Configuring Step: P09373Step with chunk size = 50
+2026-02-06 01:39:40 INFO  com.abcbs.crrs.config.P09373Config - Configuring Job: P09373Job
+2026-02-06 01:39:40 INFO  com.abcbs.crrs.config.P09375Config - Creating step: P09375Step (as tasklet)
+2026-02-06 01:39:40 INFO  com.abcbs.crrs.config.P09375Config - Creating job: P09375Job
+2026-02-06 01:39:40 INFO  com.abcbs.crrs.config.P09320Config - Configuring step: P09320Step
+2026-02-06 01:39:40 INFO  com.abcbs.crrs.config.P09320Config - Configuring job: P09320Job
+2026-02-06 01:39:41 INFO  com.abcbs.crrs.config.P09321Config - Configuring step: P09321Step
+2026-02-06 01:39:41 INFO  com.abcbs.crrs.config.P09321Config - Configuring job: P09321Job
+2026-02-06 01:39:41 INFO  com.abcbs.crrs.config.P09185Config - Building step: p09185Step
+2026-02-06 01:39:41 INFO  com.abcbs.crrs.config.P09185Config - Building job: p09185Job
+2026-02-06 01:39:41 INFO  com.abcbs.crrs.config.P09310Config - Entered into Step 1
+2026-02-06 01:39:41 INFO  com.abcbs.crrs.config.P09310Config - Entered into Step 2
+2026-02-06 01:39:41 INFO  com.abcbs.crrs.config.P09310Config - Entered into Job
+2026-02-06 01:39:41 INFO  com.abcbs.crrs.config.P09305Config - P09305 Chkp Step started
+2026-02-06 01:39:41 INFO  com.abcbs.crrs.config.P09305Config - P09305 Step job started 
+2026-02-06 01:39:41 INFO  com.abcbs.crrs.config.P09305Config - P09305 job started 
+2026-02-06 01:39:41 INFO  com.abcbs.crrs.config.P09325Config - Entered into P09325 Step
+2026-02-06 01:39:41 INFO  com.abcbs.crrs.config.P09325Config - Entered into P09325 Job
+2026-02-06 01:39:41 INFO  com.abcbs.crrs.config.P09376Config - Creating step: p09376Step (as tasklet)
+2026-02-06 01:39:41 INFO  com.abcbs.crrs.config.P09376Config - Creating job: p09376Job
+2026-02-06 01:39:42 INFO  com.abcbs.crrs.config.P09330Config - Creating step: p09330Step (tasklet)
+2026-02-06 01:39:42 INFO  com.abcbs.crrs.config.P09330Config - Creating job: p09330Job
+2026-02-06 01:39:42 INFO  com.abcbs.crrs.config.P09183Config - Building Step 'p09183Step' with chunk size 100
+2026-02-06 01:39:42 INFO  com.abcbs.crrs.config.P09183Config - Building Job 'p09183Job'
+2026-02-06 01:39:42 INFO  com.abcbs.crrs.config.P09180Config - Creating step: P09186Step
+2026-02-06 01:39:42 INFO  com.abcbs.crrs.config.P09180Config - Creating job: P09180Job
+2026-02-06 01:39:42 INFO  com.abcbs.crrs.config.P09345Config - Creating step: p09345Step (tasklet)
+2026-02-06 01:39:42 INFO  com.abcbs.crrs.config.P09345Config - Creating job: p09345Job
+2026-02-06 01:39:44 INFO  com.abcbs.crrs.config.P09372Config - Creating ItemReader for P09CashReceipt using repository method: findOffCashReceipts
+2026-02-06 01:39:44 INFO  com.abcbs.crrs.config.P09372Config - Configuring Step: P09372Step with chunk size 2000
+2026-02-06 01:39:44 INFO  com.abcbs.crrs.config.P09372Config - Initializing Job: P09372Job
+2026-02-06 01:39:44 INFO  com.abcbs.crrs.config.P09175Config - Creating step: P09175Step (tasklet)
+2026-02-06 01:39:44 INFO  com.abcbs.crrs.config.P09175Config - Creating job: P09175Job
+2026-02-06 01:39:44 INFO  com.abcbs.crrs.lock.P09TableLocker - P09TableLocker initialized. Detected DB dialect=org.hibernate.dialect.sqlserverdialect
+2026-02-06 01:39:44 INFO  com.abcbs.crrs.config.RetryConfig - Entered into RetryTemplate
+2026-02-06 01:39:45 INFO  com.abcbs.crrs.CrrsBatchApplication - Started CrrsBatchApplication in 46.848 seconds (process running for 51.316)
+2026-02-06 01:39:45 INFO  com.abcbs.crrs.config.JobLauncherRunner - Entered into run
+2026-02-06 01:39:45 INFO  com.abcbs.crrs.config.JobLauncherRunner - Requested for P09175
+2026-02-06 01:39:47 INFO  com.abcbs.crrs.config.P09175Config - Instantiating P09175FileWriter
+2026-02-06 01:39:47 INFO  com.abcbs.crrs.jobs.P09175.P09175FileWriter - P09175 started (PX01 → PX02 driven)
+2026-02-06 01:39:47 INFO  com.abcbs.crrs.jobs.P09175.P09175FileWriter - P09175 completed. Forms=0, Total=0.00

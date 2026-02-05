@@ -1,0 +1,30 @@
+1                               CHECK CONTROL MEMO
+                                    TOTALS PAGE
+0
+ TOTAL NUMBER OF FORMS ==========>      0
+0
+ TOTAL CONTROLLED AMOUNT ========>          $         0.00
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0          **************************   END OF REPORT # P09175  ****************
+0
