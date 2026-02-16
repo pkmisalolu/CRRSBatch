@@ -83,7 +83,7 @@ public class P09352Config {
     @Bean(name = "p09352ProcessStep")
     public Step p09352ProcessStep(JobRepository repo,
                                   PlatformTransactionManager transactionManager,
-                                  @Qualifier("controlCardReader") FlatFileItemReader<P09352ControlCardInput> controlReader,
+                                  @Qualifier("controlCardReader") org.springframework.batch.item.ItemReader<P09352ControlCardInput> controlReader,
                                   @Qualifier("corpCardReader") FlatFileItemReader<P09352CorpCardInput> corpReader,
                                   @Qualifier("checkpointReader") FlatFileItemReader<P09352CheckpointCardInput> checkpointReader,
                                   @Qualifier("inputVoucherReader") FlatFileItemReader<P09352InputVoucher> inputVoucherReader,
@@ -105,8 +105,6 @@ public class P09352Config {
 
     		        // ✅ ensure report writer is opened with step EC
     		        reportWriter.openIfNeeded(stepExecution);
-
-    		        controlReader.open(stepEc);
     		        corpReader.open(stepEc);
     		        checkpointReader.open(stepEc);
     		        inputVoucherReader.open(stepEc);
@@ -117,15 +115,12 @@ public class P09352Config {
 
     		        try {
     		            P09352ControlCardInput ctrl = controlReader.read();
-    		            if (ctrl == null) throw new IllegalStateException("CONTROL CARD file is empty");
 
     		            P09352OutputWrapper out = processor.process(ctrl);
 
     		            int apCnt = (out == null || out.getApRecords() == null) ? 0 : out.getApRecords().size();
     		            int glCnt = (out == null || out.getGlRecords() == null) ? 0 : out.getGlRecords().size();
     		            int ocCnt = (out == null || out.getOccsRecords() == null) ? 0 : out.getOccsRecords().size();
-
-    		            //System.out.println("P09352 OUT COUNTS: AP=" + apCnt + " GL=" + glCnt + " OCCS=" + ocCnt);
 
     		            if (apCnt > 0) apWriter.write(new Chunk<>(out.getApRecords()));
     		            if (glCnt > 0) glWriter.write(new Chunk<>(out.getGlRecords()));
@@ -139,8 +134,7 @@ public class P09352Config {
 
     		            try { inputVoucherReader.close(); } catch (Exception ignore) {}
     		            try { checkpointReader.close(); } catch (Exception ignore) {}
-    		            try { corpReader.close(); } catch (Exception ignore) {}
-    		            try { controlReader.close(); } catch (Exception ignore) {}
+    		            try { corpReader.close(); } catch (Exception ignore) {}    		           
     		        }
     		    }, transactionManager)
     		    .build();
@@ -174,9 +168,7 @@ public class P09352Config {
     		            voucherWriter.write(new Chunk<>(List.of(out)));
     		        } finally {
     		            voucherWriter.close();
-    		        }
-
-    		       //System.out.println("VOUCHER WRITTEN: " + prefix + String.format("%05d", suffixOut));
+    		        }  
 
     		        return org.springframework.batch.repeat.RepeatStatus.FINISHED;
     		    }, transactionManager)
@@ -189,14 +181,12 @@ public class P09352Config {
 
     @Bean(name = "controlCardReader")
     @org.springframework.batch.core.configuration.annotation.StepScope
-    public FlatFileItemReader<P09352ControlCardInput> controlCardReader(
-            @Value("#{jobParameters['controlCardFile']}") String controlCardFile) {
+    public org.springframework.batch.item.ItemReader<P09352ControlCardInput> controlCardReader() {
 
-        return new FlatFileItemReaderBuilder<P09352ControlCardInput>()
-                .name("controlCardReader")
-                .resource(new FileSystemResource(controlCardFile))
-                .lineMapper(P09352LineMappers.controlCardLineMapper())
-                .build();
+        // One dummy record so step runs once; processor will split datePicker itself
+        return new org.springframework.batch.item.support.ListItemReader<>(
+                java.util.Collections.singletonList(new P09352ControlCardInput())
+        );
     }
 
     @Bean(name = "corpCardReader")

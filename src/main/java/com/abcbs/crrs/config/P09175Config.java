@@ -59,7 +59,7 @@ public class P09175Config {
             @Value("#{jobParameters['P09175_ControlTotal']}")  String totalPath,
             IP09BatchRepository batchRepository,
             IP09SuspenseRepository suspenseRepository,
-            IOptionRepository optionRepository) {              // ✅ ADD
+            IOptionRepository optionRepository) {              
 
         log.info("Instantiating P09175FileWriter");
 
@@ -69,7 +69,7 @@ public class P09175Config {
                 totalPath,
                 batchRepository,
                 suspenseRepository,
-                optionRepository                                   // ✅ ADD
+                optionRepository                                   
         );
     }
 }

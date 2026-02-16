@@ -87,12 +87,6 @@ public class JobLauncherRunner implements CommandLineRunner {
 	@Qualifier("p09330Job")
 	private Job p09330Job;
 
-	/*
-	 * @Autowired
-	 * 
-	 * @Qualifier("p09345Job") private Job p09345Job;
-	 */
-
 	@Autowired
 	@Qualifier("p09370Job")
 	private Job p09370Job;
@@ -108,7 +102,7 @@ public class JobLauncherRunner implements CommandLineRunner {
 	private Job p09181Job;
 
 	@Autowired
-	@Qualifier("p09365Job") // must match @Bean name in P09352Config
+	@Qualifier("p09365Job")
 	private Job p09365Job;
 
 	@Autowired
@@ -341,36 +335,42 @@ public class JobLauncherRunner implements CommandLineRunner {
 					throw new IllegalArgumentException("INSUFFICIENT NO. OF PARAMS FOR P09390");
 				}
 			} else if ("P09352".equals(jobName)) {
-				logger.info("Requested for P09352");
-				if (args.length >= 10) {
+			    logger.info("Requested for P09352");
+			    if (args.length >= 11) {
 
-					String controlCardFile = args[1];
-					String corpCardFile = args[2];
-					String checkpointFile = args[3];
-					String ivoucherFile = args[4];
+			        String jobType = args[1];
+			        String datePicker = args[2];
+			        String corpCardFile    = args[3];
+			        String checkpointFile  = args[4];
+			        String ivoucherFile    = args[5];
 
-					String xapntrfcPath = args[5];
-					String xp09Path = args[6];
-					String xp07Path = args[7];
-					String xvoucherPath = args[8];
-					String reportPath = args[9];
+			        String xapntrfcPath    = args[6];
+			        String xp09Path        = args[7];
+			        String xp07Path        = args[8];
+			        String xvoucherPath    = args[9];
+			        String reportPath      = args[10];
+			        JobParameters jobParameters = new JobParametersBuilder()
+			                .addString("jobType", jobType)
+			                .addString("datePicker", datePicker)
+			                .addString("corpCardFile", corpCardFile)
+			                .addString("checkpointFile", checkpointFile)
+			                .addString("ivoucherFile", ivoucherFile)
+			                .addString("xapntrfcPath", xapntrfcPath)
+			                .addString("xp09Path", xp09Path)
+			                .addString("xp07Path", xp07Path)
+			                .addString("xvoucherPath", xvoucherPath)
+			                .addString("reportPath", reportPath)
+			                .addLong("run.id", System.currentTimeMillis())
+			                .toJobParameters();
 
-					JobParameters jobParameters = new JobParametersBuilder()
-							.addString("controlCardFile", controlCardFile).addString("corpCardFile", corpCardFile)
-							.addString("checkpointFile", checkpointFile).addString("ivoucherFile", ivoucherFile)
-							.addString("xapntrfcPath", xapntrfcPath).addString("xp09Path", xp09Path)
-							.addString("xp07Path", xp07Path).addString("xvoucherPath", xvoucherPath)
-							.addString("reportPath", reportPath).addLong("run.id", System.currentTimeMillis())
-							.toJobParameters();
+			        jobExecution = jobLauncher.run(p09352Job, jobParameters);
+			        logger.info("Job {} finished with status: {}", jobName, jobExecution.getStatus());
 
-					jobExecution = jobLauncher.run(p09352Job, jobParameters);
-					logger.info("Job {} finished with status: {}", jobName, jobExecution.getStatus());
-
-				} else {
-					logger.error("Insufficient number of parameters for P09352");
-					throw new IllegalArgumentException(
-							"P09352 requires parameters: controlCardFile corpCardFile checkpointFile ivoucherFile xapntrfcPath xp09Path xp07Path xvoucherPath reportPath");
-				}
+			    } else {
+			        logger.error("Insufficient number of parameters for P09352");
+			        throw new IllegalArgumentException(
+			                "P09352 requires parameters: controlCardFile corpCardFile checkpointFile ivoucherFile xapntrfcPath xp09Path xp07Path xvoucherPath reportPath");
+			    }
 			} else if ("P09325".equals(jobName)) {
 				if (args.length < 3) {
 					logger.error(

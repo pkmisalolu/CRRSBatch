@@ -84,7 +84,10 @@ public class P09352ReportWriter implements StepExecutionListener {
     private final Map<RefundCategory, Totals> requestedByCat = new EnumMap<>(RefundCategory.class);
     private final Map<RefundCategory, Totals> errorByCat     = new EnumMap<>(RefundCategory.class);
     private final Map<RefundCategory, Totals> issuedByCat    = new EnumMap<>(RefundCategory.class);
-
+    
+    private static final String WS_PROJECTION_RPT = "P R O J E C T I O N    REPORT";
+    private static final String WS_FINAL_RPT      = "F I N A L    REPORT";
+    
     @Override
     public void beforeStep(StepExecution stepExecution) {
         openIfNeeded(stepExecution);
@@ -345,12 +348,17 @@ public class P09352ReportWriter implements StepExecutionListener {
 
         writeln(line132(lpad("AP BATCH " + apBatch, 71)));
         
-        String fr = "F I N A L    REPORT";
+        String rptLiteral = typeOfReportLiteral();
         writeln(line132(
-                rpad("", 20) + rpad(fr, 30) +
-                rpad("", 15) + rpad(fr, 30) +
-                rpad("", 15) + rpad(fr, 30)
+            rpad("", 13) + rpad(rptLiteral, 30) +
+            rpad("", 15) + rpad(rptLiteral, 30) +
+            rpad("", 15) + rpad(rptLiteral, 30)
         ));
+    }
+    
+    private String typeOfReportLiteral() {
+        String ind = safe(getEcString("WS_CONTROL_CARD_RUN_TYPE_IND"));
+        return "P".equalsIgnoreCase(ind) ? WS_PROJECTION_RPT : WS_FINAL_RPT;
     }
 
     private String normalizeCorpName(String corpCode, String corpName) {

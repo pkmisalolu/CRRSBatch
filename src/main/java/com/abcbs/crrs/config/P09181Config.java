@@ -41,14 +41,10 @@ public class P09181Config {
         @Value("#{jobParameters['inputFile']}") String inputFile) {
 
         FlatFileItemReader<String> reader = new FlatFileItemReader<>();
-        reader.setResource(new ClassPathResource(inputFile)); // look inside resources
+        reader.setResource(new FileSystemResource(inputFile)); // look inside resources
         reader.setLineMapper((line, lineNumber) -> line);
         return reader;
     }
-
-
-
-
 	
 	// 2. Processor: replicates 200000-PROCESS-RECORDS + 300000-ADD-SEMI
     @Bean(name = "p09181Processor")

@@ -22,6 +22,7 @@ import org.springframework.batch.item.ItemProcessor;
 import org.springframework.batch.item.file.FlatFileItemReader;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -121,6 +122,12 @@ public class P09352Processor implements ItemProcessor<P09352ControlCardInput, P0
 
     private StepExecution stepExecution;
 
+    @Value("#{jobParameters['jobType']}")
+    private String jobType;
+
+    @Value("#{jobParameters['datePicker']}")
+    private String datePicker;
+    
     // ACCEPT WS-C2-TIME-OF-DAY FROM TIME
     private String wsFormattedHH;
     private String wsFormattedMM;
@@ -446,8 +453,10 @@ public class P09352Processor implements ItemProcessor<P09352ControlCardInput, P0
     // ============================================================
     @Override
     public P09352OutputWrapper process(P09352ControlCardInput cc) {
-
-        if (cc == null) return null;
+    	String[] mdy = splitToMMDDYY(datePicker);  // [MM, DD, YY]
+    	String compareMm = mdy[0];
+    	String compareDd = mdy[1];
+    	String compareYy = mdy[2];
 
         final ExecutionContext ec = stepExecution.getExecutionContext();
 
@@ -468,9 +477,9 @@ public class P09352Processor implements ItemProcessor<P09352ControlCardInput, P0
         ec.put("P09352_ALREADY_RAN", Boolean.TRUE);
 
         // CONTROL CARD DATE LOGIC (your 210000 compare date pieces)
-        wsDb2Month = nvl(cc.getCompareMm()).trim();
-        wsDb2Day   = nvl(cc.getCompareDd()).trim();
-        wsDb2Year  = nvl(cc.getCompareYy()).trim();
+        wsDb2Month = nvl(compareMm).trim();
+        wsDb2Day   = nvl(compareDd).trim();
+        wsDb2Year  = nvl(compareYy).trim();
         wsDb2Century = (wsDb2Year.compareTo("80") > 0) ? "19" : "20";
 
         wsDb2ControlCardDate =
@@ -484,12 +493,12 @@ public class P09352Processor implements ItemProcessor<P09352ControlCardInput, P0
         wsCurrentYY = wsDb2Year;
         ec.putString("WS_RUN_DATE_MMDDYY", wsCurrentMM + "/" + wsCurrentDD + "/" + wsCurrentYY);
         ec.putString("WS_AP_BATCH_ID", wsCurrentMM + wsCurrentDD + "Z");
-ec.putString("WS_DB2_CONTROL_CARD_DATE", wsDb2ControlCardDate);
+        ec.putString("WS_DB2_CONTROL_CARD_DATE", wsDb2ControlCardDate);
         ec.putString("WS_DB2_COMPARE_MM", wsDb2Month);
         ec.putString("WS_DB2_COMPARE_DD", wsDb2Day);
         ec.putString("WS_DB2_COMPARE_YY", wsDb2Year);
         ec.putString("WS_DB2_COMPARE_CENTURY", wsDb2Century);
-
+        ec.putString("WS_CONTROL_CARD_RUN_TYPE_IND", nvl(jobType));
         // Run COBOL logic (all refund types)
         perform200000ProcessRefundType(ec);
 
@@ -2514,6 +2523,38 @@ private LocalDate resolveControlCardOrToday(ExecutionContext ec) {
         return (s == null) ? "" : s;
     }
 
+    private static String[] splitToMMDDYY(String datePicker) {
+        if (datePicker == null) {
+            throw new IllegalArgumentException("datePicker jobParameter is missing");
+        }
+
+        String v = datePicker.trim();
+        String digits = v.replaceAll("[^0-9]", "");
+
+        if (digits.length() == 6) {
+            // MMDDYY
+            return new String[] { digits.substring(0,2), digits.substring(2,4), digits.substring(4,6) };
+        }
+
+        if (digits.length() == 8) {
+            // MMDDYYYY or YYYYMMDD
+            int first4 = Integer.parseInt(digits.substring(0,4));
+            if (first4 >= 1900) {
+                // YYYYMMDD
+                String yyyy = digits.substring(0,4);
+                return new String[] { digits.substring(4,6), digits.substring(6,8), yyyy.substring(2,4) };
+            } else {
+                // MMDDYYYY
+                String yyyy = digits.substring(4,8);
+                return new String[] { digits.substring(0,2), digits.substring(2,4), yyyy.substring(2,4) };
+            }
+        }
+
+        throw new IllegalArgumentException(
+            "Unsupported datePicker format: '" + datePicker + "'. Expected MMDDYY, MM/DD/YY, MMDDYYYY, YYYYMMDD, or YYYY-MM-DD."
+        );
+    }
+    
     private String pad2(String s) {
         String t = nvl(s).trim();
         if (t.length() == 1) return "0" + t;

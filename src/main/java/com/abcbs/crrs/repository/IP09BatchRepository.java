@@ -18,25 +18,25 @@ public interface IP09BatchRepository extends JpaRepository<P09Batch, BatchPK> {
 
 	@Query(value = """
 			SELECT
-			    CR_REFUND_TYPE,
-			    BT_BATCH_PREFIX,
-			    BT_BATCH_DATE,
-			    BT_BATCH_SUFFIX,
-			    BT_BATCH_CNT,
-			    BT_BATCH_AMT,
-			    BT_CONTROL_DATE,
-			    BT_RECEIVED_DATE,
-			    BT_DEPOSIT_DATE,
-			    BT_ENTRY_DATE,
-			    BT_STATUS_DATE,
-			    BT_STATUS,
-			    BT_POSTED_IND
-			  FROM P09_BATCH
-			 WHERE (BT_BATCH_PREFIX + BT_BATCH_DATE + BT_BATCH_SUFFIX + CR_REFUND_TYPE) > :ck
-         AND BT_POSTED_IND = ' '
-			 ORDER BY BT_BATCH_PREFIX, BT_BATCH_DATE, BT_BATCH_SUFFIX, CR_REFUND_TYPE
+			  CR_REFUND_TYPE,
+			  BT_BATCH_PREFIX,
+			  BT_BATCH_DATE,
+			  BT_BATCH_SUFFIX,
+			  BT_BATCH_CNT,
+			  BT_BATCH_AMT,
+			  BT_CONTROL_DATE,
+			  BT_RECEIVED_DATE,
+			  BT_DEPOSIT_DATE,
+			  BT_ENTRY_DATE,
+			  BT_STATUS_DATE,
+			  BT_STATUS,
+			  BT_POSTED_IND
+			FROM P09_BATCH
+			WHERE CONCAT(CONCAT(CONCAT(BT_BATCH_PREFIX, BT_BATCH_DATE), BT_BATCH_SUFFIX), CR_REFUND_TYPE) > :ck
+			  AND BT_POSTED_IND = ' '
+			ORDER BY BT_BATCH_PREFIX, BT_BATCH_DATE, BT_BATCH_SUFFIX, CR_REFUND_TYPE
 			""", nativeQuery = true)
-	List<P09Batch> fetchAfterKeyUnposted(@Param("ck") String concatenatedKey, Pageable page);
+			List<P09Batch> fetchAfterKeyUnposted(@Param("ck") String ck, Pageable page);
 
 	// ************************P09310**************************************************************
 
