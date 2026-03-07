@@ -521,27 +521,22 @@ public class P09352Processor implements ItemProcessor<P09352ControlCardInput, P0
         return out;
     }
 
- private void perform200000ProcessRefundType(ExecutionContext ec) {
-
-	    ec.putInt("T_TBL_PNTR", 1);
-	    ec.putString("WS_REFUND_TYPE", "SPO");
-
-	    boolean finalRpt = perform210000GetCntrlRcd(ec);
-	    if (!finalRpt) return;
-
-	    // After 210000/220000/410000/480000 ran, MAX must be set
-	    int max = ec.containsKey("T_TBL_PNTR_MAX") ? ec.getInt("T_TBL_PNTR_MAX") : 0;
-
-	    ec.putInt("T_TBL_PNTR", 1);
-
-	    while (true) {
-	        int ptr = ec.getInt("T_TBL_PNTR");
-	        if (ptr > max) break;
-
-	        perform500000UpdtCashRecActOccs(ec);
-	        ec.putInt("T_TBL_PNTR", ptr + 1);
-	    }
-	}
+    private void perform200000ProcessRefundType(ExecutionContext ec) {
+        ec.putInt("T_TBL_PNTR", 1);
+        ec.putString("WS_REFUND_TYPE", "SPO");
+        perform210000GetCntrlRcd(ec);
+        if (jobType != null && jobType.trim().equalsIgnoreCase("F")) {
+            ec.putInt("T_TBL_PNTR", 1);
+            while (true) {
+                perform500000UpdtCashRecActOccs(ec);
+                int ptr = ec.getInt("T_TBL_PNTR");
+                if (ptr > 700) {
+                    break;
+                }
+                ec.putInt("T_TBL_PNTR", ptr + 1);
+            }
+        }
+    }
 
     // ================================================================
     // 210000-GET-CNTRL-RCD (control cursor, drives cash receipt loop)
@@ -1062,7 +1057,6 @@ public class P09352Processor implements ItemProcessor<P09352ControlCardInput, P0
         } else {
             while (issuedChkRows.size() < 700) issuedChkRows.add(null);
         }
-
         IssuedChkRow row = new IssuedChkRow();
 
         row.setSourceActivityId(act == null ? null : act.getAId());
@@ -1269,7 +1263,6 @@ public class P09352Processor implements ItemProcessor<P09352ControlCardInput, P0
  // 500000-UPDT-CASH-REC-ACT-OCCS (COBOL: process TABLE(T-TBL-PNTR))
  // ================================================================
     private void perform500000UpdtCashRecActOccs(ExecutionContext ec) {
-
         int ptr = ec.getInt("T_TBL_PNTR");
         if (ptr < 1 || ptr > 700) return;
 
@@ -1278,10 +1271,9 @@ public class P09352Processor implements ItemProcessor<P09352ControlCardInput, P0
         if (issuedChkRows == null || ptr > issuedChkRows.size()) return;
 
         IssuedChkRow r = issuedChkRows.get(ptr - 1);
-
         // ✅ COBOL: blank table entry -> NEXT SENTENCE (do nothing)
         if (r == null || isBlank(r.crRefundType)) {
-            log.debug("[500000] Blank issued row at ptr={}, skipping", ptr);
+            ec.putInt("T_TBL_PNTR", 999);
             return;
         }
 
@@ -1352,7 +1344,6 @@ public class P09352Processor implements ItemProcessor<P09352ControlCardInput, P0
          }
 
          ActivityPK id = act.getAId();
-
          int updated = activityRepository.updateProcessedInd(
         	        "P",                               // COBOL sets processed flag
                  id.getCrRefundType(),
@@ -1419,7 +1410,6 @@ public class P09352Processor implements ItemProcessor<P09352ControlCardInput, P0
 
             // PERFORM 522500-MOVE-REM-INFO
             perform522500MoveRemInfo(r, cr);
-
             // COBOL: EXEC SQL UPDATE V_P09_CASH_RECEIPT ...
             int rows = cashReceiptRepository.updateCashReceiptRecord(
             	    cr.getCrReceiptBal(),

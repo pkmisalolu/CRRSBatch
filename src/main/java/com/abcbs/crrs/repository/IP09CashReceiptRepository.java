@@ -73,6 +73,19 @@ public interface IP09CashReceiptRepository extends JpaRepository<P09CashReceipt,
 			""")
 	List<P09CashReceipt> findPendingCashReceipts(String refundType, LocalDate statusDate, String corp);
 
+	// PX02 - fetch pending cash receipts (COBOL WHERE conditions)
+	@Query("""
+			    SELECT c
+			    FROM P09CashReceipt c
+			    WHERE c.crId.crRefundType = :refundType
+			      AND c.crStatusDate <= :statusDate
+			      AND c.crStatusText = 'PENDED'
+			      AND (c.crPendFinAct = 'PRR' OR c.crPendFinAct = 'FRR')
+			      AND c.crCorp = :corp
+			    ORDER BY c.crId.crRefundType, c.crId.crCntrlDate, c.crId.crCntrlNbr
+			""")
+	List<P09CashReceipt> findPendingCashReceipts350(String refundType, LocalDate statusDate, String corp);
+
 	// DB-MODIFY V_P09_CASH_RECEIPT (COBOL UPDATE block)
 	@Modifying
 	@Query("""

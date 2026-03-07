@@ -1,0 +1,173 @@
+ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX      XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX      XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX      
+ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX      XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX      XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX      
+ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX      XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX      XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX      
+ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX      XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX      XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX      
+ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX      XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX      XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX      
+                                                                                                             
+ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX      XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX      XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX      
+ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX      XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX      XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX      
+ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX      XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX      XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX      
+ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX      XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX      XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX      
+ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX      XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX      XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX      
+                                                                                                             
+ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX      XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX      XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX      
+ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX      XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX      XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX      
+ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX      XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX      XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX      
+ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX      XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX      XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX      
+ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX      XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX      XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX      
+                                                                                                             
+                                                                                                             
+ RET                                 RET                                 RET                                 
+ 11/02/07          700               11/02/07       701                  11/06/07       700                  
+ DOCTORS HOSPITAL AT RE              DOCTORS HOSPITAL AT RE              COLLIN COUNTY DIALYSIS              
+                                                                                                             
+                                                                                                             
+                                                                                                             
+ DOCTORS HOSPITAL AT RE              DOCTORS HOSPITAL AT RE              COLLIN COUNTY DIALYSIS              
+ 5501 S MCCOLL RD                    5501 S MCCOLL RD                    3420 AVENUE K #150                  
+ EDINBURG         TX  78539-         EDINBURG         TX  78539-         PLANO            TX  75074-         
+                                                                                                             
+                                                                                                             
+                                                                                                             
+                                                                                                             
+ RET                                 RET                                 RET                                 
+ 11/07/07          700               11/13/07       700                  12/28/07       700                  
+ DOCTORS HOSPITAL AT RE              DOCTORS HOSPITAL AT RE              DOCTORS HOSPITAL AT RE              
+                                                                                                             
+                                                                                                             
+                                                                                                             
+ DOCTORS HOSPITAL AT RE              DOCTORS HOSPITAL AT RE              DOCTORS HOSPITAL AT RE              
+ 5501 S MCCOLL RD                    5501 S MCCOLL RD                    5501 S MCCOLL RD                    
+ EDINBURG         TX  78539-         EDINBURG         TX  78539-         EDINBURG         TX  78539-         
+                                                                                                             
+                                                                                                             
+                                                                                                             
+                                                                                                             
+ RET                                 RET                                 RET                                 
+ 12/28/07          701               01/17/08       700                  01/17/08       701                  
+ DOCTORS HOSPITAL AT RE              DOCTORS HOSPITAL AT RE              DOCTORS HOSPITAL AT RE              
+                                                                                                             
+                                                                                                             
+                                                                                                             
+ DOCTORS HOSPITAL AT RE              DOCTORS HOSPITAL AT RE              DOCTORS HOSPITAL AT RE              
+ 5501 S MCCOLL RD                    5501 S MCCOLL RD                    5501 S MCCOLL RD                    
+ EDINBURG         TX  78539-         EDINBURG         TX  78539-         EDINBURG         TX  78539-         
+                                                                                                             
+                                                                                                             
+                                                                                                             
+                                                                                                             
+ RET                                 RET                                 RET                                 
+ 01/17/08          702               01/17/08       703                  01/17/08       704                  
+ DOCTORS HOSPITAL AT RE              DOCTORS HOSPITAL AT RE              COLLIN COUNTY DIALYSIS              
+                                                                                                             
+                                                                                                             
+                                                                                                             
+ DOCTORS HOSPITAL AT RE              DOCTORS HOSPITAL AT RE              COLLIN COUNTY DIALYSIS              
+ 5501 S MCCOLL RD                    5501 S MCCOLL RD                    3420 AVENUE K #150                  
+ EDINBURG         TX  78539-         EDINBURG         TX  78539-         PLANO            TX  75074-         
+                                                                                                             
+                                                                                                             
+                                                                                                             
+                                                                                                             
+ RET                                 RET                                 RET                                 
+ 01/17/08          705               01/17/08       706                  01/17/08       707                  
+ DOCTORS HOSPITAL AT RE              DOCTORS HOSPITAL AT RE              DOCTORS HOSPITAL AT RE              
+                                                                                                             
+                                                                                                             
+                                                                                                             
+ DOCTORS HOSPITAL AT RE              DOCTORS HOSPITAL AT RE              DOCTORS HOSPITAL AT RE              
+ 5501 S MCCOLL RD                    5501 S MCCOLL RD                    5501 S MCCOLL RD                    
+ EDINBURG         TX  78539-         EDINBURG         TX  78539-         EDINBURG         TX  78539-         
+                                                                                                             
+                                                                                                             
+                                                                                                             
+                                                                                                             
+ RET                                 RET                                 RET                                 
+ 01/17/08          708               01/17/08       709                  01/17/08       710                  
+ DOCTORS HOSPITAL AT RE              DOCTORS HOSPITAL AT RE              DOCTORS HOSPITAL AT RE              
+                                                                                                             
+                                                                                                             
+                                                                                                             
+ DOCTORS HOSPITAL AT RE              DOCTORS HOSPITAL AT RE              DOCTORS HOSPITAL AT RE              
+ 5501 S MCCOLL RD                    5501 S MCCOLL RD                    5501 S MCCOLL RD                    
+ EDINBURG         TX  78539-         EDINBURG         TX  78539-         EDINBURG         TX  78539-         
+                                                                                                             
+                                                                                                             
+                                                                                                             
+                                                                                                             
+ RET                                 RET                                 RET                                 
+ 01/22/08          800               01/22/08       801                  01/22/08       802                  
+ DOCTORS HOSPITAL AT RE              DOCTORS HOSPITAL AT RE              DOCTORS HOSPITAL AT RE              
+                                                                                                             
+                                                                                                             
+                                                                                                             
+ DOCTORS HOSPITAL AT RE              DOCTORS HOSPITAL AT RE              DOCTORS HOSPITAL AT RE              
+ 5501 S MCCOLL RD                    5501 S MCCOLL RD                    5501 S MCCOLL RD                    
+ EDINBURG         TX  78539-         EDINBURG         TX  78539-         EDINBURG         TX  78539-         
+                                                                                                             
+                                                                                                             
+                                                                                                             
+                                                                                                             
+ RET                                 RET                                 RET                                 
+ 02/06/08          700               02/06/08       701                  07/17/08       700                  
+ COLLIN COUNTY DIALYSIS              DOCTORS HOSPITAL AT RE              NC DHHS                             
+                                                                                                             
+                                                                                                             
+                                                                                                             
+ COLLIN COUNTY DIALYSIS              DOCTORS HOSPITAL AT RE              NC DHHS                             
+ 3420 AVENUE K #150                  5501 S MCCOLL RD                    P.O. BOX 65102                      
+ PLANO            TX  75074-         EDINBURG         TX  78539-         CHARLOTTE        NC  28265-         
+                                                                                                             
+                                                                                                             
+                                                                                                             
+                                                                                                             
+ RET                                 RET                                 RET                                 
+ 09/12/08          700               09/29/08       700                  10/09/08       700                  
+ HOSPITAL FOR SPECIAL SU             HOSP FOR SPECIAL SURGERY            HOSP FOR SPECIAL SURGE              
+                                                                                                             
+                                                                                                             
+                                                                                                             
+ HOSPITAL FOR SPECIAL SU             HOSP FOR SPECIAL SURGERY            HOSP FOR SPECIAL SURGE              
+ P O BOX 5058                        535 EAST 70TH STREET                535 EAST 70TH STREET                
+ NEW YORK         NY  10087-         NEW YORK         NY  10021-         NEW YORK         NY  10021-         
+                                                                                                             
+                                                                                                             
+                                                                                                             
+                                                                                                             
+ RET                                 RET                                 RET                                 
+ 11/04/08          700               03/12/09       700                  05/05/09       700                  
+ HOSP FOR SPECIAL SURGE              HOSPITAL FOR SPECIAL SURGERY        UNIVERSITY OF VA HOSPITAL           
+                                                                                                             
+                                                                                                             
+                                                                                                             
+ HOSP FOR SPECIAL SURGE              HOSPITAL FOR SPECIAL SURGERY        UNIVERSITY OF VA HOSPITAL           
+ 535 EAST 70TH STREET                P O BOX 5058                        ATTN CASHIERING MANAGER             
+ NEW YORK         NY  10021-         NEW YORK         NY  10087-5058     P O BOX 85031                       
+                                                                         RICHMOND         VA  23261-5031     
+                                                                                                             
+                                                                                                             
+                                                                                                             
+ RET                                 RET                                 RET                                 
+ 05/13/09          700               05/13/09       701                  06/01/09       700                  
+ UNIVERSITY OF VA HOSPITAL           UNIVERSITY OF VA HOSPITAL           HOSP FOR SPECIAL SURGERY            
+                                                                                                             
+                                                                                                             
+                                                                                                             
+ UNIVERSITY OF VA HOSPITAL           UNIVERSITY OF VA HOSPITAL           HOSP FOR SPECIAL SURGERY            
+ ATTN CASHIERING MANAGER             PO BOX 85031                        535 EAST 70TH STREET                
+ P O BOX 85031                       RICHMOND         VA  23261-5031     NEW YORK         NY  10021-         
+ RICHMOND         VA  23261-5031                                                                             
+                                                                                                             
+                                                                                                             
+                                                                                                             
+ RET                                 RET                                 RET                                 
+ 06/01/09          701               10/14/09       700                  10/28/09       700                  
+ HOSP FOR SPECIAL SURGERY            RGNL HLTH SRV LLC                   UNIVERSITY OF VA HOSPITAL           
+                                                                                                             
+                                                                                                             
+                                                                                                             
+ HOSP FOR SPECIAL SURGERY            RGNL HLTH SRV LLC                   UNIVERSITY OF VA HOSPITAL           
+ 535 EAST 70TH STREET                3003 N MACARTHUR DR                 PO BOX 85031                        
+ NEW YORK         NY  10021-         ALEXANDRIA       LA  71303-4143     RICHMOND         VA  23261-5031     
+                                                                                                             
+                                                                                                             

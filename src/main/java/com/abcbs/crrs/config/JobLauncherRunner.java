@@ -108,6 +108,7 @@ public class JobLauncherRunner implements CommandLineRunner {
 	@Autowired
 	@Qualifier("p09345Job")
 	private Job p09345Job;
+	
 
 	@Autowired
 	private Job P09372Job;
@@ -115,6 +116,10 @@ public class JobLauncherRunner implements CommandLineRunner {
 	@Autowired
 	@Qualifier("p09175Job")
 	private Job p09175Job;
+	
+	@Autowired
+	@Qualifier("p09350Job")
+	private Job p09350Job;
 
 	private static final Logger logger = LogManager.getLogger(JobLauncherRunner.class);
 
@@ -556,9 +561,9 @@ public class JobLauncherRunner implements CommandLineRunner {
 
 				if (args.length >= 4) {
 
-					String P09175_ReportOutput = args[1];
-					String P09175_CcmOutput = args[2];
-					String P09175_ControlTotal = args[3];
+					String P09175_CcmOutput = args[1];
+					String P09175_ControlTotal = args[2];
+					String P09175_ReportOutput = args[3];
 
 					JobParameters jobParameters = new JobParametersBuilder()
 							.addString("P09175_ReportOutput", P09175_ReportOutput)
@@ -602,7 +607,52 @@ public class JobLauncherRunner implements CommandLineRunner {
 					logger.error("Insuffient number of parameters");
 					throw new IllegalArgumentException("INSUFFICIENT NO. OF PARAMS");
 				}
-			} else {
+			} else if("P09350".equals(jobName)) {
+				logger.info("Requested for P09350");
+				String jobType = null;
+				String datePicker = null;
+				String CONTROL_CARD = null;
+				String CORP_CARD = null;
+				String CHKP_CARD = null;
+				String INPUT_VOUCHER_NBR = null;
+				String OUTPUT_VOUCHER_NBR = null;
+				String REPORT_FILE = null;
+				String GENERAL_LEDGER_OUT = null;
+				String OCCS_DEDS_FILE_OUT = null;
+				String AP_INTRFACE_OUT = null;
+				if (args.length > 2) {
+					jobType=args[1];
+					datePicker = args[2];
+					CORP_CARD = args[3];
+					CHKP_CARD = args[4];
+					INPUT_VOUCHER_NBR = args[5];
+					REPORT_FILE = args[6];
+					OUTPUT_VOUCHER_NBR = args[7];
+					GENERAL_LEDGER_OUT = args[8];
+					OCCS_DEDS_FILE_OUT = args[9];
+					AP_INTRFACE_OUT = args[10];
+					// Build job parameters
+					JobParameters jobParameters = new JobParametersBuilder()
+							.addString("jobType", jobType)
+							.addString("datePicker", datePicker)
+							.addString("CORP_CARD", CORP_CARD)
+							.addString("CHKP_CARD", CHKP_CARD)
+							.addString("INPUT_VOUCHER_NBR", INPUT_VOUCHER_NBR)
+							.addString("OUTPUT_VOUCHER_NBR", OUTPUT_VOUCHER_NBR)
+							.addString("REPORT_FILE", REPORT_FILE)
+							.addString("GENERAL_LEDGER_OUT", GENERAL_LEDGER_OUT)
+							.addString("OCCS_DEDS_FILE_OUT", OCCS_DEDS_FILE_OUT)
+							.addString("AP_INTRFACE_OUT", AP_INTRFACE_OUT)
+							.addString("jobType", jobType)
+							.addLong("run.id", System.currentTimeMillis())
+							.toJobParameters();
+					// Launch the job with the parameters
+					jobExecution = jobLauncher.run(p09350Job, jobParameters);
+				}else {
+					logger.error("Insuffient number of parameters");
+					throw new IllegalArgumentException("INSUFFICIENT NO. OF PARAMS");
+				}
+			}else {
 				logger.error("Job has not found");
 				throw new IllegalArgumentException("JOB NOT FOUND");
 			}

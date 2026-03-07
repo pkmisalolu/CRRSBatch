@@ -1,0 +1,473 @@
+REPORT #  P09360-A                             ARKANSAS BLUE CROSS AND BLUE SHIELD                                        PAGE     1
+RUN DATE: 02/24/26                               FEP  CRRS  JOURNAL ENTRY REPORT                                  RUN TIME: 12:01:58
+REFUND TYPE: SPO    REPORT DATE:  02/26
+REFUND       CONTROL                                   MEMBER        ACTIVITY         ACTIVITY             CROSS REFERENCE
+ TYPE     DATE   NUMBER       PATIENT'S NAME          ID NUMBER    CODE    DATE        AMOUNT    TYPE   DATE          NUMBER
+------  -------- ------  --------------------------  ------------  ---- -------- ---------------- ---- -------- --------------------
+ PER    02/10/26  707A   JONES          DOROTHY      R08718969     EST  02/10/26        $2,500.00                                   
+                                                                                       $2,500.00-                                   
+        02/10/26  707B   LOVELL JR      HARLAND      R510187553    EST  02/10/26        $2,500.00                                   
+                                                                                       $2,500.00-                                   
+        02/10/26  707C   COTTINGHAM     BRENDA       R50435748     EST  02/10/26        $2,500.00                                   
+                                                                                       $2,500.00-                                   
+        02/10/26  707D   TATE           JANICE       R22007925     EST  02/10/26        $2,499.00                                   
+                                                                                       $2,499.00-                                   
+        02/10/26  707E   EDGAR          LETHA        E4KFM1161052  EST  02/10/26        $4,026.41                                   
+                                                                                       $4,026.41-                                   
+        02/10/26  707F   PATIENTS       SEVERAL      999999999999  EST  02/10/26        $8,400.00                                   
+                                                                                       $8,400.00-                                   
+        02/10/26  708A   NICHOLS        MICHAEL      RTE103781663  EST  02/10/26           $33.66                                   
+                                                                                          $33.66-                                   
+        02/10/26  708B   RICHARD        KAREN        HBU498M94353  EST  02/10/26           $92.00                                   
+                                                                                          $92.00-                                   
+        02/10/26  708C   VAUGHN         RANDALL      BVA476M65508  EST  02/10/26           $92.55                                   
+                                                                                          $92.55-                                   
+        02/10/26  708D   RICHARD        MICHAEL      GFM697M98209  EST  02/10/26          $123.12                                   
+                                                                                         $123.12-                                   
+        02/10/26  709A   POOL           PAUL         R57687966     EST  02/10/26            $3.91                                   
+                                                                                           $3.91-                                   
+        02/10/26  709B   STEPHENSON     BUFFY        R59423386     EST  02/10/26          $690.34                                   
+                                                                                         $690.34-                                   
+        02/10/26  700    DOBBINS        VIRA         R60809972     EST  02/10/26           $37.55                                   
+                                                                                          $37.55-                                   
+        02/10/26  701    WOODS          CAROL        R57960506     EST  02/10/26          $218.72                                   
+                                                                                         $218.72-                                   
+        02/10/26  702    STRATTON       JEFFERY      YUP831173854  EST  02/10/26           $98.98                                   
+                                                                                          $98.98-                                   
+        02/10/26  703    BRANHAM        ASHTON       FRU100011727  EST  02/10/26        $1,268.87                                   
+                                                                                       $1,268.87-                                   
+        02/10/26  704    BOYCE          TRACY        LGO991W09773  EST  02/10/26           $27.71                                   
+                                                                                          $27.71-                                   
+        02/10/26  705    BLACK          MARY         XDD294A67027  EST  02/10/26          $640.20                                   
+                                                                                         $640.20-                                   
+        02/10/26  706    HUDSPETH       DANIEL       RPS0A0358016  EST  02/10/26          $145.78                                   
+                                                                                         $145.78-                                   
+        02/10/26  710    SMITH          RUTH         YAX866020510  EST  02/10/26        $1,676.00                                   
+                                                                                       $1,676.00-                                   
+        02/10/26  711    IRIZARRY       VICTORIA     W9F2261082AB  EST  02/10/26           $30.50                                   
+                                                                                          $30.50-                                   
+        02/10/26  712    HIGHFILL       ADDISON      FCJ825512987  EST  02/10/26          $128.77                                   
+                                                                                         $128.77-                                   
+        02/10/26  713    PAPPILLION     JENNY        R61928000     EST  02/10/26          $130.16                                   
+                                                                                         $130.16-                                   
+        02/10/26  714    VEGA           PABLO        OEV120883160  EST  02/10/26          $118.44                                   
+                                                                                         $118.44-                                   
+        02/10/26  715    SMITH          ALVIN        SFZ841540643  EST  02/10/26          $123.15                                   
+REPORT #  P09360-A                             ARKANSAS BLUE CROSS AND BLUE SHIELD                                        PAGE     2
+RUN DATE: 02/24/26                               FEP  CRRS  JOURNAL ENTRY REPORT                                  RUN TIME: 12:02:00
+REFUND TYPE: PER    REPORT DATE:  02/26
+REFUND       CONTROL                                   MEMBER        ACTIVITY         ACTIVITY             CROSS REFERENCE
+ TYPE     DATE   NUMBER       PATIENT'S NAME          ID NUMBER    CODE    DATE        AMOUNT    TYPE   DATE          NUMBER
+------  -------- ------  --------------------------  ------------  ---- -------- ---------------- ---- -------- --------------------
+ PER                                                                                     $123.15-                                   
+        02/10/26  716    GRAINGER       TIFFANY      R60751859     EST  02/10/26          $113.18                                   
+                                                                                         $113.18-                                   
+        02/10/26  717    HARRELL JR     JAMES        R12383594     EST  02/10/26           $14.53                                   
+                                                                                          $14.53-                                   
+        02/10/26  718    MCCLAIN        LASONDRA     KZS100010720  EST  02/10/26        $1,820.00                                   
+                                                                                       $1,820.00-                                   
+        02/10/26  719    MCCLAIN        LASONDRA     KZS100010720  EST  02/10/26          $650.00                                   
+                                                                                         $650.00-                                   
+        02/10/26  720    MCCLAIN        LASONDRA     KZS100010720  EST  02/10/26        $1,170.00                                   
+                                                                                       $1,170.00-                                   
+        02/10/26  721    SANDLIN        AIDEN        RSR827182367  EST  02/10/26           $53.84                                   
+                                                                                          $53.84-                                   
+        02/10/26  722    PATTERSON      KHOLE        BHGW01058207  EST  02/10/26           $16.00                                   
+                                                                                          $16.00-                                   
+        02/10/26  723    HERNANDEZ      ISSAC        FJB21013604M  EST  02/10/26           $23.19                                   
+                                                                                          $23.19-                                   
+        02/10/26  724    WILLIAMS       DAYVEON      WSY3244684HS  EST  02/10/26          $164.39                                   
+                                                                                         $164.39-                                   
+        02/10/26  725    MILLER         SENICA       R58281978     EST  02/10/26        $1,553.28                                   
+                                                                                       $1,553.28-                                   
+        02/10/26  726    CHRONISTER     VIRGIL       XAA844672392  EST  02/10/26           $46.04                                   
+                                                                                          $46.04-                                   
+        02/10/26  727    HAMLETT        BILLY        MGJ030251MDT  EST  02/10/26          $164.38                                   
+                                                                                         $164.38-                                   
+        02/10/26  728    HOUSE          TRACY        R57773112     EST  02/10/26          $108.12                                   
+                                                                                         $108.12-                                   
+        02/10/26  729    HOUSE          TRACY        R5773112      EST  02/10/26           $49.25                                   
+                                                                                          $49.25-                                   
+        02/10/26  730    HORN           KATHERINE    R59639723     EST  02/10/26          $125.00                                   
+                                                                                         $125.00-                                   
+        02/10/26  731    CROSSWELL      TINA         YUN844156784  EST  02/10/26          $649.69                                   
+                                                                                         $649.69-                                   
+        02/10/26  732    RADCLIFF       KURT         R58291992     EST  02/10/26          $215.86                                   
+                                                                                         $215.86-                                   
+        02/10/26  733    CRIMS          DIANNA       YUQ947132210  EST  02/10/26          $226.58                                   
+                                                                                         $226.58-                                   
+        04/17/25  415    KING           MICHAEL      ZZT804423170  ACC  02/10/26          $44.47-  CL  06/18/25 242421247801        
+                                                                                           $44.47  CL  06/18/25 242421247801        
+        06/24/25  406    HODGES         AUSTIN       PPA889071894  ACC  02/10/26       $2,482.59-  CL  11/21/25 250731726300        
+                                                                                        $2,482.59  CL  11/21/25 250731726300        
+        04/17/25  415    KING           MICHAEL      ZZT804423170  ACC  02/10/26          $44.47-  CL  06/18/25 242270744601        
+                                                                                           $44.47  CL  06/18/25 242270744601        
+        10/15/24  407A   HOOKS          CAMERON      JDH907358915  FR   02/11/26           $41.38      02/10/26                     
+                                                                                          $41.38-      02/10/26                     
+        10/15/24  408    HAWKINS        JAHIYAH      AQT604601852  FR   02/11/26          $344.08      02/10/26                     
+                                                                                         $344.08-      02/10/26                     
+        10/15/24  420    HOUCHIN        QUINCY       FID100075656  FR   02/11/26           $91.39      02/10/26                     
+                                                                                          $91.39-      02/10/26                     
+REPORT #  P09360-A                             ARKANSAS BLUE CROSS AND BLUE SHIELD                                        PAGE     3
+RUN DATE: 02/24/26                               FEP  CRRS  JOURNAL ENTRY REPORT                                  RUN TIME: 12:02:00
+REFUND TYPE: PER    REPORT DATE:  02/26
+REFUND       CONTROL                                   MEMBER        ACTIVITY         ACTIVITY             CROSS REFERENCE
+ TYPE     DATE   NUMBER       PATIENT'S NAME          ID NUMBER    CODE    DATE        AMOUNT    TYPE   DATE          NUMBER
+------  -------- ------  --------------------------  ------------  ---- -------- ---------------- ---- -------- --------------------
+ PER    10/15/24  422    SMALL          AMY          T6A843857204  FR   02/11/26           $18.28      02/10/26                     
+                                                                                          $18.28-      02/10/26                     
+        10/15/24  423    ROGERS         KELLIE       YUP827403255  FR   02/11/26          $124.47      02/10/26                     
+                                                                                         $124.47-      02/10/26                     
+        10/15/24  426    HELMAN         ERIC         JEA002032950  FR   02/11/26          $214.96      02/10/26                     
+                                                                                         $214.96-      02/10/26                     
+        10/16/24  211    BREEDLOVE      BROOKLYNN    CZQAN2352331  FR   02/11/26          $220.41      02/10/26                     
+                                                                                         $220.41-      02/10/26                     
+        11/05/24  211A   PEREZ-GAONA    JOSE         YUP825258001  FR   02/11/26           $30.56      02/10/26                     
+                                                                                          $30.56-      02/10/26                     
+        11/14/24  409    JACKSON        KATIE        UHL852233735  FR   02/11/26          $175.54      02/10/26                     
+                                                                                         $175.54-      02/10/26                     
+        11/15/24  207    MATTHEWS       JOHN         TEA806113403  FR   02/11/26           $18.80      02/10/26                     
+                                                                                          $18.80-      02/10/26                     
+        11/15/24  404    DE SAINT       FELIX SKYE   MYY818765270  FR   02/11/26           $66.24      02/10/26                     
+                                                                                          $66.24-      02/10/26                     
+        11/19/24  407    USSERY         CORDAE       TEA806269160  FR   02/11/26           $21.30      02/10/26                     
+                                                                                          $21.30-      02/10/26                     
+        11/20/24  211    KOENIG         HAYLEE       GAC825291898  FR   02/11/26           $66.94      02/10/26                     
+                                                                                          $66.94-      02/10/26                     
+        12/02/24  200    BARRIENTES     DOROTHY      XUP202169232  FR   02/11/26           $37.53      02/10/26                     
+                                                                                          $37.53-      02/10/26                     
+        12/02/24  224C   MASTAGNI       MISTI        KAZ803933373  FR   02/11/26           $79.54      02/10/26                     
+                                                                                          $79.54-      02/10/26                     
+        12/03/24  202    GARZA DE LA    ANTHONY      J6D588217300  FR   02/11/26           $18.22      02/10/26                     
+                                                                                          $18.22-      02/10/26                     
+        12/04/24  409    SANCHEZ        MARCO        ZGP810625553  FR   02/11/26          $716.13      02/10/26                     
+                                                                                         $716.13-      02/10/26                     
+        03/13/25  447    MEHRBAKHSH     JESSICA      ZFA621A78120  FR   02/11/26           $65.00      02/10/26                     
+                                                                                          $65.00-      02/10/26                     
+        03/13/25  455F   GALLAND        BRETT        IPB137207330  FR   02/11/26           $21.00      02/10/26                     
+                                                                                          $21.00-      02/10/26                     
+        03/17/25  423    LANKFORD       SHAYLENE     HGPW00839381  FR   02/11/26            $7.67      02/10/26                     
+                                                                                           $7.67-      02/10/26                     
+        03/17/25  425    LANKFORD       SHAYLENE     HGPW00839381  FR   02/11/26           $91.73      02/10/26                     
+                                                                                          $91.73-      02/10/26                     
+        04/02/25  408    PANTOJA        MARIA        DHY0127839LR  FR   02/11/26           $45.60      02/10/26                     
+                                                                                          $45.60-      02/10/26                     
+        04/02/25  412A   FLEAR          WILLIAM      QMO129968018  FR   02/11/26           $32.51      02/10/26                     
+                                                                                          $32.51-      02/10/26                     
+        04/03/25  400E   WILKE          DAVID        JYA003114740  FR   02/11/26        $1,000.00      02/10/26                     
+                                                                                       $1,000.00-      02/10/26                     
+        04/03/25  400P   WILLIAMS       MARY         OTH903418453  FR   02/11/26        $1,000.00      02/10/26                     
+                                                                                       $1,000.00-      02/10/26                     
+        04/08/25  405    MASON          BEVERLY      E4KFM0836703  FR   02/11/26           $27.49      02/10/26                     
+                                                                                          $27.49-      02/10/26                     
+        04/08/25  427A   MITCHELL       BETH         99034479101   FR   02/11/26           $36.03      02/10/26                     
+                                                                                          $36.03-      02/10/26                     
+        04/09/25  413    NADER          ESAM         YVK223W06889  FR   02/11/26          $199.67      02/10/26                     
+REPORT #  P09360-A                             ARKANSAS BLUE CROSS AND BLUE SHIELD                                        PAGE     4
+RUN DATE: 02/24/26                               FEP  CRRS  JOURNAL ENTRY REPORT                                  RUN TIME: 12:02:01
+REFUND TYPE: PER    REPORT DATE:  02/26
+REFUND       CONTROL                                   MEMBER        ACTIVITY         ACTIVITY             CROSS REFERENCE
+ TYPE     DATE   NUMBER       PATIENT'S NAME          ID NUMBER    CODE    DATE        AMOUNT    TYPE   DATE          NUMBER
+------  -------- ------  --------------------------  ------------  ---- -------- ---------------- ---- -------- --------------------
+ PER                                                                                     $199.67-      02/10/26                     
+        04/09/25  437    PARAKS         SHANTARIO    TEA806475732  FR   02/11/26           $45.38      02/10/26                     
+                                                                                          $45.38-      02/10/26                     
+        04/10/25  403    FREEMAN        RYAN         ZFA132M87643  FR   02/11/26           $29.43      02/10/26                     
+                                                                                          $29.43-      02/10/26                     
+        04/10/25  405    STRAUB         JACKIE       D2R833852538  FR   02/11/26          $420.00      02/10/26                     
+                                                                                         $420.00-      02/10/26                     
+        04/10/25  417    HOOK           JASON        ZFB460W11704  FR   02/11/26           $40.77      02/10/26                     
+                                                                                          $40.77-      02/10/26                     
+        04/10/25  418    HOOK           JASON        ZFB460W11704  FR   02/11/26          $196.90      02/10/26                     
+                                                                                         $196.90-      02/10/26                     
+        04/10/25  419    MARTINEZ       GIRALEYDE    ZFA092W06664  FR   02/11/26          $116.15      02/10/26                     
+                                                                                         $116.15-      02/10/26                     
+        04/10/25  422    HILL           KRISTI       RRT210074445  FR   02/11/26           $32.58      02/10/26                     
+                                                                                          $32.58-      02/10/26                     
+        04/10/25  425    SNOW           ALYSSA       WEIW01207646  FR   02/11/26          $100.00      02/10/26                     
+                                                                                         $100.00-      02/10/26                     
+        04/10/25  427    SNOW           ALYSSA       WEIW01207646  FR   02/11/26          $100.00      02/10/26                     
+                                                                                         $100.00-      02/10/26                     
+        04/11/25  401    THIBODEAUX     JASON        PDB822656081  FR   02/11/26          $182.25      02/10/26                     
+                                                                                         $182.25-      02/10/26                     
+        04/11/25  423A   MELTON         BILLIE       XAA829944105  FR   02/11/26          $133.68      02/10/26                     
+                                                                                         $133.68-      02/10/26                     
+        04/11/25  423B   MCADAMS        ARDITH       XAA813281401  FR   02/11/26           $37.87      02/10/26                     
+                                                                                          $37.87-      02/10/26                     
+        04/11/25  423C   WHEELER        JEARY        XAA817839311  FR   02/11/26           $19.45      02/10/26                     
+                                                                                          $19.45-      02/10/26                     
+        04/11/25  423D   ABNER          ALMA         XAA857149478  FR   02/11/26           $26.01      02/10/26                     
+                                                                                          $26.01-      02/10/26                     
+        04/11/25  423E   PRESSER        MELVIN       XAA817499265  FR   02/11/26          $175.72      02/10/26                     
+                                                                                         $175.72-      02/10/26                     
+        04/11/25  423F   WOOD           BETTY        XAA826319641  FR   02/11/26           $66.89      02/10/26                     
+                                                                                          $66.89-      02/10/26                     
+        04/14/25  410    DAVIS          REBECCA      SVR868929253  FR   02/11/26           $12.00      02/10/26                     
+                                                                                          $12.00-      02/10/26                     
+        04/17/25  400    ROWTON         KEVIN        ABC888423326  FR   02/11/26           $34.00      02/10/26                     
+                                                                                          $34.00-      02/10/26                     
+        04/17/25  402    SAMPSON        LAVERN       XIQ917984852  FR   02/11/26          $204.84      02/10/26                     
+                                                                                         $204.84-      02/10/26                     
+        04/17/25  415    KING           MICHAEL      ZZT804423170  PR   02/11/26           $40.54      02/10/26                     
+                                                                                          $40.54-      02/10/26                     
+        04/17/25  421B   LANGE          CAROL        IBIW01031350  FR   02/11/26            $7.69      02/10/26                     
+                                                                                           $7.69-      02/10/26                     
+        04/24/25  407    ABNER          NELL         XAA857149478  FR   02/11/26           $17.06      02/10/26                     
+                                                                                          $17.06-      02/10/26                     
+        04/24/25  408    CLOWER         KATHRYN      QUP848M92745  FR   02/11/26          $571.49      02/10/26                     
+                                                                                         $571.49-      02/10/26                     
+        04/24/25  412    ALEXANDER      TRENT        BXE847873544  FR   02/11/26          $177.92      02/10/26                     
+                                                                                         $177.92-      02/10/26                     
+REPORT #  P09360-A                             ARKANSAS BLUE CROSS AND BLUE SHIELD                                        PAGE     5
+RUN DATE: 02/24/26                               FEP  CRRS  JOURNAL ENTRY REPORT                                  RUN TIME: 12:02:02
+REFUND TYPE: PER    REPORT DATE:  02/26
+REFUND       CONTROL                                   MEMBER        ACTIVITY         ACTIVITY             CROSS REFERENCE
+ TYPE     DATE   NUMBER       PATIENT'S NAME          ID NUMBER    CODE    DATE        AMOUNT    TYPE   DATE          NUMBER
+------  -------- ------  --------------------------  ------------  ---- -------- ---------------- ---- -------- --------------------
+ PER    04/24/25  444    SCHNEIDER      SHEILA       YUQ927964343  FR   02/11/26           $21.10      02/10/26                     
+                                                                                          $21.10-      02/10/26                     
+        04/25/25  406    NASH           RONALD       RGH839039658  FR   02/11/26           $17.64      02/10/26                     
+                                                                                          $17.64-      02/10/26                     
+        04/25/25  413    NANCE          SABRINA      GXM118803884  FR   02/11/26           $30.39      02/10/26                     
+                                                                                          $30.39-      02/10/26                     
+        04/25/25  414    SIMS           CARDELL      L4J828773346  FR   02/11/26           $34.76      02/10/26                     
+                                                                                          $34.76-      02/10/26                     
+        06/24/25  406    HODGES         AUSTIN       PPA889071894  PR   02/11/26           $51.41      02/10/26                     
+                                                                                          $51.41-      02/10/26                     
+        10/20/25  004D   PATIENTS       SEVERAL      999999999999  FR   02/11/26          $170.96      02/10/26                     
+                                                                                         $170.96-      02/10/26                     
+
+TOTAL FOR REFUND TYPE: PER      REPORT DATE:  02/26
+  C/R ACTIVITY    COUNT:    208                   AMOUNT:             $0.00
+                  DEBITS:      $45,768.03         CREDITS:       $45,768.03
+
+TOTAL FOR REFUND TYPE: PER
+  C/R ACTIVITY    COUNT:    208                   AMOUNT:             $0.00
+                  DEBITS:      $45,768.03         CREDITS:       $45,768.03
+REPORT #  P09360-A                             ARKANSAS BLUE CROSS AND BLUE SHIELD                                        PAGE     6
+RUN DATE: 02/24/26                               FEP  CRRS  JOURNAL ENTRY REPORT                                  RUN TIME: 12:02:02
+REFUND TYPE: SPO    REPORT DATE:  02/26
+REFUND       CONTROL                                   MEMBER        ACTIVITY         ACTIVITY             CROSS REFERENCE
+ TYPE     DATE   NUMBER       PATIENT'S NAME          ID NUMBER    CODE    DATE        AMOUNT    TYPE   DATE          NUMBER
+------  -------- ------  --------------------------  ------------  ---- -------- ---------------- ---- -------- --------------------
+
+TOTAL FOR REFUND TYPE: PER      REPORT DATE:  02/26
+  C/R ACTIVITY    COUNT:      0                   AMOUNT:             $0.00
+                  DEBITS:           $0.00         CREDITS:            $0.00
+
+TOTAL FOR REFUND TYPE: PER
+  C/R ACTIVITY    COUNT:      0                   AMOUNT:             $0.00
+                  DEBITS:           $0.00         CREDITS:            $0.00
+REPORT #  P09360-A                             ARKANSAS BLUE CROSS AND BLUE SHIELD                                        PAGE     7
+RUN DATE: 02/24/26                               FEP  CRRS  JOURNAL ENTRY REPORT                                  RUN TIME: 12:02:02
+REFUND TYPE: SPO    REPORT DATE:  02/26
+REFUND       CONTROL                                   MEMBER        ACTIVITY         ACTIVITY             CROSS REFERENCE
+ TYPE     DATE   NUMBER       PATIENT'S NAME          ID NUMBER    CODE    DATE        AMOUNT    TYPE   DATE          NUMBER
+------  -------- ------  --------------------------  ------------  ---- -------- ---------------- ---- -------- --------------------
+
+TOTAL FOR REFUND TYPE: PER      REPORT DATE:  02/26
+  C/R ACTIVITY    COUNT:      0                   AMOUNT:             $0.00
+                  DEBITS:           $0.00         CREDITS:            $0.00
+
+TOTAL FOR REFUND TYPE: PER
+  C/R ACTIVITY    COUNT:      0                   AMOUNT:             $0.00
+                  DEBITS:           $0.00         CREDITS:            $0.00
+REPORT #  P09360-A                             ARKANSAS BLUE CROSS AND BLUE SHIELD                                        PAGE     8
+RUN DATE: 02/24/26                               FEP  CRRS  JOURNAL ENTRY REPORT                                  RUN TIME: 12:02:02
+REFUND TYPE: SPO    REPORT DATE:  02/26
+REFUND       CONTROL                                   MEMBER        ACTIVITY         ACTIVITY             CROSS REFERENCE
+ TYPE     DATE   NUMBER       PATIENT'S NAME          ID NUMBER    CODE    DATE        AMOUNT    TYPE   DATE          NUMBER
+------  -------- ------  --------------------------  ------------  ---- -------- ---------------- ---- -------- --------------------
+REPORT #  P09360-A                             ARKANSAS BLUE CROSS AND BLUE SHIELD                                        PAGE     9
+RUN DATE: 02/24/26                               FEP  CRRS  JOURNAL ENTRY REPORT                                  RUN TIME: 12:02:02
+REFUND TYPE: SPO    REPORT DATE:  02/26
+REFUND       CONTROL                                   MEMBER        ACTIVITY         ACTIVITY             CROSS REFERENCE
+ TYPE     DATE   NUMBER       PATIENT'S NAME          ID NUMBER    CODE    DATE        AMOUNT    TYPE   DATE          NUMBER
+------  -------- ------  --------------------------  ------------  ---- -------- ---------------- ---- -------- --------------------
+
+TOTAL FOR REFUND TYPE: PER      REPORT DATE:  02/26
+  C/R ACTIVITY    COUNT:      0                   AMOUNT:             $0.00
+                  DEBITS:           $0.00         CREDITS:            $0.00
+
+TOTAL FOR REFUND TYPE: PER
+  C/R ACTIVITY    COUNT:      0                   AMOUNT:             $0.00
+                  DEBITS:           $0.00         CREDITS:            $0.00
+REPORT #  P09360-A                             ARKANSAS BLUE CROSS AND BLUE SHIELD                                        PAGE    10
+RUN DATE: 02/24/26                               FEP  CRRS  JOURNAL ENTRY REPORT                                  RUN TIME: 12:02:02
+REFUND TYPE: SPO    REPORT DATE:  02/26
+REFUND       CONTROL                                   MEMBER        ACTIVITY         ACTIVITY             CROSS REFERENCE
+ TYPE     DATE   NUMBER       PATIENT'S NAME          ID NUMBER    CODE    DATE        AMOUNT    TYPE   DATE          NUMBER
+------  -------- ------  --------------------------  ------------  ---- -------- ---------------- ---- -------- --------------------
+
+TOTAL FOR REFUND TYPE: PER      REPORT DATE:  02/26
+  C/R ACTIVITY    COUNT:      0                   AMOUNT:             $0.00
+                  DEBITS:           $0.00         CREDITS:            $0.00
+
+TOTAL FOR REFUND TYPE: PER
+  C/R ACTIVITY    COUNT:      0                   AMOUNT:             $0.00
+                  DEBITS:           $0.00         CREDITS:            $0.00
+REPORT #  P09360-A                             ARKANSAS BLUE CROSS AND BLUE SHIELD                                        PAGE    11
+RUN DATE: 02/24/26                               FEP  CRRS  JOURNAL ENTRY REPORT                                  RUN TIME: 12:02:02
+REFUND TYPE: SPO    REPORT DATE:  02/26
+REFUND       CONTROL                                   MEMBER        ACTIVITY         ACTIVITY             CROSS REFERENCE
+ TYPE     DATE   NUMBER       PATIENT'S NAME          ID NUMBER    CODE    DATE        AMOUNT    TYPE   DATE          NUMBER
+------  -------- ------  --------------------------  ------------  ---- -------- ---------------- ---- -------- --------------------
+
+TOTAL FOR REFUND TYPE: PER      REPORT DATE:  02/26
+  C/R ACTIVITY    COUNT:      0                   AMOUNT:             $0.00
+                  DEBITS:           $0.00         CREDITS:            $0.00
+
+TOTAL FOR REFUND TYPE: PER
+  C/R ACTIVITY    COUNT:      0                   AMOUNT:             $0.00
+                  DEBITS:           $0.00         CREDITS:            $0.00
+REPORT #  P09360-A                             ARKANSAS BLUE CROSS AND BLUE SHIELD                                        PAGE    12
+RUN DATE: 02/24/26                               FEP  CRRS  JOURNAL ENTRY REPORT                                  RUN TIME: 12:02:02
+REFUND TYPE: SPO    REPORT DATE:  02/26
+REFUND       CONTROL                                   MEMBER        ACTIVITY         ACTIVITY             CROSS REFERENCE
+ TYPE     DATE   NUMBER       PATIENT'S NAME          ID NUMBER    CODE    DATE        AMOUNT    TYPE   DATE          NUMBER
+------  -------- ------  --------------------------  ------------  ---- -------- ---------------- ---- -------- --------------------
+
+TOTAL FOR REFUND TYPE: PER      REPORT DATE:  02/26
+  C/R ACTIVITY    COUNT:      0                   AMOUNT:             $0.00
+                  DEBITS:           $0.00         CREDITS:            $0.00
+
+TOTAL FOR REFUND TYPE: PER
+  C/R ACTIVITY    COUNT:      0                   AMOUNT:             $0.00
+                  DEBITS:           $0.00         CREDITS:            $0.00
+REPORT #  P09360-A                             ARKANSAS BLUE CROSS AND BLUE SHIELD                                        PAGE    13
+RUN DATE: 02/24/26                               FEP  CRRS  JOURNAL ENTRY REPORT                                  RUN TIME: 12:02:02
+REFUND TYPE: SPO    REPORT DATE:  02/26
+REFUND       CONTROL                                   MEMBER        ACTIVITY         ACTIVITY             CROSS REFERENCE
+ TYPE     DATE   NUMBER       PATIENT'S NAME          ID NUMBER    CODE    DATE        AMOUNT    TYPE   DATE          NUMBER
+------  -------- ------  --------------------------  ------------  ---- -------- ---------------- ---- -------- --------------------
+REPORT #  P09360-A                             ARKANSAS BLUE CROSS AND BLUE SHIELD                                        PAGE    14
+RUN DATE: 02/24/26                               FEP  CRRS  JOURNAL ENTRY REPORT                                  RUN TIME: 12:02:02
+REFUND TYPE: SPO    REPORT DATE:  02/26
+REFUND       CONTROL                                   MEMBER        ACTIVITY         ACTIVITY             CROSS REFERENCE
+ TYPE     DATE   NUMBER       PATIENT'S NAME          ID NUMBER    CODE    DATE        AMOUNT    TYPE   DATE          NUMBER
+------  -------- ------  --------------------------  ------------  ---- -------- ---------------- ---- -------- --------------------
+
+TOTAL FOR REFUND TYPE: PER      REPORT DATE:  02/26
+  C/R ACTIVITY    COUNT:      0                   AMOUNT:             $0.00
+                  DEBITS:           $0.00         CREDITS:            $0.00
+
+TOTAL FOR REFUND TYPE: PER
+  C/R ACTIVITY    COUNT:      0                   AMOUNT:             $0.00
+                  DEBITS:           $0.00         CREDITS:            $0.00
+REPORT #  P09360-A                             ARKANSAS BLUE CROSS AND BLUE SHIELD                                        PAGE    15
+RUN DATE: 02/24/26                               FEP  CRRS  JOURNAL ENTRY REPORT                                  RUN TIME: 12:02:02
+REFUND TYPE: SPO    REPORT DATE:  02/26
+REFUND       CONTROL                                   MEMBER        ACTIVITY         ACTIVITY             CROSS REFERENCE
+ TYPE     DATE   NUMBER       PATIENT'S NAME          ID NUMBER    CODE    DATE        AMOUNT    TYPE   DATE          NUMBER
+------  -------- ------  --------------------------  ------------  ---- -------- ---------------- ---- -------- --------------------
+
+TOTAL FOR REFUND TYPE: PER      REPORT DATE:  02/26
+  C/R ACTIVITY    COUNT:      0                   AMOUNT:             $0.00
+                  DEBITS:           $0.00         CREDITS:            $0.00
+
+TOTAL FOR REFUND TYPE: PER
+  C/R ACTIVITY    COUNT:      0                   AMOUNT:             $0.00
+                  DEBITS:           $0.00         CREDITS:            $0.00
+REPORT #  P09360-A                             ARKANSAS BLUE CROSS AND BLUE SHIELD                                        PAGE    16
+RUN DATE: 02/24/26                               FEP  CRRS  JOURNAL ENTRY REPORT                                  RUN TIME: 12:02:02
+REFUND TYPE: SPO    REPORT DATE:  02/26
+REFUND       CONTROL                                   MEMBER        ACTIVITY         ACTIVITY             CROSS REFERENCE
+ TYPE     DATE   NUMBER       PATIENT'S NAME          ID NUMBER    CODE    DATE        AMOUNT    TYPE   DATE          NUMBER
+------  -------- ------  --------------------------  ------------  ---- -------- ---------------- ---- -------- --------------------
+
+TOTAL FOR REFUND TYPE: PER      REPORT DATE:  02/26
+  C/R ACTIVITY    COUNT:      0                   AMOUNT:             $0.00
+                  DEBITS:           $0.00         CREDITS:            $0.00
+
+TOTAL FOR REFUND TYPE: PER
+  C/R ACTIVITY    COUNT:      0                   AMOUNT:             $0.00
+                  DEBITS:           $0.00         CREDITS:            $0.00
+REPORT #  P09360-A                             ARKANSAS BLUE CROSS AND BLUE SHIELD                                        PAGE    17
+RUN DATE: 02/24/26                               FEP  CRRS  JOURNAL ENTRY REPORT                                  RUN TIME: 12:02:02
+REFUND TYPE: SPO    REPORT DATE:  02/26
+REFUND       CONTROL                                   MEMBER        ACTIVITY         ACTIVITY             CROSS REFERENCE
+ TYPE     DATE   NUMBER       PATIENT'S NAME          ID NUMBER    CODE    DATE        AMOUNT    TYPE   DATE          NUMBER
+------  -------- ------  --------------------------  ------------  ---- -------- ---------------- ---- -------- --------------------
+
+TOTAL FOR REFUND TYPE: PER      REPORT DATE:  02/26
+  C/R ACTIVITY    COUNT:      0                   AMOUNT:             $0.00
+                  DEBITS:           $0.00         CREDITS:            $0.00
+
+TOTAL FOR REFUND TYPE: PER
+  C/R ACTIVITY    COUNT:      0                   AMOUNT:             $0.00
+                  DEBITS:           $0.00         CREDITS:            $0.00
+REPORT #  P09360-A                             ARKANSAS BLUE CROSS AND BLUE SHIELD                                        PAGE    18
+RUN DATE: 02/24/26                               FEP  CRRS  JOURNAL ENTRY REPORT                                  RUN TIME: 12:02:02
+REFUND TYPE: SPO    REPORT DATE:  02/26
+REFUND       CONTROL                                   MEMBER        ACTIVITY         ACTIVITY             CROSS REFERENCE
+ TYPE     DATE   NUMBER       PATIENT'S NAME          ID NUMBER    CODE    DATE        AMOUNT    TYPE   DATE          NUMBER
+------  -------- ------  --------------------------  ------------  ---- -------- ---------------- ---- -------- --------------------
+REPORT #  P09360-A                             ARKANSAS BLUE CROSS AND BLUE SHIELD                                        PAGE    19
+RUN DATE: 02/24/26                               FEP  CRRS  JOURNAL ENTRY REPORT                                  RUN TIME: 12:02:02
+REFUND TYPE: SPO    REPORT DATE:  02/26
+REFUND       CONTROL                                   MEMBER        ACTIVITY         ACTIVITY             CROSS REFERENCE
+ TYPE     DATE   NUMBER       PATIENT'S NAME          ID NUMBER    CODE    DATE        AMOUNT    TYPE   DATE          NUMBER
+------  -------- ------  --------------------------  ------------  ---- -------- ---------------- ---- -------- --------------------
+
+TOTAL FOR REFUND TYPE: PER      REPORT DATE:  02/26
+  C/R ACTIVITY    COUNT:      0                   AMOUNT:             $0.00
+                  DEBITS:           $0.00         CREDITS:            $0.00
+
+TOTAL FOR REFUND TYPE: PER
+  C/R ACTIVITY    COUNT:      0                   AMOUNT:             $0.00
+                  DEBITS:           $0.00         CREDITS:            $0.00
+REPORT #  P09360-A                             ARKANSAS BLUE CROSS AND BLUE SHIELD                                        PAGE    20
+RUN DATE: 02/24/26                               FEP  CRRS  JOURNAL ENTRY REPORT                                  RUN TIME: 12:02:02
+REFUND TYPE: SPO    REPORT DATE:  02/26
+REFUND       CONTROL                                   MEMBER        ACTIVITY         ACTIVITY             CROSS REFERENCE
+ TYPE     DATE   NUMBER       PATIENT'S NAME          ID NUMBER    CODE    DATE        AMOUNT    TYPE   DATE          NUMBER
+------  -------- ------  --------------------------  ------------  ---- -------- ---------------- ---- -------- --------------------
+ PER    02/11/26  700    BOGGS          SYDNEY       YUP805666057  EST  02/11/26          $323.84                                   
+                                                                                         $323.84-                                   
+        02/11/26  701    WOODSON        STACY        TTF826195569  EST  02/11/26          $600.00                                   
+                                                                                         $600.00-                                   
+        02/11/26  702    CRAIN          JAMES        VKK201541311  EST  02/11/26        $1,260.00                                   
+                                                                                       $1,260.00-                                   
+        02/11/26  703    FOWLER         LASHAY       AQT603910820  EST  02/11/26        $1,170.00                                   
+                                                                                       $1,170.00-                                   
+        02/11/26  704    MORRIS         DANIEL       LAS388283757  EST  02/11/26        $1,020.00                                   
+                                                                                       $1,020.00-                                   
+        02/11/26  705    DANIEL         ANGELA       LAS388283757  EST  02/11/26          $210.00                                   
+                                                                                         $210.00-                                   
+        02/11/26  706    FORD           PAMELA       R58972167     EST  02/11/26           $91.00                                   
+                                                                                          $91.00-                                   
+        02/11/26  707    PRUETT         HARRISON     XJBH43698747  EST  02/11/26        $2,180.87                                   
+                                                                                       $2,180.87-                                   
+        02/11/26  708    HILL           TAYLOR       GFM267M98208  EST  02/11/26          $214.31                                   
+                                                                                         $214.31-                                   
+        02/11/26  709    BARNES         EMILY        CMB732158540  EST  02/11/26          $231.34                                   
+                                                                                         $231.34-                                   
+        02/11/26  710    REMMEL         MARGARET     DIV904889712  EST  02/11/26           $22.50                                   
+                                                                                          $22.50-                                   
+        02/11/26  711    LEBOEUF        RICHARD      KNA7526374AB  EST  02/11/26           $68.58                                   
+                                                                                          $68.58-                                   
+        02/11/26  712    MOORE JR       GOLDMAN      R59259828     EST  02/11/26           $31.71                                   
+                                                                                          $31.71-                                   
+        02/11/26  713    MOORE JR       GOLDMAN      R59259828     EST  02/11/26           $18.59                                   
+                                                                                          $18.59-                                   
+        02/11/26  714    MILLER         KATINA       R61423254     EST  02/11/26            $0.22                                   
+                                                                                           $0.22-                                   
+        02/11/26  715    SHIPMAN        CAROLYN      R59258533     EST  02/11/26           $49.80                                   
+                                                                                          $49.80-                                   
+
+TOTAL FOR REFUND TYPE: PER      REPORT DATE:  02/26
+  C/R ACTIVITY    COUNT:     32                   AMOUNT:             $0.00
+                  DEBITS:       $7,492.76         CREDITS:        $7,492.76
+
+TOTAL FOR REFUND TYPE: PER
+  C/R ACTIVITY    COUNT:     32                   AMOUNT:             $0.00
+                  DEBITS:       $7,492.76         CREDITS:        $7,492.76
+
+REPORT #  P09360-A                             ARKANSAS BLUE CROSS AND BLUE SHIELD                                        PAGE    21
+RUN DATE: 02/24/26                               FEP  CRRS  JOURNAL ENTRY REPORT                                  RUN TIME: 12:02:02
+
+TOTAL C/R ACTIVITY     COUNT:     240                  AMOUNT:            $0.00
+
+                         TOTAL DEBITS:       $53,260.79                        TOTAL CREDITS:       $53,260.79
+
+****************************************************  END OF P09360-A REPORT  ******************************************************
