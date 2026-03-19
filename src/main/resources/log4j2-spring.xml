@@ -15,8 +15,8 @@
 
 
 		<RollingFile name="File"
-			fileName="logs/crrs_batch.log"
-			filePattern="logs/crrs_batch-%d{yyyy-MM-dd}.log.gz">
+			fileName="/isfinpay/finpayapps/CRRS/batch/logs/crrs_batch.log"
+			filePattern="/isfinpay/finpayapps/CRRS/batch/logs/crrs_batch-%d{yyyy-MM-dd}.log.gz">
 			<PatternLayout
 				pattern="%d{yyyy-MM-dd HH:mm:ss} %-5level %logger{36} - %msg%n" />
 
@@ -41,16 +41,16 @@
 			<DefaultRolloverStrategy max="30" />
 		</RollingFile>-->
 
-		<RollingFile name="AuditFile" fileName="logs/audit.log"
-			filePattern="logs/audit-%d{yyyy-MM-dd}.log.gz">
+		<RollingFile name="AuditFile" fileName="/isfinpay/finpayapps/CRRS/batch/logs/audit.log"
+			filePattern="/isfinpay/finpayapps/CRRS/batch/logs/audit-%d{yyyy-MM-dd}.log.gz">
 			<PatternLayout pattern="%msg%n" />
 			<Policies>
 				<TimeBasedTriggeringPolicy interval="1" />
 			</Policies>
 
 		</RollingFile>
-		<RollingFile name="AuditDB2File" fileName="logs/auditDb2.log"
-			filePattern="logs/auditDB2-%d{yyyy-MM-dd}.log.gz">
+		<RollingFile name="AuditDB2File" fileName="/isfinpay/finpayapps/CRRS/batch/logs/syncdb2.log"
+			filePattern="/isfinpay/finpayapps/CRRS/batch/logs/syncdb2-%d{yyyy-MM-dd}.log.gz">
 			<PatternLayout pattern="%msg%n" />
 
 			<Policies>

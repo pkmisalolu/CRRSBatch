@@ -46,44 +46,52 @@ public interface IP09BatchRepository extends JpaRepository<P09Batch, BatchPK> {
 			+ "AND b.bId.crRefundType = :refundType")
 	public int deleteByBatchAndRefund(@Param("prefix") String prefix, @Param("date") String date,
 			@Param("suffix") String suffix, @Param("refundType") String refundType);
+	
+    @Query("""
+            SELECT
+                b.bId.crRefundType   AS refundType,
+                b.bId.btBatchPrefix  AS batchPrefix,
+                b.bId.btBatchDate    AS batchDate,
+                b.bId.btBatchSuffix  AS batchSuffix,
+                b.btBatchCnt         AS batchCnt,
+                b.btBatchAmt         AS batchAmt,
+                b.btControlDate      AS controlDate,
+                b.btReceivedDate     AS receivedDate,
+                b.btDepositDate      AS depositDate,
+                b.btEntryDate        AS entryDate,
+                b.btStatusDate       AS statusDate,
+                b.btStatus           AS status
+            FROM P09Batch b
+            WHERE b.btPostedInd = 'T'
+              AND CONCAT(
+                    CONCAT(
+                        CONCAT(b.bId.crRefundType, b.bId.btBatchPrefix),
+                        b.bId.btBatchDate
+                    ),
+                    b.bId.btBatchSuffix
+                  ) > :checkpointKey
+            ORDER BY
+                b.bId.crRefundType,
+                b.bId.btBatchPrefix,
+                b.bId.btBatchDate,
+                b.bId.btBatchSuffix
+            """)
+        List<P09175BatchView> fetchPx01Cursor(@Param("checkpointKey") String checkpointKey);
 
-	@Query("""
-			SELECT
-			    b.bId.crRefundType    AS refundType,
-			    b.bId.btBatchPrefix   AS batchPrefix,
-			    b.bId.btBatchDate     AS batchDate,
-			    b.bId.btBatchSuffix   AS batchSuffix,
-			    b.btBatchCnt      AS batchCnt,
-			    b.btBatchAmt      AS batchAmt,
-			    b.btControlDate   AS controlDate,
-			    b.btReceivedDate  AS receivedDate,
-			    b.btDepositDate   AS depositDate,
-			    b.btEntryDate     AS entryDate,
-			    b.btStatusDate    AS statusDate,
-			    b.btStatus        AS status
-			FROM P09Batch b
-			WHERE
-			    b.btPostedInd = 'T'
-			ORDER BY
-			    b.bId.crRefundType,
-			    b.bId.btBatchPrefix,
-			    b.bId.btBatchDate,
-			    b.bId.btBatchSuffix
-			""")
-	List<P09175BatchView> fetchPx01Cursor();
+		@Modifying
+		@Transactional
+		@Query("""
+				UPDATE P09Batch b
+				   SET b.btPostedInd = :newPostedInd
+				 WHERE b.bId.btBatchSuffix = :batchSuffix
+				   AND b.bId.btBatchDate   = :batchDate
+				   AND b.bId.btBatchPrefix = :batchPrefix
+				   AND b.bId.crRefundType  = :refundType
+				   AND b.btPostedInd       = :currentPostedInd
+				""")
+		int updatePostedIndicator(@Param("newPostedInd") String newPostedInd, @Param("batchSuffix") String batchSuffix,
+				@Param("batchDate") String batchDate, @Param("batchPrefix") String batchPrefix,
+				@Param("refundType") String refundType, @Param("currentPostedInd") String currentPostedInd);
 
-	@Modifying
-	@Transactional
-	@Query("""
-			UPDATE P09Batch b
-			   SET b.btPostedInd = :postedInd
-			 WHERE b.bId.btBatchSuffix = :batchSuffix
-			   AND b.bId.btBatchDate   = :batchDate
-			   AND b.bId.btBatchPrefix = :batchPrefix
-			   AND b.bId.crRefundType  = :refundType
-			""")
-	int updatePostedIndicator(@Param("postedInd") String postedInd, @Param("batchSuffix") String batchSuffix,
-			@Param("batchDate") String batchDate, @Param("batchPrefix") String batchPrefix,
-			@Param("refundType") String refundType);
 
 }
