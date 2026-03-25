@@ -10,21 +10,27 @@ import java.time.LocalDateTime;
 @Data
 public class P09305OutputRecord {
     // control/display
-    private String clerkId;
+    private String actUserId;
+    private String actActivity;
     private LocalDate crCntrlDate;
     private String crCntrlNbr;
     private String crRefundType;
-    private BigDecimal crCntrldAmt;
-
-    // detail
-    private String actActivity;
     private LocalDate actActivityDate;
     private LocalDateTime actTimestamp;
-    private BigDecimal activityAmount;
-    private BigDecimal workingBalance;
-    private BigDecimal cashReceiptsBalance;
-
+    
+    
+    private String crXrefNbr;
+    private LocalDate actXrefDate;
+    
+    
+    private BigDecimal crCntrldAmt;  
     private String crCheckNbr;
+    
+    
+    
+    
+    private BigDecimal actActivityAmt;
+    private BigDecimal actWorkingBal;
     private BigDecimal crCheckAmt;
     private String crReceiptType;
     private String crClaimType;
@@ -35,11 +41,8 @@ public class P09305OutputRecord {
     private String crReasonCode;
     private String crGlAcctNbr;
     private String corp;
-    
-    
-    
-    private String actXrefNumber;
-    private LocalDate actXrefDate;
+
+    private BigDecimal crReceiptBal;
 
     // for checkpointing frequency
     private int checkpointCounter;

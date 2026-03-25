@@ -12,6 +12,8 @@ public interface P09305ActivityView {
     String getCrRefundType();
     LocalDate getActActivityDate();
     LocalDateTime getActTimestamp();
+    
+    
 
     BigDecimal getCrCntrldAmt();
     String getCrCheckNbr();
@@ -25,7 +27,15 @@ public interface P09305ActivityView {
     String getCrReasonCode();
     String getCrGlAcctNbr();
     String getCrCorp();
+    
     String getCrXrefNbr();
     LocalDate getActXrefDate();
+    
+    
+    BigDecimal getActActivityAmt();
+    BigDecimal getActWorkingBal();
+
+    BigDecimal getCrReceiptBal() ;
+    
 }
 

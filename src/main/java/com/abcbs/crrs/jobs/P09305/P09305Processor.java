@@ -5,6 +5,7 @@ import java.util.Objects;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.springframework.batch.core.Step;
 import org.springframework.batch.item.ItemProcessor;
 import org.springframework.stereotype.Component;
 
@@ -14,9 +15,12 @@ import com.abcbs.crrs.projections.P09305ActivityView;
 @Component
 public class P09305Processor implements ItemProcessor<P09305ActivityView, P09305OutputRecord> {
 
+
+
     private String lastClerk=null, lastDate=null, lastNbr=null, lastType=null;
     private int checkpointCounter=0;
     private static final Logger log = LogManager.getLogger(P09305Config.class);
+
 
     @Override
     public P09305OutputRecord process(P09305ActivityView v) {
@@ -34,17 +38,23 @@ public class P09305Processor implements ItemProcessor<P09305ActivityView, P09305
                 Objects.equals(cnbr, lastNbr) &&
                 Objects.equals(rtype, lastType);
 
-        r.setClerkId(clerk);
+        r.setActUserId(clerk);
         
-        r.setCrCntrlDate(sameKey ? null : v.getCrCntrlDate());
-        r.setCrCntrlNbr(sameKey ? ""   : cnbr);
-        r.setCrRefundType(sameKey ? "" : rtype);
+        
+       
+        
         r.setCrCntrldAmt(sameKey ? null : v.getCrCntrldAmt());
         
 
         // details
         r.setActActivity(v.getActActivity());
+        r.setCrCntrlDate(sameKey ? null : v.getCrCntrlDate());
+        r.setCrCntrlNbr(sameKey ? ""   : cnbr);
+        r.setCrRefundType(sameKey ? "" : rtype);
         r.setActActivityDate(v.getActActivityDate());
+        
+        
+        
         r.setActTimestamp(v.getActTimestamp());
         r.setCrCheckNbr(v.getCrCheckNbr());
         r.setCrCheckAmt(v.getCrCheckAmt());
@@ -54,11 +64,22 @@ public class P09305Processor implements ItemProcessor<P09305ActivityView, P09305
         r.setCrPatientFname(v.getCrPatientFname());
         r.setCrRemittorName(v.getCrRemittorName());
         r.setCrMbrIdNbr(v.getCrMbrIdNbr());
+
         r.setCrReasonCode(v.getCrReasonCode());
         r.setCrGlAcctNbr(v.getCrGlAcctNbr());
         r.setCorp(v.getCrCorp());
-        r.setActXrefNumber(v.getCrXrefNbr());
+        
+        r.setCrXrefNbr(v.getCrXrefNbr());
         r.setActXrefDate(v.getActXrefDate());
+        
+        r.setActActivityAmt(v.getActActivityAmt());
+        r.setActWorkingBal(v.getActWorkingBal());
+        
+        r.setCrReceiptBal(v.getCrReceiptBal());
+
+
+        
+
 
         // checkpoint counter (writer uses frequency from ExecutionContext)
         checkpointCounter++;

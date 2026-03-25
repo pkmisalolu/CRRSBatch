@@ -84,14 +84,20 @@ public class P09305Config {
          @Value("#{jobParameters['checkpointKey']}") String checkpointKey) {
      return (contrib, ctx) -> {
          Long cnt = em.createQuery(
-             "SELECT COUNT(a) FROM P09Activity a JOIN P09CashReceipt b " +
-             " ON a.id.crCntrlDate=b.id.crCntrlDate AND a.id.crCntrlNbr=b.id.crCntrlNbr AND a.id.crRefundType=b.id.crRefundType " +
-             "WHERE b.crCorp=:corpNo AND a.actDailyInd='Y' AND a.id.actActivity<>'EST' AND " +
-             " CONCAT(a.actUserId, a.id.actActivity," +
-             "       FUNCTION('FORMAT', a.id.crCntrlDate, 'yyyy-MM-dd')," +
-             "        a.id.crCntrlNbr, a.id.crRefundType," +
-             "        FUNCTION('FORMAT', a.id.actActivityDate, 'yyyy-MM-dd')," +
-             "        FUNCTION('FORMAT', a.id.actTimestamp, 'yyyy-MM-dd HH:mm:ss.fff')) > :checkpointKey", Long.class)
+        		 "SELECT COUNT(a) " +
+        		 "FROM P09Activity a, P09CashReceipt b " +
+        		 "WHERE a.aId.crCntrlDate = b.crId.crCntrlDate " +
+        		 "AND a.aId.crCntrlNbr = b.crId.crCntrlNbr " +
+        		 "AND a.aId.crRefundType = b.crId.crRefundType " +
+        		 "AND b.crCorp = :corpNo " +
+        		 "AND a.actDailyInd = 'Y' " +
+        		 "AND a.aId.actActivity <> 'EST' " +
+        		 "AND CONCAT(" +
+        		 "    CONCAT(CONCAT(a.actUserId, a.aId.actActivity), FUNCTION('TO_CHAR', a.aId.crCntrlDate))," +
+        		 "    CONCAT(CONCAT(a.aId.crCntrlNbr, a.aId.crRefundType)," +
+        		 "        CONCAT(FUNCTION('TO_CHAR', a.aId.actActivityDate), FUNCTION('TO_CHAR', a.aId.actTimestamp))" +
+        		 "    )" +
+        		 ") > :checkpointKey", Long.class)
              .setParameter("corpNo", this.corpNo)
              .setParameter("checkpointKey", checkpointKey == null ? "" : checkpointKey)
              .getSingleResult();
@@ -128,31 +134,33 @@ public class P09305Config {
          @Value("#{jobParameters['checkpointKey']}") String checkpointKey) throws IOException {
 
 	 String jpql =
-			    "SELECT NEW com.abcbs.crrs.projections.P09305ActivityViewImpl(" +
-			    "  a.actUserId, a.id.actActivity, a.id.crCntrlDate, a.id.crCntrlNbr, a.id.crRefundType," +
-			    "  a.id.actActivityDate, a.id.actTimestamp," +
-			    "  a.actXrefNbr, a.actXrefDate, " +
-			    "  b.crCntrldAmt, b.crCheckNbr, b.crCheckAmt, b.crReceiptType, b.crClaimType," +
-			    "  b.crPatientLname, b.crPatientFname, b.crRemittorName, b.crMbrIdNbr," +
-			    "  b.crReasonCode, b.crGlAcctNbr, b.crCorp" +          // <-- note b.id.crCorp
-			    ") " +
-			    "FROM P09Activity a JOIN P09CashReceipt b " +
-			    "  ON "+
-			    "a.id.crCntrlDate = b.id.crCntrlDate " +
-			    "AND a.id.crCntrlNbr  = b.id.crCntrlNbr  " +
-			    "AND  a.id.crRefundType= b.id.crRefundType " +
-			    "WHERE b.crCorp = :corpNo " +                         // <-- note b.id.crCorp
-			    "  AND a.actDailyInd = 'Y' " +
-			    "  AND a.id.actActivity <> 'EST' " +                     // <-- a.id.actActivity
-			    "  AND CONCAT(" +
-			    "       a.actUserId, a.id.actActivity," +
-			    "       FUNCTION('FORMAT', a.id.crCntrlDate, 'yyyy-MM-dd')," +
-			    "       a.id.crCntrlNbr, a.id.crRefundType," +
-			    "       FUNCTION('FORMAT', a.id.actActivityDate, 'yyyy-MM-dd')," +
-			    "       FUNCTION('FORMAT', a.id.actTimestamp, 'yyyy-MM-dd HH:mm:ss.fff')" +
-			    "      ) > :checkpointKey " +
-			    "ORDER BY a.actUserId, a.id.actActivity, a.id.crCntrlDate, a.id.crCntrlNbr," +
-			    "         a.id.crRefundType, a.id.actActivityDate, a.id.actTimestamp, b.crCorp";
+			 "SELECT NEW com.abcbs.crrs.projections.P09305ActivityViewImpl(" +
+			 "  a.actUserId, a.aId.actActivity, a.aId.crCntrlDate, a.aId.crCntrlNbr, a.aId.crRefundType," +
+			 "  a.aId.actActivityDate, a.aId.actTimestamp," +
+			 "  a.actXrefNbr, a.actXrefDate, " +
+			 "  a.actActivityAmt, " +
+			 "  a.actWorkingBal, " +
+			 "  b.crCntrldAmt, b.crCheckNbr, b.crCheckAmt, b.crReceiptType, b.crClaimType," +
+			 "  b.crPatientLname, b.crPatientFname, b.crRemittorName, b.crMbrIdNbr," +
+			 "  b.crReasonCode, b.crGlAcctNbr, b.crCorp," +
+			 "  b.crReceiptBal " +
+			 ") " +
+			 "FROM P09Activity a, P09CashReceipt b " +
+			 "WHERE a.aId.crCntrlDate = b.crId.crCntrlDate " +
+			 "AND a.aId.crCntrlNbr = b.crId.crCntrlNbr " +
+			 "AND a.aId.crRefundType = b.crId.crRefundType " +
+			 "AND b.crCorp = :corpNo " +
+			 "AND a.actDailyInd = 'Y' " +
+			 "AND a.aId.actActivity <> 'EST' " +
+		     "  AND CONCAT(" +
+             "       a.actUserId, a.aId.actActivity," +
+             "       FUNCTION('FORMAT', a.aId.crCntrlDate, 'yyyy-MM-dd')," +
+             "       a.aId.crCntrlNbr, a.aId.crRefundType," +
+             "       FUNCTION('FORMAT', a.aId.actActivityDate, 'yyyy-MM-dd')," +
+             "       FUNCTION('FORMAT', a.aId.actTimestamp, 'yyyy-MM-dd HH:mm:ss.fff')" +
+             "      ) > :checkpointKey " +
+			 "ORDER BY a.actUserId, a.aId.actActivity, a.actActivityAmt, a.aId.crCntrlDate, " +
+			 "a.aId.crCntrlNbr, a.aId.crRefundType, a.aId.actActivityDate, a.aId.actTimestamp, b.crCorp";
 		 
 
 	 logger.info("P09305 Jpa Paging Item Reader job started ");
@@ -166,7 +174,7 @@ public class P09305Config {
              .build();
      
  }
-
+ 
  public ItemProcessor<P09305ActivityView, P09305OutputRecord> p09305Processor() {
      return new P09305Processor();
  }
@@ -175,9 +183,12 @@ public class P09305Config {
  @StepScope
  public P09305ReportWriter p09305Writer(
          @Value("#{jobParameters['outputFile']}") String outputFile,
-         CorpNameLoader corpNameLoader) {
+         @Value("#{jobParameters['corpFile']}") String corpFile,
+         CorpNameLoader corpNameLoader) throws IOException {
+	 
+	 
 	 logger.info("p09305 report writer started ");
-     return new P09305ReportWriter(outputFile, this.corpNo, corpNameLoader);
+     return new P09305ReportWriter(outputFile, readCorp(corpFile).corpNo, corpNameLoader);
  }
 
  @Bean

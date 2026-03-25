@@ -1,0 +1,74 @@
+ REPORT #  P09305-A                                   ARKANSAS BLUE CROSS AND BLUE SHIELD                                  PAGE     1
+ RUN DATE: 03/23/26                                    FINANCIAL ACTIVITY REPORT                                   RUN TIME: 17:11:32
+ CORP 01 - BCBS                                                                                                                      
+                                                                                                                                     
+ CLERK ID: KKKATHI                                                                                                                   
+                                                          RECEIPT ACTIVITY                                                           
+  CONTROL  CNTL  REF      CONTROL      ACTIVITY              XREF                       ACTIVITY        WORKING       CASH RECEIPTS  
+   DATE      #   TYPE     AMOUNT         DATE    ACT        NUMBER          XREF DATE    AMOUNT         BALANCE         BALANCE      
+ --------  ----  ---- --------------   --------  ---  --------------------  --------- --------------- --------------- ---------------
+ 02/26/26  707   UND          $19.50   03/23/26  REM  REMAIL                                   $19.50           $0.00           $0.00
+                                                                                                                                     
+ TOTAL RECEIPT ACTIVITY FOR CLERK: KKKATHI                                      1     $19.50            $0.00            $0.00       
+ REPORT #  P09305-A                                   ARKANSAS BLUE CROSS AND BLUE SHIELD                                  PAGE     2
+ RUN DATE: 03/23/26                                    FINANCIAL ACTIVITY REPORT                                   RUN TIME: 17:11:32
+ CORP 01 - BCBS                                                                                                                      
+                                                                                                                                     
+ CLERK ID: RAS3488                                                                                                                   
+                                                          RECEIPT ACTIVITY                                                           
+  CONTROL  CNTL  REF      CONTROL      ACTIVITY              XREF                       ACTIVITY        WORKING       CASH RECEIPTS  
+   DATE      #   TYPE     AMOUNT         DATE    ACT        NUMBER          XREF DATE    AMOUNT         BALANCE         BALANCE      
+ --------  ----  ---- --------------   --------  ---  --------------------  --------- --------------- --------------- ---------------
+ 01/05/06  001   PER         $401.42   01/09/06  ACC  RETRO DRUG CANCEL      01/06/06         $401.42           $0.00           $0.00
+                                                                                                                                     
+ TOTAL RECEIPT ACTIVITY FOR CLERK: RAS3488                                      1    $401.42            $0.00            $0.00       
+ REPORT #  P09305-A                                   ARKANSAS BLUE CROSS AND BLUE SHIELD                                  PAGE     3
+ RUN DATE: 03/23/26                                    FINANCIAL ACTIVITY REPORT                                   RUN TIME: 17:11:32
+ CORP 01 - BCBS                                                                                                                      
+                                                                                                                                     
+ CLERK ID: RRP7573                                                                                                                   
+                                                          RECEIPT ACTIVITY                                                           
+  CONTROL  CNTL  REF      CONTROL      ACTIVITY              XREF                       ACTIVITY        WORKING       CASH RECEIPTS  
+   DATE      #   TYPE     AMOUNT         DATE    ACT        NUMBER          XREF DATE    AMOUNT         BALANCE         BALANCE      
+ --------  ----  ---- --------------   --------  ---  --------------------  --------- --------------- --------------- ---------------
+ 01/05/06  001   RET          $70.24   01/18/06  ACC  05278X08160            01/16/06           $7.91           $0.00           $0.00
+                               $0.00   01/18/06  ACC  05278X08162            01/16/06          $23.26           $0.00           $0.00
+                               $0.00   01/18/06  ACC  05278X08161            01/16/06          $39.07           $0.00           $0.00
+ 01/05/06  001   UND          $90.20   01/12/06  ACC  05308353740            01/10/06          $90.20           $0.00           $0.00
+                                                                                                                                     
+ TOTAL RECEIPT ACTIVITY FOR CLERK: RRP7573                                      4    $160.44            $0.00            $0.00       
+ REPORT #  P09305-A                                   ARKANSAS BLUE CROSS AND BLUE SHIELD                                  PAGE     4
+ RUN DATE: 03/23/26                                    FINANCIAL ACTIVITY REPORT                                   RUN TIME: 17:11:32
+ CORP 01 - BCBS                                                                                                                      
+                                                                                                                                     
+ CLERK ID: string                                                                                                                    
+                                                          RECEIPT ACTIVITY                                                           
+  CONTROL  CNTL  REF      CONTROL      ACTIVITY              XREF                       ACTIVITY        WORKING       CASH RECEIPTS  
+   DATE      #   TYPE     AMOUNT         DATE    ACT        NUMBER          XREF DATE    AMOUNT         BALANCE         BALANCE      
+ --------  ----  ---- --------------   --------  ---  --------------------  --------- --------------- --------------- ---------------
+ 02/05/26  701   RET          $58.00   03/22/26  REM                         02/09/26          $58.00           $0.00           $0.00
+                                                                                                                                     
+ TOTAL RECEIPT ACTIVITY FOR CLERK: string                                      1     $58.00            $0.00            $0.00        
+ REPORT #  P09305-A                                   ARKANSAS BLUE CROSS AND BLUE SHIELD                                  PAGE     5
+ RUN DATE: 03/23/26                                    FINANCIAL ACTIVITY REPORT                                   RUN TIME: 17:11:32
+                                                                                                                                     
+                                                                                                                                     
+                                                                                                                                     
+                                                                                                          NUMBER       AMOUNT        
+        G R A N D    T O T A L    OF ALL RECEIPT ACTIVITY FOR REFUND TYPE        PERSONALS  IS                       1        $401.42
+        G R A N D    T O T A L    OF ALL RECEIPT ACTIVITY FOR REFUND TYPE          RETURNS  IS                       2        $128.24
+        G R A N D    T O T A L    OF ALL RECEIPT ACTIVITY FOR REFUND TYPE   UNDELIVERABLES  IS                       2        $109.70
+        G R A N D    T O T A L    OF ALL RECEIPT ACTIVITY FOR REFUND TYPE           OTHERS  IS                       0          $0.00
+        G R A N D    T O T A L    OF ALL RECEIPT ACTIVITY FOR REFUND TYPE           OFFSET  IS                       0          $0.00
+        G R A N D    T O T A L    OF ALL RECEIPT ACTIVITY FOR REFUND TYPE     STOP PAYMENT  IS                       0          $0.00
+        G R A N D    T O T A L    OF ALL RECEIPT ACTIVITY FOR REFUND TYPE    ARK PYMT INIT  IS                       0          $0.00
+                                                                                                                                     
+                                                                                                                                     
+                                                                                                          NUMBER       AMOUNT        
+                                      G R A N D    T O T A L     OF ALL RECEIPT ACTIVITY IS                          7        $639.36
+                                                                                                                                     
+                                                                                                                                     
+                                                                                                                                     
+*************************************************************************************************************************************
+**                                                     END OF P09305-A REPORT                                                      **
+*************************************************************************************************************************************

@@ -146,10 +146,10 @@ public class RoutingReportWriter implements AutoCloseable {
         if (hdr != null) {
             write(String.format(
                 " BEG INV: %6s %14s   REC'D: %6s %14s  FOR: %6s %14s  END INV: %6s %14s",
-                CNT.format(hdr.getBeginCnt()), padAmt(hdr.getBeginAmt(), 14),
+                CNT.format(hdr.getBeginCnt()), padAmt(absSafe(hdr.getBeginAmt()), 14),
                 CNT.format(hdr.getRecvCnt()),   padAmt(hdr.getRecvAmt(), 14),
                 CNT.format(hdr.getFwdCnt()),   padAmt(hdr.getFwdAmt(), 14),
-                CNT.format(hdr.getEndCnt()),   padAmt(hdr.getEndAmt(), 14)
+                CNT.format(hdr.getEndCnt()),   padAmt(absSafe(hdr.getEndAmt()), 14)
             ));
         }
 
@@ -160,6 +160,11 @@ public class RoutingReportWriter implements AutoCloseable {
         write("  TYPE    DATE  NUMBER     AMOUNT        LAST      FIRST    ID NUMBER         REMITTOR    CODE   TYPE    NUMBER   STATUS   LOC  HOUSE");
 
         write(""); // blank line before details
+    }
+    
+    
+    private static BigDecimal absSafe(BigDecimal val) {
+        return val == null ? BigDecimal.ZERO : val.abs();
     }
 
     private void ensureBody() throws IOException {
