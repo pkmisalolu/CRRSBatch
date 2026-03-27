@@ -198,7 +198,8 @@ public class P09305ReportWriter implements ItemWriter<P09305OutputRecord>, StepE
         String ctrlDate = r.getCrCntrlDate() == null ? "        " : r.getCrCntrlDate().format(DateTimeFormatter.ofPattern("MM/dd/yy"));
         String cnbr = blank(r.getCrCntrlNbr());
         String rtype = blank(r.getCrRefundType());
-        String ctrlAmt = r.getCrCntrldAmt() == null ? "" : right(AMT.format(r.getCrCntrldAmt()), 14);
+        String ctrlAmt = (r.getCrCntrldAmt() == null || r.getCrCntrldAmt().signum() == 0) ? "": right(AMT.format(r.getCrCntrldAmt()), 14);
+        
         String actDate = r.getActActivityDate() == null ? "        " : r.getActActivityDate().format(DateTimeFormatter.ofPattern("MM/dd/yy"));
         String act = pad(blank(r.getActActivity()), 3);
         String xref = pad(blank(r.getCrXrefNbr()), 20);
