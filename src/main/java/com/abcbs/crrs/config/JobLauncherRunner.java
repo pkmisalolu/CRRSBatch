@@ -18,6 +18,8 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
+import com.abcbs.crrs.traces.SyncDb2TraceFileService;
+
 @Component
 public class JobLauncherRunner implements CommandLineRunner {
 
@@ -120,13 +122,15 @@ public class JobLauncherRunner implements CommandLineRunner {
 	@Autowired
 	@Qualifier("p09350Job")
 	private Job p09350Job;
+	
+	int  exitCode=0;
 
 	private static final Logger logger = LogManager.getLogger(JobLauncherRunner.class);
 
 	@Override
 	public void run(String... args) throws Exception {
 		logger.info("Entered into run");
-		JobExecution jobExecution;
+		JobExecution jobExecution = null;
 		String jobName;
 
 		if (args.length > 0) {
@@ -656,6 +660,15 @@ public class JobLauncherRunner implements CommandLineRunner {
 				logger.error("Job has not found");
 				throw new IllegalArgumentException("JOB NOT FOUND");
 			}
+			SyncDb2TraceFileService.getInstance().rotateFile();
+			if (jobExecution == null) {
+	            exitCode = 1;
+	        }else if ("FAILED".equalsIgnoreCase(jobExecution.getExitStatus().getExitCode())) {
+	            exitCode = 1;
+	        } else {
+	            System.out.println("Job completed successfully");
+	        }
+			System.exit(exitCode);
 		}
 	}
 }

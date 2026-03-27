@@ -64,6 +64,7 @@ public class AfterCommitSqlFormatter implements MessageFormattingStrategy {
                             	formatted=formatted+";";
                             }
                             auditDb2.info(formatted);
+                            SyncDb2TraceFileService.getInstance().writeActivity(formatted);
                         });
                         queries.removeAll(queries); // Clear instead of remove
                         SQL_BUFFER.get().clear();

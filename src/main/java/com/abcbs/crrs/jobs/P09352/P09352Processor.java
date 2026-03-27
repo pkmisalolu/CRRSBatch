@@ -2043,9 +2043,9 @@ private static BigDecimal nvl(BigDecimal v) { return v == null ? BigDecimal.ZERO
 
      P09352XP09DedsOutput gl = cloneGl(base);
 
-     // IF receipt type in FS/FB/FH/FF/FC/FD/FV => 277100000000 else 10953
+     // IF receipt type in FS/FB/FH/FF/FC/FD/FV => 277100000000 else 29070
      if (isFsFamily(r.crReceiptType)) gl.setGlAcctNbr("277100000000");
-     else gl.setGlAcctNbr(padRight("10953", 12));
+     else gl.setGlAcctNbr(padRight("29070", 12));
 
      // COMPUTE GL-ACT-AMT = (activityAmt * -1)
      gl.setGlActAmt(nvlBd(r.actActivityAmt).negate());
