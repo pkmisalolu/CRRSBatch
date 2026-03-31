@@ -26,7 +26,26 @@ public class MSSQLtoDB2Converter {
 
             // check_control
             "CONTROL_FROM_DATE",
-            "CONTROL_TO_DATE"
+            "CONTROL_TO_DATE",
+            
+            //cash_receipt 
+            "CR_CNTRL_DATE",
+            "CR_RECEIVED_DATE",
+            "CR_DEPOSIT_DATE",
+            "CR_ENTRY_DATE",
+            "CR_STATUS_DATE",
+            "CR_CHECK_DATE",
+            "CR_LETTER_DATE",
+            "CR_ACCTS_REC_DATE",
+            "CR_LOCATION_DATE",
+            
+            //ACTIVITY 
+            "ACT_ACTIVITY_DATE",
+            "ACT_XREF_DATE",
+            "ACT_REPORT_DATE"
+    );
+    private static final Set<String> LOCAL_TIMESTAMP_COLUMNS = Set.of(
+            "ACT_TIMESTAMP"
     );
 
 
@@ -40,21 +59,33 @@ public class MSSQLtoDB2Converter {
 
         if (normalized.startsWith("INSERT INTO BANK_RECON") ||
             normalized.startsWith("INSERT INTO CHECK_CONTROL") || 
+            normalized.startsWith("INSERT INTO P09_ACTIVITY") ||
+            normalized.startsWith("INSERT INTO P09_CASH_RECEIPT") ||
             (normalized.startsWith("INSERT") && normalized.contains("BANK_RECON") ) ||
+            (normalized.startsWith("INSERT") && normalized.contains("P09_ACTIVITY") ) ||
+            (normalized.startsWith("INSERT") && normalized.contains("P09_CASH_RECEIPT") ) ||
             (normalized.startsWith("INSERT") && normalized.contains("CHECK_CONTROL") )) {
             return handleInsert(sql);
         }
 
         if (normalized.startsWith("UPDATE BANK_RECON") ||
             normalized.startsWith("UPDATE CHECK_CONTROL") ||
+            normalized.startsWith("UPDATE P09_ACTIVITY") ||
+            normalized.startsWith("UPDATE P09_CASH_RECEIPT") ||
             (normalized.startsWith("UPDATE") && normalized.contains("BANK_RECON") ) ||
+            (normalized.startsWith("UPDATE") && normalized.contains("P09_ACTIVITY") ) ||
+            (normalized.startsWith("UPDATE") && normalized.contains("P09_CASH_RECEIPT") ) ||
             (normalized.startsWith("UPDATE") && normalized.contains("CHECK_CONTROL") )) {
             return handleUpdate(sql);
         }
         
         if (normalized.startsWith("DELETE FROM BANK_RECON") ||
         	    normalized.startsWith("DELETE FROM CHECK_CONTROL")||
+        	    normalized.startsWith("DELETE FROM P09_ACTIVITY")||
+        	    normalized.startsWith("DELETE FROM P09_CASH_RECEIPT")||
         	    (normalized.startsWith("DELETE") && normalized.contains("BANK_RECON") ) ||
+        	    (normalized.startsWith("DELETE") && normalized.contains("P09_ACTIVITY") ) ||
+        	    (normalized.startsWith("DELETE") && normalized.contains("P09_CASH_RECEIPT") ) ||
                 (normalized.startsWith("DELETE") && normalized.contains("CHECK_CONTROL") )) {
         	    return handleDelete(sql);
         }
@@ -70,7 +101,7 @@ public class MSSQLtoDB2Converter {
     private static String handleInsert(String sql) {
 
         Pattern p = Pattern.compile(
-                "INSERT\\s+INTO\\s+([A-Z_]+)\\s*\\(([^)]+)\\)\\s*VALUES\\s*\\((.*)\\)\\s*;?\\s*$",
+                "INSERT\\s+INTO\\s+([A-Z0-9_]+)\\s*\\(([^)]+)\\)\\s*VALUES\\s*\\((.*)\\)\\s*;?\\s*$",
                 Pattern.CASE_INSENSITIVE | Pattern.DOTALL
         );
 
@@ -92,6 +123,8 @@ public class MSSQLtoDB2Converter {
 
             if (LOCAL_DATE_COLUMNS.contains(col)) {
                 values.set(i, convertLiteralToDb2Date(val));
+            }else if (LOCAL_TIMESTAMP_COLUMNS.contains(col)) {
+                values.set(i, convertLiteralToDb2Timestamp(val));
             }
         }
 
@@ -138,6 +171,9 @@ public class MSSQLtoDB2Converter {
             m.appendTail(sb);
             result = sb.toString();
         }
+        for (String col : LOCAL_TIMESTAMP_COLUMNS) {
+            result = replaceTimestampComparisons(result, col);
+        }
 
         return result;
     }
@@ -175,6 +211,9 @@ public class MSSQLtoDB2Converter {
     	    m.appendTail(sb);
     	    result = sb.toString();
     	}
+    	for (String col : LOCAL_TIMESTAMP_COLUMNS) {
+            result = replaceTimestampComparisons(result, col);
+        }
     	return result;
     }
 
@@ -232,7 +271,94 @@ public class MSSQLtoDB2Converter {
         list.add(sb.toString());
         return list;
     }
+    private static String convertLiteralToDb2Timestamp(String literal) {
 
+        if (literal == null) return literal;
+
+        literal = literal.trim();
+
+        if (!literal.startsWith("'") || !literal.endsWith("'")) {
+            return literal;
+        }
+
+        String inside = literal.substring(1, literal.length() - 1).trim();
+
+        inside = normalizeTimestamp(inside);
+
+        return "'" + inside + "'";
+    }
+    private static String replaceTimestampComparisons(String sql, String col) {
+        Pattern p = Pattern.compile(
+                "(" +
+                        "(?:\\[?[A-Z0-9_]+\\]?\\.)?" +
+                        "(?:\\[?" + Pattern.quote(col) + "\\]?)" +
+                        "\\s*(=|<=|>=|<|>)\\s*" +
+                ")" +
+                "(?:N)?" +
+                "'([^']+)'",
+                Pattern.CASE_INSENSITIVE
+        );
+
+        Matcher m = p.matcher(sql);
+        StringBuffer sb = new StringBuffer();
+
+        while (m.find()) {
+            String prefix = m.group(1);
+            String val = m.group(3);
+            String newVal = "'" + normalizeTimestamp(val) + "'";
+            m.appendReplacement(sb, Matcher.quoteReplacement(prefix + newVal));
+        }
+
+        m.appendTail(sb);
+        return sb.toString();
+    }
+    private static String normalizeTimestamp(String ts) {
+
+        if (ts == null) return ts;
+
+        String value = ts.trim();
+
+        // Step 1: Replace T with space
+        value = value.replace('T', ' ');
+
+        // Step 2: Remove timezone (handles ALL cases)
+        // Z
+        // +5
+        // -5
+        // +05
+        // -05
+        // +5:30
+        // -5:30
+        // +05:30
+        // -05:30
+        value = value.replaceFirst("(Z|[+-]\\d{1,2}(:\\d{2})?)$", "");
+
+        // Step 3: Normalize fraction to 6 digits
+        if (value.contains(".")) {
+
+            int dot = value.indexOf('.');
+            String main = value.substring(0, dot);
+            String fraction = value.substring(dot + 1);
+
+            // remove any non-numeric garbage after fraction
+            fraction = fraction.replaceAll("[^0-9].*$", "");
+
+            if (fraction.length() > 6) {
+                fraction = fraction.substring(0, 6);
+            } else {
+                while (fraction.length() < 6) {
+                    fraction += "0";
+                }
+            }
+
+            value = main + "." + fraction;
+
+        } else {
+            value = value + ".000000";
+        }
+
+        return value.trim();
+    }
 }
         
 

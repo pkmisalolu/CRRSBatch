@@ -13,7 +13,8 @@ import java.util.List;
 public class AfterCommitSqlFormatter implements MessageFormattingStrategy {
 
     // Tables to include in logging
-    private static final List<String> TARGET_TABLES = List.of("bank_description", "check_control", "bank_recon");
+    //private static final List<String> TARGET_TABLES = List.of("bank_description", "check_control", "bank_recon");
+	private static final List<String> TARGET_TABLES = List.of("bank_recon", "p09_activity", "p09_cash_receipt");
     
     //private static final Logger logger = LogManager.getLogger("");
     private static final Logger audit = LogManager.getLogger("AUDIT_LOG");

@@ -1,0 +1,9 @@
+update p09_cash_receipt set cr_remittor_title=' ' where cr_refund_type='OFF' and cr_cntrl_date='2008-11-04' and cr_cntrl_nbr='100';
+update p09_cash_receipt set cr_remittor_title=' ' where cr_refund_type='OFF' and cr_cntrl_date='2008-11-04' and cr_cntrl_nbr='101';
+update p09_cash_receipt set cr_remittor_title=' ' where cr_refund_type='OFF' and cr_cntrl_date='2008-11-04' and cr_cntrl_nbr='102';
+update p09_cash_receipt set cr_remittor_title=' ' where cr_refund_type='OFF' and cr_cntrl_date='2008-11-04' and cr_cntrl_nbr='103';
+update p09_cash_receipt set cr_remittor_title=' ' where cr_refund_type='OFF' and cr_cntrl_date='2008-11-04' and cr_cntrl_nbr='104';
+update p09_cash_receipt set cr_remittor_title=' ' where cr_refund_type='OFF' and cr_cntrl_date='2008-11-04' and cr_cntrl_nbr='105';
+update p09_cash_receipt set cr_remittor_title=' ' where cr_refund_type='OFF' and cr_cntrl_date='2008-11-04' and cr_cntrl_nbr='106';
+update p09_cash_receipt set cr_remittor_title=' ' where cr_refund_type='OFF' and cr_cntrl_date='2008-11-04' and cr_cntrl_nbr='107';
+update p09_cash_receipt set cr_remittor_title=' ' where cr_refund_type='OFF' and cr_cntrl_date='2008-11-04' and cr_cntrl_nbr='108';

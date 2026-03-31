@@ -1,0 +1,113 @@
+ REPORT #  P09315-A                             ARKANSAS BLUE CROSS AND BLUE SHIELD                                        PAGE     1
+ RUN DATE: 03/29/26                             SUMMARY OF DAILY FINANCIAL ACTIVITY                                RUN TIME: 13:50:57
+ CORP 01 - BCBS                                                                                                                      
+                                 MANUAL ESTABLISHED           SYSTEM ESTABLISHED                                                     
+                                     #       AMOUNT         #       AMOUNT                                                           
+                                                                                                                                     
+ PERSONAL CHECKS                     0       $0.00          0       $0.00                                                            
+ RETURNED CHECKS                     0       $0.00          0       $0.00                                                            
+ RETURNED/UNDELIVERABLES             0       $0.00          0       $0.00                                                            
+ OTH    C/R                          0       $0.00          0       $0.00                                                            
+ OFFSET                              0       $0.00          0       $0.00                                                            
+ STOP PAYMENT                        0       $0.00          0       $0.00                                                            
+ ARKANSAS PYMT INITIATIVE            0       $0.00          0       $0.00                                                            
+                   TOTALS            0       $0.00          0       $0.00                                                            
+                                                                                                                                     
+                                                                                                                                     
+                                                                                                                                     
+ MANUAL RECON ACTIVITY                    PERSONAL                   RETURNS                 UNDELIVERABLE               OTHER       
+                                        #        AMOUNT           #        AMOUNT           #        AMOUNT           #        AMOUNT
+                                                                                                                                     
+ ACCEPTED MONEY                       168    $34,583.64           0         $0.00           0         $0.00           0         $0.00
+ APPLIED TO A/R                         0         $0.00           0         $0.00           0         $0.00           0         $0.00
+ CHECK REMAILED                         0         $0.00           0         $0.00           0         $0.00           0         $0.00
+ DELETED C/R                            0         $0.00           0         $0.00           0         $0.00           0         $0.00
+ LOGOUT TO SP ACCT                    168     $1,008.00           0         $0.00           2        $20.00           0         $0.00
+ FULL REISSUE REQUEST                   0         $0.00           0         $0.00           0         $0.00           0         $0.00
+ PARTIAL REISSUE REQUEST                0         $0.00           0         $0.00           0         $0.00           0         $0.00
+ TOT MANUAL RECON ACTIVITY            336    $35,591.64           0         $0.00           2        $20.00           0         $0.00
+                                                                                                                                     
+                                                                                                                                     
+                                                                                                                                     
+ MANUAL RECON ACTIVITY                     OFFSET                  STOP PAYMENT              ARK INIT PYMT          TOTAL PROCESSED  
+                                        #        AMOUNT           #        AMOUNT           #        AMOUNT           #        AMOUNT
+                                                                                                                                     
+ ACCEPTED MONEY                         0         $0.00           0         $0.00           0         $0.00           0         $0.00
+ APPLIED TO A/R                         0         $0.00           0         $0.00           0         $0.00           0         $0.00
+ CHECK REMAILED                         0         $0.00           0         $0.00           0         $0.00           0         $0.00
+ DELETED C/R                            0         $0.00           0         $0.00           0         $0.00           0         $0.00
+ LOGOUT TO SP ACCT                      0         $0.00           0         $0.00           0         $0.00           0         $0.00
+ FULL REISSUE REQUEST                   0         $0.00           0         $0.00           0         $0.00           0         $0.00
+ PARTIAL REISSUE REQUEST                0         $0.00           0         $0.00           0         $0.00           0         $0.00
+ TOT MANUAL RECON ACTIVITY              0         $0.00           0         $0.00           0         $0.00           0         $0.00
+                                                                                                                                     
+                                                                                                                                     
+                                                                                                                                     
+ REPORT #  P09315-A                             ARKANSAS BLUE CROSS AND BLUE SHIELD                                        PAGE     2
+ RUN DATE: 03/29/26                             SUMMARY OF DAILY FINANCIAL ACTIVITY                                RUN TIME: 13:50:57
+ CORP 01 - BCBS                                                                                                                      
+                                                                                                                                     
+ SYSTEM RECON ACTIVITY                    PERSONAL                   RETURNS                 UNDELIVERABLE               OTHER       
+                                        #        AMOUNT           #        AMOUNT           #        AMOUNT           #        AMOUNT
+                                                                                                                                     
+ FULL REISSUE                           0         $0.00           0         $0.00           0         $0.00           0         $0.00
+ PARTIAL REISSUE                        0         $0.00           0         $0.00           0         $0.00           0         $0.00
+ TOT SYSTEM RECON ACTIVITY              0         $0.00           0         $0.00           0         $0.00           0         $0.00
+ TOTAL RECON ACTIVITY                   0         $0.00           0         $0.00           0         $0.00           0         $0.00
+                                                                                                                                     
+                                                                                                                                     
+                                                                                                                                     
+ SYSTEM RECON ACTIVITY                     OFFSET                  STOP PAYMENT              ARK INIT PYMT          TOTAL PROCESSED  
+                                        #        AMOUNT           #        AMOUNT           #        AMOUNT           #        AMOUNT
+                                                                                                                                     
+ FULL REISSUE                           0         $0.00           0         $0.00           0         $0.00           0         $0.00
+ PARTIAL REISSUE                        0         $0.00           0         $0.00           0         $0.00           0         $0.00
+ TOT SYSTEM RECON ACTIVITY              0         $0.00           0         $0.00           0         $0.00           0         $0.00
+ TOTAL RECON ACTIVITY                   0         $0.00           0         $0.00           0         $0.00           0         $0.00
+                                                                                                                                     
+                                                                                                                                     
+                                                                                                                                     
+ REPORT #  P09315-A                             ARKANSAS BLUE CROSS AND BLUE SHIELD                                        PAGE     3
+ RUN DATE: 03/29/26                             SUMMARY OF DAILY FINANCIAL ACTIVITY                                RUN TIME: 13:50:57
+ CORP 01 - BCBS                                                                                                                      
+ MANUAL REQUESTED ACTIVITY                PERSONAL                   RETURNS                 UNDELIVERABLE               OTHER       
+                                        #        AMOUNT           #        AMOUNT           #        AMOUNT           #        AMOUNT
+                                                                                                                                     
+ REQUEST ACCEPT AMOUNT                  0         $0.00           0         $0.00           0         $0.00           0         $0.00
+ REQUEST ADJUSTMENT                     0         $0.00           0         $0.00           0         $0.00           0         $0.00
+ REQUEST APPLICATION                    0         $0.00           0         $0.00           0         $0.00           0         $0.00
+ REQUEST CHECK                          0         $0.00           0         $0.00           0         $0.00           0         $0.00
+ REQUEST OTHER ACTION                   0         $0.00           0         $0.00           0         $0.00           0         $0.00
+ REQUEST REMAIL OF CHECK                0         $0.00           0         $0.00           0         $0.00           0         $0.00
+ PENDED FOR ERROR                       0         $0.00           0         $0.00           0         $0.00           0         $0.00
+ RET CHECK CANCELLED                    0         $0.00           0         $0.00           0         $0.00           0         $0.00
+ MODIFIED                               0         $0.00           0         $0.00           0         $0.00           0         $0.00
+ TOT MANUAL REQUEST ACTIVITY            0         $0.00           0         $0.00           0         $0.00           0         $0.00
+                                                                                                                                     
+                                                                                                                                     
+                                                                                                                                     
+ MANUAL REQUESTED ACTIVITY                 OFFSET                  STOP PAYMENT              ARK INIT PYMT          TOTAL PROCESSED  
+                                        #        AMOUNT           #        AMOUNT           #        AMOUNT           #        AMOUNT
+                                                                                                                                     
+ REQUEST ACCEPT AMOUNT                  0         $0.00           0         $0.00           0         $0.00           0         $0.00
+ REQUEST ADJUSTMENT                     0         $0.00           0         $0.00           0         $0.00           0         $0.00
+ REQUEST APPLICATION                    0         $0.00           0         $0.00           0         $0.00           0         $0.00
+ REQUEST CHECK                          0         $0.00           0         $0.00           0         $0.00           0         $0.00
+ REQUEST OTHER ACTION                   0         $0.00           0         $0.00           0         $0.00           0         $0.00
+ REQUEST REMAIL OF CHECK                0         $0.00           0         $0.00           0         $0.00           0         $0.00
+ PENDED FOR ERROR                       0         $0.00           0         $0.00           0         $0.00           0         $0.00
+ RET CHECK CANCELLED                    0         $0.00           0         $0.00           0         $0.00           0         $0.00
+ MODIFIED                               0         $0.00           0         $0.00           0         $0.00           0         $0.00
+ TOT MANUAL REQUEST ACTIVITY            0         $0.00           0         $0.00           0         $0.00           0         $0.00
+                                                                                                                                     
+                                                                                                                                     
+                                                                                                                                     
+UPDATED ACT_DAILY_IND rows: 0                                                                                                        
+                                                                                                                                     
+                                                                                                                                     
+                                                                                                                                     
+                                                                                                                                     
+                                                                                                                                     
+                                                                                                                                     
+                                                                                                                                     
+ ****************************************************  END OF P09315-A REPORT  ******************************************************

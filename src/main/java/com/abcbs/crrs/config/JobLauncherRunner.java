@@ -181,8 +181,8 @@ public class JobLauncherRunner implements CommandLineRunner {
 						.addString("reportOut", reportOut).addLong("run.id", System.currentTimeMillis())
 						.toJobParameters();
 
-				JobExecution exec = jobLauncher.run(p09360Job, params);
-				logger.info("Job {} finished with status {}", jobName, exec.getStatus());
+				jobExecution = jobLauncher.run(p09360Job, params);
+				logger.info("Job {} finished with status {}", jobName, jobExecution.getStatus());
 			} else if ("P09375".equals(jobName)) {
 				logger.info("Requested job: {}", jobName);
 
@@ -202,8 +202,8 @@ public class JobLauncherRunner implements CommandLineRunner {
 						.addString("controlFile", controlFile).addLong("run.id", System.currentTimeMillis())
 						.toJobParameters();
 
-				JobExecution exec = jobLauncher.run(p09375Job, params);
-				logger.info("Job {} finished with status {}", jobName, exec.getStatus());
+				jobExecution = jobLauncher.run(p09375Job, params);
+				logger.info("Job {} finished with status {}", jobName, jobExecution.getStatus());
 			} else if ("P09320".equals(jobName)) {
 				logger.info("Requested job: {}", jobName);
 
@@ -218,8 +218,8 @@ public class JobLauncherRunner implements CommandLineRunner {
 						.addString("reportOut", reportOut).addLong("run.id", System.currentTimeMillis())
 						.toJobParameters();
 
-				JobExecution exec = jobLauncher.run(p09320Job, params);
-				logger.info("Job {} finished with status {}", jobName, exec.getStatus());
+				jobExecution = jobLauncher.run(p09320Job, params);
+				logger.info("Job {} finished with status {}", jobName, jobExecution.getStatus());
 			} else if ("P09321".equals(jobName)) {
 				logger.info("Requested job: {}", jobName);
 
@@ -235,8 +235,8 @@ public class JobLauncherRunner implements CommandLineRunner {
 						.addString("corpFile", corpFile).addString("reportOut", reportOut)
 						.addLong("run.id", System.currentTimeMillis()).toJobParameters();
 
-				JobExecution exec = jobLauncher.run(p09321Job, params);
-				logger.info("Job {} finished with status {}", jobName, exec.getStatus());
+				jobExecution = jobLauncher.run(p09321Job, params);
+				logger.info("Job {} finished with status {}", jobName, jobExecution.getStatus());
 			} else if ("P09185".equals(jobName)) {
 				logger.info("Requested for P09185");
 				String param1 = null;
@@ -418,30 +418,32 @@ public class JobLauncherRunner implements CommandLineRunner {
 				jobExecution = jobLauncher.run(p09315Job, params);
 
 			} else if ("P09305".equals(args[0])) {
-
+ 
 				String chkpFile = args[1];
 				String corpFile = args[2];
 				String output = args[3];
 				String checkpointKey = (args.length > 4) ? args[4] : ""; // seed (optional)
-
+ 
 				logger.info("Checkpoint File: " + chkpFile);
 				logger.info("corpFile : " + corpFile);
 				logger.info("Output File: " + output);
-
+ 
 				logger.info("checkpoin tKey: " + checkpointKey);
-
+ 
 				logger.info("---------------------------------------------------");
-
+ 
 				JobParameters params = new JobParametersBuilder().addString("chkpFile", chkpFile)
 						.addString("corpFile", corpFile).addString("outputFile", output)
 						.addString("checkpointKey", checkpointKey).addLong("run.id", System.currentTimeMillis())
 						.toJobParameters();
-
-				JobExecution exec = jobLauncher.run(p09305Job, params);
-				if (!exec.getExitStatus().equals(ExitStatus.COMPLETED)) {
-					throw new IllegalStateException("P09305 failed: " + exec.getExitStatus());
+ 
+				jobExecution = jobLauncher.run(p09305Job, params);
+				
+				
+				if (!jobExecution.getExitStatus().equals(ExitStatus.COMPLETED)) {
+					throw new IllegalStateException("P09305 failed: " + jobExecution.getExitStatus());
 				}
-			} else if ("P09376".equals(jobName)) {
+			}else if ("P09376".equals(jobName)) {
 				logger.info("Requested job: {}", jobName);
 
 				if (args.length < 3) {
@@ -454,9 +456,8 @@ public class JobLauncherRunner implements CommandLineRunner {
 				JobParameters params = new JobParametersBuilder().addString("label", label)
 						.addString("controlFile", controlFile).addLong("run.id", System.currentTimeMillis())
 						.toJobParameters();
-
-				JobExecution exec = jobLauncher.run(p09376Job, params);
-				logger.info("Job {} finished with status {}", jobName, exec.getStatus());
+				jobExecution = jobLauncher.run(p09376Job, params);
+				logger.info("Job {} finished with status {}", jobName, jobExecution.getStatus());
 			} else if ("P09330".equals(jobName)) {
 				logger.info("Requested job: {}", jobName);
 
@@ -470,8 +471,8 @@ public class JobLauncherRunner implements CommandLineRunner {
 						.addLong("run.id", System.currentTimeMillis()).toJobParameters();
 
 				logger.info("Launching P09330 with outputFile={}", outputFile);
-				JobExecution exec = jobLauncher.run(p09330Job, params);
-				logger.info("Job {} finished with status {}", jobName, exec.getStatus());
+				jobExecution = jobLauncher.run(p09330Job, params);
+				logger.info("Job {} finished with status {}", jobName, jobExecution.getStatus());
 			} else if ("P09345".equals(jobName)) {
 
 				logger.info("Requested job: {}", jobName);
@@ -488,13 +489,13 @@ public class JobLauncherRunner implements CommandLineRunner {
 				logger.info("Requested job: P09345, Corp_File={}, Refund_Type_Card={}, controlFile={}", Corp_File,
 						Refund_Type_Card, Checkpoint_Card);
 
-				JobExecution exec = jobLauncher.run(p09345Job,
+				jobExecution = jobLauncher.run(p09345Job,
 						new JobParametersBuilder().addString("Corp_File", Corp_File)
 								.addString("Refund_Type_Card", Refund_Type_Card)
 								.addString("Checkpoint_Card", Checkpoint_Card).addString("P09345_Output", P09345_Output)
 								.addLong("run.id", System.currentTimeMillis()).toJobParameters());
 
-				logger.info("Job P09345 finished with status {}", exec.getStatus());
+				logger.info("Job P09345 finished with status {}", jobExecution.getStatus());
 			} else if ("P09180".equals(jobName)) {
 				logger.info("Requested job: {}", jobName);
 
@@ -510,8 +511,8 @@ public class JobLauncherRunner implements CommandLineRunner {
 						.addString("ccmTotals", ccmTotals).addString("ccmXmlFile", ccmXmlFile)
 						.addLong("run.id", System.currentTimeMillis()).toJobParameters();
 
-				JobExecution exec = jobLauncher.run(p09180Job, params);
-				logger.info("Job {} finished with status {}", jobName, exec.getStatus());
+				jobExecution = jobLauncher.run(p09180Job, params);
+				logger.info("Job {} finished with status {}", jobName, jobExecution.getStatus());
 			} else if ("P09181".equals(jobName)) {
 				logger.info("Requested job: P09181");
 				String inputFile = args[1];
@@ -558,8 +559,8 @@ public class JobLauncherRunner implements CommandLineRunner {
 						.addString("suspenseFile", suspenseFile).addString("letterCntFile", letterCntFile)
 						.addLong("run.id", System.currentTimeMillis()).toJobParameters();
 
-				JobExecution exec = jobLauncher.run(P09372Job, params);
-				logger.info("Job {} finished with status {}", jobName, exec.getStatus());
+				jobExecution = jobLauncher.run(P09372Job, params);
+				logger.info("Job {} finished with status {}", jobName, jobExecution.getStatus());
 			} else if ("P09175".equals(jobName)) {
 				logger.info("Requested for P09175");
 

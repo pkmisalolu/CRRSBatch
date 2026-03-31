@@ -1,238 +1,405 @@
- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX      XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX      XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX      
- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX      XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX      XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX      
- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX      XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX      XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX      
- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX      XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX      XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX      
- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX      XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX      XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX      
-                                                                                                             
- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX      XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX      XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX      
- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX      XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX      XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX      
- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX      XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX      XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX      
- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX      XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX      XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX      
- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX      XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX      XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX      
-                                                                                                             
- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX      XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX      XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX      
- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX      XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX      XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX      
- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX      XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX      XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX      
- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX      XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX      XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX      
- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX      XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX      XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX      
-                                                                                                             
-                                                                                                             
- API                                 API                                 API                                 
- 08/31/25          0001              08/31/25       0401                 10/31/25       0002                 
- REMITTOR ONE                        REMITTOR ONE                        REMITTOR TWO                        
-                                                                                                             
-                                                                                                             
-                                                                                                             
- REMITTOR ONE                        REMITTOR ONE                        REMITTOR TWO                        
- REM_ADDR1                           REM_ADDR1                           REM_ADDR1                           
- REM_ADDR2                           REM_ADDR2                           REM_ADDR2                           
- REMIT_CITY       AR  72201-1234     REMIT_CITY       AR  72201-1234     REMIT_CITY       AR  72201-2345     
-                                                                                                             
-                                                                                                             
-                                                                                                             
- API                                 API                                 API                                 
- 10/31/25          0003              10/31/25       0004                 10/31/25       0005                 
- REMITTOR THREE                      REMITTOR FOUR                       REMITTOR FIVE                       
-                                                                                                             
-                                                                                                             
-                                                                                                             
- REMITTOR THREE                      REMITTOR FOUR                       REMITTOR FIVE                       
- REM_ADDR1                           REM_ADDR1                           REM_ADDR1                           
- REM_ADDR2                           REM_ADDR2                           REM_ADDR2                           
- REMIT_CITY       AR  72201-3456     REMIT_CITY       AR  72201-4567     REMIT_CITY       AR  72201-5678     
-                                                                                                             
-                                                                                                             
-                                                                                                             
- API                                 API                                 API                                 
- 10/31/25          0006              10/31/25       0007                 10/31/25       0008                 
- REMITTOR SIX                        REMITTOR SEVEN                      REMITTOR EIGHT                      
-                                                                                                             
-                                                                                                             
-                                                                                                             
- REMITTOR SIX                        REMITTOR SEVEN                      REMITTOR EIGHT                      
- REM_ADDR1                           REM_ADDR1                           REM_ADDR1                           
- REM_ADDR2                           REM_ADDR2                           REM_ADDR2                           
- REMIT_CITY       AR  72201-6789     REMIT_CITY       AR  72201-7890     REMIT_CITY       AR  72201-8901     
-                                                                                                             
-                                                                                                             
-                                                                                                             
- API                                 API                                 API                                 
- 10/31/25          0009              10/31/25       0010                 10/31/25       0011                 
- REMITTOR NINE                       REMITTOR TEN                        REMITTOR ELEVEN                     
-                                                                                                             
-                                                                                                             
-                                                                                                             
- REMITTOR NINE                       REMITTOR TEN                        REMITTOR ELEVEN                     
- REM_ADDR1                           REM_ADDR1                           REM_ADDR1                           
- REM_ADDR2                           REM_ADDR2                           REM_ADDR2                           
- REMIT_CITY       AR  72201-9012     REMIT_CITY       AR  72201-0123     REMIT_CITY       AR  72201-1234     
-                                                                                                             
-                                                                                                             
-                                                                                                             
- API                                 API                                 API                                 
- 10/31/25          0012              10/31/25       0013                 10/31/25       0014                 
- REMITTOR TWELVE                     REMITTOR THIRTEEN                   REMITTOR FOURTEEN                   
-                                                                                                             
-                                                                                                             
-                                                                                                             
- REMITTOR TWELVE                     REMITTOR THIRTEEN                   REMITTOR FOURTEEN                   
- REM_ADDR1                           REM_ADDR1                           REM_ADDR1                           
- REM_ADDR2                           REM_ADDR2                           REM_ADDR2                           
- REMIT_CITY       AR  72201-2345     REMIT_CITY       AR  72201-3456     REMIT_CITY       AR  72201-4567     
-                                                                                                             
-                                                                                                             
-                                                                                                             
- API                                 API                                 API                                 
- 10/31/25          0015              10/31/25       0016                 10/31/25       0017                 
- REMITTOR FIFTEEN                    REMITTOR SIXTEEN                    REMITTOR SEVENTEEN                  
-                                                                                                             
-                                                                                                             
-                                                                                                             
- REMITTOR FIFTEEN                    REMITTOR SIXTEEN                    REMITTOR SEVENTEEN                  
- REM_ADDR1                           REM_ADDR1                           REM_ADDR1                           
- REM_ADDR2                           REM_ADDR2                           REM_ADDR2                           
- REMIT_CITY       AR  72201-5678     REMIT_CITY       AR  72201-6789     REMIT_CITY       AR  72201-7890     
-                                                                                                             
-                                                                                                             
-                                                                                                             
- API                                 API                                 API                                 
- 10/31/25          0018              10/31/25       0019                 10/31/25       0020                 
- REMITTOR EIGHTEEN                   REMITTOR NINETEEN                   REMITTOR TWENTY                     
-                                                                                                             
-                                                                                                             
-                                                                                                             
- REMITTOR EIGHTEEN                   REMITTOR NINETEEN                   REMITTOR TWENTY                     
- REM_ADDR1                           REM_ADDR1                           REM_ADDR1                           
- REM_ADDR2                           REM_ADDR2                           REM_ADDR2                           
- REMIT_CITY       AR  72201-8901     REMIT_CITY       AR  72201-9012     REMIT_CITY       AR  72201-0123     
-                                                                                                             
-                                                                                                             
-                                                                                                             
- API                                 API                                 API                                 
- 10/31/25          0021              10/31/25       0022                 10/31/25       0023                 
- REMITTOR TWENTYONE                  REMITTOR TWENTYTWO                  REMITTOR TWENTYTHREE                
-                                                                                                             
-                                                                                                             
-                                                                                                             
- REMITTOR TWENTYONE                  REMITTOR TWENTYTWO                  REMITTOR TWENTYTHREE                
- REM_ADDR1                           REM_ADDR1                           REM_ADDR1                           
- REM_ADDR2                           REM_ADDR2                           REM_ADDR2                           
- REMIT_CITY       AR  72201-1234     REMIT_CITY       AR  72201-2345     REMIT_CITY       AR  72201-3456     
-                                                                                                             
-                                                                                                             
-                                                                                                             
- API                                 API                                 API                                 
- 10/31/25          0024              10/31/25       0101                 10/31/25       0102                 
- REMITTOR OTHER                      REMITTOR ONE                        REMITTOR TWO                        
-                                                                                                             
-                                                                                                             
-                                                                                                             
- REMITTOR OTHER                      REMITTOR ONE                        REMITTOR TWO                        
- REM_ADDR1                           REM_ADDR1                           REM_ADDR1                           
- REM_ADDR2                           REM_ADDR2                           REM_ADDR2                           
- REMIT_CITY       AR  72201-4567     REMIT_CITY       AR  72201-1234     REMIT_CITY       AR  72201-2345     
-                                                                                                             
-                                                                                                             
-                                                                                                             
- API                                 API                                 API                                 
- 10/31/25          0103              10/31/25       0104                 10/31/25       0105                 
- REMITTOR THREE                      REMITTOR FOUR                       REMITTOR FIVE                       
-                                                                                                             
-                                                                                                             
-                                                                                                             
- REMITTOR THREE                      REMITTOR FOUR                       REMITTOR FIVE                       
- REM_ADDR1                           REM_ADDR1                           REM_ADDR1                           
- REM_ADDR2                           REM_ADDR2                           REM_ADDR2                           
- REMIT_CITY       AR  72201-3456     REMIT_CITY       AR  72201-4567     REMIT_CITY       AR  72201-5678     
-                                                                                                             
-                                                                                                             
-                                                                                                             
- API                                 API                                 API                                 
- 10/31/25          0106              10/31/25       0107                 10/31/25       0108                 
- REMITTOR SIX                        REMITTOR SEVEN                      REMITTOR EIGHT                      
-                                                                                                             
-                                                                                                             
-                                                                                                             
- REMITTOR SIX                        REMITTOR SEVEN                      REMITTOR EIGHT                      
- REM_ADDR1                           REM_ADDR1                           REM_ADDR1                           
- REM_ADDR2                           REM_ADDR2                           REM_ADDR2                           
- REMIT_CITY       AR  72201-6789     REMIT_CITY       AR  72201-7890     REMIT_CITY       AR  72201-8901     
-                                                                                                             
-                                                                                                             
-                                                                                                             
- API                                 API                                 API                                 
- 10/31/25          0109              10/31/25       0110                 10/31/25       0111                 
- REMITTOR NINE                       REMITTOR TEN                        REMITTOR ELEVEN                     
-                                                                                                             
-                                                                                                             
-                                                                                                             
- REMITTOR NINE                       REMITTOR TEN                        REMITTOR ELEVEN                     
- REM_ADDR1                           REM_ADDR1                           REM_ADDR1                           
- REM_ADDR2                           REM_ADDR2                           REM_ADDR2                           
- REMIT_CITY       AR  72201-9012     REMIT_CITY       AR  72201-0123     REMIT_CITY       AR  72201-1234     
-                                                                                                             
-                                                                                                             
-                                                                                                             
- API                                 API                                 API                                 
- 10/31/25          0112              10/31/25       0113                 10/31/25       0114                 
- REMITTOR TWELVE                     REMITTOR THIRTEEN                   REMITTOR FOURTEEN                   
-                                                                                                             
-                                                                                                             
-                                                                                                             
- REMITTOR TWELVE                     REMITTOR THIRTEEN                   REMITTOR FOURTEEN                   
- REM_ADDR1                           REM_ADDR1                           REM_ADDR1                           
- REM_ADDR2                           REM_ADDR2                           REM_ADDR2                           
- REMIT_CITY       AR  72201-2345     REMIT_CITY       AR  72201-3456     REMIT_CITY       AR  72201-4567     
-                                                                                                             
-                                                                                                             
-                                                                                                             
- API                                 API                                 API                                 
- 10/31/25          0115              10/31/25       0116                 10/31/25       0117                 
- REMITTOR FIFTEEN                    REMITTOR SIXTEEN                    REMITTOR SEVENTEEN                  
-                                                                                                             
-                                                                                                             
-                                                                                                             
- REMITTOR FIFTEEN                    REMITTOR SIXTEEN                    REMITTOR SEVENTEEN                  
- REM_ADDR1                           REM_ADDR1                           REM_ADDR1                           
- REM_ADDR2                           REM_ADDR2                           REM_ADDR2                           
- REMIT_CITY       AR  72201-5678     REMIT_CITY       AR  72201-6789     REMIT_CITY       AR  72201-7890     
-                                                                                                             
-                                                                                                             
-                                                                                                             
- API                                 API                                 API                                 
- 10/31/25          0118              10/31/25       0119                 10/31/25       0120                 
- REMITTOR EIGHTEEN                   REMITTOR NINETEEN                   REMITTOR TWENTY                     
-                                                                                                             
-                                                                                                             
-                                                                                                             
- REMITTOR EIGHTEEN                   REMITTOR NINETEEN                   REMITTOR TWENTY                     
- REM_ADDR1                           REM_ADDR1                           REM_ADDR1                           
- REM_ADDR2                           REM_ADDR2                           REM_ADDR2                           
- REMIT_CITY       AR  72201-8901     REMIT_CITY       AR  72201-9012     REMIT_CITY       AR  72201-0123     
-                                                                                                             
-                                                                                                             
-                                                                                                             
- API                                 API                                 API                                 
- 10/31/25          0121              10/31/25       0122                 10/31/25       0123                 
- REMITTOR TWENTYONE                  REMITTOR TWENTYTWO                  REMITTOR TWENTYTHREE                
-                                                                                                             
-                                                                                                             
-                                                                                                             
- REMITTOR TWENTYONE                  REMITTOR TWENTYTWO                  REMITTOR TWENTYTHREE                
- REM_ADDR1                           REM_ADDR1                           REM_ADDR1                           
- REM_ADDR2                           REM_ADDR2                           REM_ADDR2                           
- REMIT_CITY       AR  72201-1234     REMIT_CITY       AR  72201-2345     REMIT_CITY       AR  72201-3456     
-                                                                                                             
-                                                                                                             
-                                                                                                             
- API                                 API                                 API                                 
- 10/31/25          0124              10/31/25       0201                 12/31/25       0301                 
- REMITTOR OTHER                      REMITTOR ONE                        REMITTOR ONE                        
-                                                                                                             
-                                                                                                             
-                                                                                                             
- REMITTOR OTHER                      REMITTOR ONE                        REMITTOR ONE                        
- REM_ADDR1                           REM_ADDR1                           REM_ADDR1                           
- REM_ADDR2                           REM_ADDR2                           REM_ADDR2                           
- REMIT_CITY       AR  72201-4567     REMIT_CITY       AR  72201-1234     REMIT_CITY       AR  72201-1234     
-                                                                                                             
+ <of1_letter>                                                                   
+                                                                                
+ <date>MARCH 30, 2026    </date>                                                
+                                                                                
+                                                                                
+ <name>FAMILY PRACTICE ASSOC OF CLARKSVILLE</name>                              
+ <addr1>FAMILY PRAC ASSOC OF CLARKSVILLE    </addr1>                            
+ <addr2>PO BOX 2008                         </addr2>                            
+ <addr3>CLARKSVILE AR 72830                </addr3>                             
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+ <patient>RE: BRADLEY YOUNG            </patient>                               
+ <checknbr>    Check # 00024186</checknbr>                                      
+                                                                                
+ <paragraph>                                                                    
+                                                                                
+                                                                                
+ Please find enclosed your check in the amount of $109.75.                      
+                                                                                
+                                                                                
+ Our research indicates that your overpayment will be satisfied through our     
+ automatic offset process.                                                      
+                                                                                
+                                                                                
+ Therefore, we are returning your voided check.                                 
+ </paragraph>                                                                   
+                                                                                
+                                                                                
+                                                                                
+ <closing>Thank You</closing>                                                   
+                                                                                
+                                                                                
+                                                                                
+ <paragraph2>                                                                   
+ Sherry Cole                                                                    
+ Supervisor, Payments/Claims Refunds                                            
+ Corporate Accounting                                                           
+ Arkansas Blue Cross and Blue Shield                                            
+ 501.399.3952                                                                   
+ </paragraph2>                                                                  
+ </of1_letter>                                                                  
+                                                                                
+ <of1_letter>                                                                   
+                                                                                
+ <date>MARCH 30, 2026    </date>                                                
+                                                                                
+                                                                                
+ <name>STEVEN WRIGHT MD PA                 </name>                              
+ <addr1>STEVEN WRIGHT MD PA                 </addr1>                            
+ <addr2>1614 W 42ND                         </addr2>                            
+ <addr3>PINE BLUFF AR 71603                </addr3>                             
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+ <patient>RE: BENJAMIN HILL            </patient>                               
+ <checknbr>    Check # 00004790</checknbr>                                      
+                                                                                
+ <paragraph>                                                                    
+                                                                                
+                                                                                
+ Please find enclosed your check in the amount of $1,175.62.                    
+                                                                                
+                                                                                
+ Our research indicates that your overpayment will be satisfied through our     
+ automatic offset process.                                                      
+                                                                                
+                                                                                
+ Therefore, we are returning your voided check.                                 
+ </paragraph>                                                                   
+                                                                                
+                                                                                
+                                                                                
+ <closing>Thank You</closing>                                                   
+                                                                                
+                                                                                
+                                                                                
+ <paragraph2>                                                                   
+ Sherry Cole                                                                    
+ Supervisor, Payments/Claims Refunds                                            
+ Corporate Accounting                                                           
+ Arkansas Blue Cross and Blue Shield                                            
+ 501.399.3952                                                                   
+ </paragraph2>                                                                  
+ </of1_letter>                                                                  
+                                                                                
+ <of1_letter>                                                                   
+                                                                                
+ <date>MARCH 30, 2026    </date>                                                
+                                                                                
+                                                                                
+ <name>BURNETT CROMM LINCOLN PADEN         </name>                              
+ <addr1>BURNETTE CROOM LINCOLN PADEN        </addr1>                            
+ <addr2>405 BUTERCUP DR                     </addr2>                            
+ <addr3>MOUNTAIN HOME AR 72653             </addr3>                             
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+ <patient>RE: JEFFREY WOFORD           </patient>                               
+ <checknbr>    Check # 00047160</checknbr>                                      
+                                                                                
+ <paragraph>                                                                    
+                                                                                
+                                                                                
+ Please find enclosed your check in the amount of $25.00.                       
+                                                                                
+                                                                                
+ Our research indicates that your overpayment will be satisfied through our     
+ automatic offset process.                                                      
+                                                                                
+                                                                                
+ Therefore, we are returning your voided check.                                 
+ </paragraph>                                                                   
+                                                                                
+                                                                                
+                                                                                
+ <closing>Thank You</closing>                                                   
+                                                                                
+                                                                                
+                                                                                
+ <paragraph2>                                                                   
+ Sherry Cole                                                                    
+ Supervisor, Payments/Claims Refunds                                            
+ Corporate Accounting                                                           
+ Arkansas Blue Cross and Blue Shield                                            
+ 501.399.3952                                                                   
+ </paragraph2>                                                                  
+ </of1_letter>                                                                  
+                                                                                
+ <of1_letter>                                                                   
+                                                                                
+ <date>MARCH 30, 2026    </date>                                                
+                                                                                
+                                                                                
+ <name>ORTHOPEDIC SPECIALISTS              </name>                              
+ <addr1>ORTHOPEDIC SPEC OF TEXARKANA        </addr1>                            
+ <addr2>PO BOX 7648                         </addr2>                            
+ <addr3>TEXARKANA TX 75505                 </addr3>                             
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+ <patient>RE: MARGIE GUNTER            </patient>                               
+ <checknbr>    Check # 00064902</checknbr>                                      
+                                                                                
+ <paragraph>                                                                    
+                                                                                
+                                                                                
+ Please find enclosed your check in the amount of $7.07.                        
+                                                                                
+                                                                                
+ Our research indicates that your overpayment will be satisfied through our     
+ automatic offset process.                                                      
+                                                                                
+                                                                                
+ Therefore, we are returning your voided check.                                 
+ </paragraph>                                                                   
+                                                                                
+                                                                                
+                                                                                
+ <closing>Thank You</closing>                                                   
+                                                                                
+                                                                                
+                                                                                
+ <paragraph2>                                                                   
+ Sherry Cole                                                                    
+ Supervisor, Payments/Claims Refunds                                            
+ Corporate Accounting                                                           
+ Arkansas Blue Cross and Blue Shield                                            
+ 501.399.3952                                                                   
+ </paragraph2>                                                                  
+ </of1_letter>                                                                  
+                                                                                
+ <of1_letter>                                                                   
+                                                                                
+ <date>MARCH 30, 2026    </date>                                                
+                                                                                
+                                                                                
+ <name>OZARK EYE CTR PA                    </name>                              
+ <addr1>OZARK EYE CENTER                    </addr1>                            
+ <addr2>PO BOX 1467                         </addr2>                            
+ <addr3>MOUNTAIN HOME AR 72654             </addr3>                             
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+ <patient>RE: VERNON TOTT              </patient>                               
+ <checknbr>    Check # 00050526</checknbr>                                      
+                                                                                
+ <paragraph>                                                                    
+                                                                                
+                                                                                
+ Please find enclosed your check in the amount of $754.61.                      
+                                                                                
+                                                                                
+ Our research indicates that your overpayment will be satisfied through our     
+ automatic offset process.                                                      
+                                                                                
+                                                                                
+ Therefore, we are returning your voided check.                                 
+ </paragraph>                                                                   
+                                                                                
+                                                                                
+                                                                                
+ <closing>Thank You</closing>                                                   
+                                                                                
+                                                                                
+                                                                                
+ <paragraph2>                                                                   
+ Sherry Cole                                                                    
+ Supervisor, Payments/Claims Refunds                                            
+ Corporate Accounting                                                           
+ Arkansas Blue Cross and Blue Shield                                            
+ 501.399.3952                                                                   
+ </paragraph2>                                                                  
+ </of1_letter>                                                                  
+                                                                                
+ <of1_letter>                                                                   
+                                                                                
+ <date>MARCH 30, 2026    </date>                                                
+                                                                                
+                                                                                
+ <name>OZARK EYE CENTER                    </name>                              
+ <addr1>OZARK EYE CENTER                    </addr1>                            
+ <addr2>PO BOX 1467                         </addr2>                            
+ <addr3>MOUNTAIN HOME AR 72654             </addr3>                             
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+ <patient>RE: VERNON TOTT              </patient>                               
+ <checknbr>    Check # 00050525</checknbr>                                      
+                                                                                
+ <paragraph>                                                                    
+                                                                                
+                                                                                
+ Please find enclosed your check in the amount of $32.86.                       
+                                                                                
+                                                                                
+ Our research indicates that your overpayment will be satisfied through our     
+ automatic offset process.                                                      
+                                                                                
+                                                                                
+ Therefore, we are returning your voided check.                                 
+ </paragraph>                                                                   
+                                                                                
+                                                                                
+                                                                                
+ <closing>Thank You</closing>                                                   
+                                                                                
+                                                                                
+                                                                                
+ <paragraph2>                                                                   
+ Sherry Cole                                                                    
+ Supervisor, Payments/Claims Refunds                                            
+ Corporate Accounting                                                           
+ Arkansas Blue Cross and Blue Shield                                            
+ 501.399.3952                                                                   
+ </paragraph2>                                                                  
+ </of1_letter>                                                                  
+                                                                                
+ <of1_letter>                                                                   
+                                                                                
+ <date>MARCH 30, 2026    </date>                                                
+                                                                                
+                                                                                
+ <name>BAXTER RMC                          </name>                              
+ <addr1>BAXTER REGIONAL MEDICAL CENTER      </addr1>                            
+ <addr2>624 HOSPITAL DR                     </addr2>                            
+ <addr3>MOUNTAIN HOME AR 72653             </addr3>                             
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+ <patient>RE: EARLENE WOODY            </patient>                               
+ <checknbr>    Check # 00223972</checknbr>                                      
+                                                                                
+ <paragraph>                                                                    
+                                                                                
+                                                                                
+ Please find enclosed your check in the amount of $453.60.                      
+                                                                                
+                                                                                
+ Our research indicates that your overpayment will be satisfied through our     
+ automatic offset process.                                                      
+                                                                                
+                                                                                
+ Therefore, we are returning your voided check.                                 
+ </paragraph>                                                                   
+                                                                                
+                                                                                
+                                                                                
+ <closing>Thank You</closing>                                                   
+                                                                                
+                                                                                
+                                                                                
+ <paragraph2>                                                                   
+ Sherry Cole                                                                    
+ Supervisor, Payments/Claims Refunds                                            
+ Corporate Accounting                                                           
+ Arkansas Blue Cross and Blue Shield                                            
+ 501.399.3952                                                                   
+ </paragraph2>                                                                  
+ </of1_letter>                                                                  
+                                                                                
+ <of1_letter>                                                                   
+                                                                                
+ <date>MARCH 30, 2026    </date>                                                
+                                                                                
+                                                                                
+ <name>SILOAM SPRINGS MEMORIAL             </name>                              
+ <addr1>SILOAM SPRINGS MEMORIAL HOSPITAL    </addr1>                            
+ <addr2>205 EAST JEFFERSON                  </addr2>                            
+ <addr3>SILOAM SPRINGS AR 72761            </addr3>                             
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+ <patient>RE: JINELL MORRIS            </patient>                               
+ <checknbr>    Check # 00106007</checknbr>                                      
+                                                                                
+ <paragraph>                                                                    
+                                                                                
+                                                                                
+ Please find enclosed your check in the amount of $279.40.                      
+                                                                                
+                                                                                
+ Our research indicates that your overpayment will be satisfied through our     
+ automatic offset process.                                                      
+                                                                                
+                                                                                
+ Therefore, we are returning your voided check.                                 
+ </paragraph>                                                                   
+                                                                                
+                                                                                
+                                                                                
+ <closing>Thank You</closing>                                                   
+                                                                                
+                                                                                
+                                                                                
+ <paragraph2>                                                                   
+ Sherry Cole                                                                    
+ Supervisor, Payments/Claims Refunds                                            
+ Corporate Accounting                                                           
+ Arkansas Blue Cross and Blue Shield                                            
+ 501.399.3952                                                                   
+ </paragraph2>                                                                  
+ </of1_letter>                                                                  
+                                                                                
+ <of1_letter>                                                                   
+                                                                                
+ <date>MARCH 30, 2026    </date>                                                
+                                                                                
+                                                                                
+ <name>ST BERNARDS                         </name>                              
+ <addr1>ST BERNARDS                         </addr1>                            
+ <addr2>PO BOX 1713                         </addr2>                            
+ <addr3>JONESBORO AR 72403                 </addr3>                             
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+ <patient>RE: LS BALCH                 </patient>                               
+ <checknbr>    Check # 00169004</checknbr>                                      
+                                                                                
+ <paragraph>                                                                    
+                                                                                
+                                                                                
+ Please find enclosed your check in the amount of $1,024.00.                    
+                                                                                
+                                                                                
+ Our research indicates that your overpayment will be satisfied through our     
+ automatic offset process.                                                      
+                                                                                
+                                                                                
+ Therefore, we are returning your voided check.                                 
+ </paragraph>                                                                   
+                                                                                
+                                                                                
+                                                                                
+ <closing>Thank You</closing>                                                   
+                                                                                
+                                                                                
+                                                                                
+ <paragraph2>                                                                   
+ Sherry Cole                                                                    
+ Supervisor, Payments/Claims Refunds                                            
+ Corporate Accounting                                                           
+ Arkansas Blue Cross and Blue Shield                                            
+ 501.399.3952                                                                   
+ </paragraph2>                                                                  
+ </of1_letter>                                                                  
+                                                                                
