@@ -344,7 +344,7 @@ public class P09376FileWriter implements Tasklet {
 
     private void proc000250UpdateRemailInd() {
         try {
-            int updated = cashRepo.clearDailyRemittanceFlag();
+            int updated = cashRepo.clearDailyRemittanceFlagbyI();
             if (updated > 0) {
                 log.info("Remail indicator reset for {} records", updated);
             } else {

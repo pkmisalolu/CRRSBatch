@@ -4,8 +4,10 @@ import java.time.LocalDate;
 import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.abcbs.crrs.entity.P09Suspense;
 import com.abcbs.crrs.entity.SuspensePK;
@@ -90,5 +92,13 @@ public interface IP09SuspenseRepository extends JpaRepository<P09Suspense, Suspe
 	List<P09175SuspenseView> fetchPx02Cursor(@Param("batchPrefix") String batchPrefix,
 			@Param("batchDate") String batchDate, @Param("batchSuffix") String batchSuffix,
 			@Param("refundType") String refundType);
+	
+	@Modifying
+	@Transactional
+	@Query("DELETE FROM P09Suspense b WHERE b.btBatchPrefix = :prefix AND b.btBatchDate = :date AND b.btBatchSuffix = :suffix "
+			+ "AND b.spId.crRefundType = :refundType")
+	public int deleteByBatchAndRefundSuspense(@Param("prefix") String prefix, @Param("date") String date,
+			@Param("suffix") String suffix, @Param("refundType") String refundType);
+	
 
 }

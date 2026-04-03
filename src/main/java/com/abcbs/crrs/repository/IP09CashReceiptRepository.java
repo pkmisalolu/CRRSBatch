@@ -24,8 +24,13 @@ import jakarta.transaction.Transactional;
 public interface IP09CashReceiptRepository extends JpaRepository<P09CashReceipt, CashReceiptPK> {
 	@Modifying
 	@Transactional
-	@Query("UPDATE P09CashReceipt c SET c.crRemDailyInd = ' '")
+	@Query("UPDATE P09CashReceipt c SET c.crRemDailyInd = ' ' WHERE c.crRemDailyInd = 'Y'")
 	int clearDailyRemittanceFlag();
+	
+	@Modifying
+	@Transactional
+	@Query("UPDATE P09CashReceipt c SET c.crRemDailyInd = ' ' WHERE c.crRemDailyInd = 'I'")
+	int clearDailyRemittanceFlagbyI();
 
 	@Query("SELECT c.crId.crRefundType AS crRefundType, c.crId.crCntrlDate AS crCntrlDate, c.crId.crCntrlNbr AS crCntrlNbr, "
 			+ "c.crRemDailyInd AS crRemDailyInd, c.crRemIdType AS crRemIdType, c.crRemIdNbr AS crRemIdNbr, c.crRemittorName AS crRemittorName, "
@@ -159,7 +164,7 @@ public interface IP09CashReceiptRepository extends JpaRepository<P09CashReceipt,
 			+ " OR (c.Id.crCntrlDate = :lastDate AND c.Id.crCntrlNbr > :lastNbr) "
 			+ " OR (c.Id.crCntrlDate = :lastDate AND c.Id.crCntrlNbr = :lastNbr AND c.Id.crRefundType > :lastType) "
 			+ " ) " + // <<< GROUPED ORs
-			" AND c.crRemDailyInd = 'I' " + " AND c.Id.crRefundType = 'RET' " + " AND c.crReasonCode = 'IRS' "
+			" AND c.crRemDailyInd = 'I' "
 			+ "ORDER BY c.Id.crCntrlDate, c.Id.crCntrlNbr, c.Id.crRefundType")
 	List<P09376DailyRemittanceView> findDailyRemittancesAfter(@Param("lastDate") LocalDate lastDate,
 			@Param("lastNbr") String lastNbr, @Param("lastType") String lastType);

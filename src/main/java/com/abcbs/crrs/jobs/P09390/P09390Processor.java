@@ -126,18 +126,19 @@ public class P09390Processor implements ItemProcessor<P09390InputFepmanChks, P09
 
         return out;
     }
-
+    
     private static String pickCntrlDate(String s) {
         if (s == null) return "00000000";
 
         s = s.trim();
-        // expected: yyyy-MM-dd
-        if (s.length() >= 10 && s.charAt(4) == '-' && s.charAt(7) == '-') {
-            String yyyy = s.substring(0, 4);
-            String mm   = s.substring(5, 7);
-            String dd   = s.substring(8,10);
-            String yy   = yyyy.substring(2,4);
-            return mm + "/" + dd + "/" + yy;   // return 8-byte COBOL date
+
+        // input: MM/DD/YYYY
+        if (s.length() >= 10 && s.charAt(2) == '/' && s.charAt(5) == '/') {
+            String mm = s.substring(0, 2);
+            String dd = s.substring(3, 5);
+            String yyyy = s.substring(6, 10);
+            String yy = yyyy.substring(2, 4);
+            return mm + "/" + dd + "/" + yy;
         }
 
         return "00000000";

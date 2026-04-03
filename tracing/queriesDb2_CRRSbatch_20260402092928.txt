@@ -1,0 +1,1 @@
+update p09_cash_receipt set cr_rem_daily_ind=' ' where cr_rem_daily_ind='Y';

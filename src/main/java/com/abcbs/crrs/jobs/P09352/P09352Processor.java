@@ -2082,7 +2082,7 @@ private static BigDecimal nvl(BigDecimal v) { return v == null ? BigDecimal.ZERO
  // COBOL: OPT_RECORD_TYPE = WS-RECORD-TYPE AND OPT_FIELD_NARR LIKE :WS-LIKE-VALUE
  // ================================================================
  private String perform567500FindOccsBankGlAcct(IssuedChkRow r, ExecutionContext ec) {
-	    final short recordType = 11;
+	    final short recordType = 14;
 
 	    final String bankAcct = safeStr(r.crBankAcctNbr);
 	    if (bankAcct.isBlank()) {

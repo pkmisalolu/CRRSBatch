@@ -12,6 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import com.abcbs.crrs.repository.IP09BatchRepository;
+import com.abcbs.crrs.repository.IP09SuspenseRepository;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
@@ -25,6 +26,9 @@ public class P09310DeleteWriter implements ItemWriter<List<P09310OutputRecord>> 
 
 	@Autowired
     private IP09BatchRepository repo;
+	
+	@Autowired
+	private IP09SuspenseRepository suspenseRepo;
     
     private static final Logger logger = LogManager.getLogger(P09310DeleteWriter.class);
 
@@ -53,13 +57,34 @@ public class P09310DeleteWriter implements ItemWriter<List<P09310OutputRecord>> 
                            + rec.getBtBatchSuffix();
                 
                 if (seenKeys.add(key)) { // first time we see this combination
-                    int n = repo.deleteByBatchAndRefund(
+                	int n = suspenseRepo.deleteByBatchAndRefundSuspense(
+                            rec.getBtBatchPrefix(),
+                            rec.getBtBatchDate(),
+                            rec.getBtBatchSuffix(),
+                            refundType
+                        );
+                	if(n>0) {
+                    	logger.info("Deleted one suspense record for group {} / {} {} {}",
+                                refundType,
+                                rec.getBtBatchPrefix(),
+                                rec.getBtBatchDate(),
+                                rec.getBtBatchSuffix()
+                            );
+                    }else {
+                    	logger.info("Record deletion failed for group {} / {} {} {}",
+                                refundType,
+                                rec.getBtBatchPrefix(),
+                                rec.getBtBatchDate(),
+                                rec.getBtBatchSuffix()
+                            );
+                    }
+                    int n1 = repo.deleteByBatchAndRefund(
                         rec.getBtBatchPrefix(),
                         rec.getBtBatchDate(),
                         rec.getBtBatchSuffix(),
                         refundType
                     );
-                    if(n>0) {
+                    if(n1>0) {
                     	logger.info("Deleted one suspense record for group {} / {} {} {}",
                                 refundType,
                                 rec.getBtBatchPrefix(),
