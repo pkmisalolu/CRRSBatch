@@ -134,7 +134,7 @@ public class P09321FileWriter implements ItemWriter<P09321Record>, ItemStream {
 		}
 
 		generateDetailLines(ws);
-		finalizeControlRecord(ws);
+		//finalizeControlRecord(ws);
 		tableLocker.unlockP09Tables();
 		log.info("=== END P09321 job for refundType: {} ===", input.getRefundType());
 	}

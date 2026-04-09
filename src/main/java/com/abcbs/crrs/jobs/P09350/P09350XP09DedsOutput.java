@@ -31,6 +31,7 @@ public class P09350XP09DedsOutput implements Serializable {
     private String glBankAcctNbr;            // X(35)
     private String glAcctNbr;                // X(12)
     private String glActCode;                // X(3)
+    public String glActAmtInd;
     private BigDecimal glActAmt;             // S9(9)V99 COMP-3
     private String glActDate;                // X(10)
 
@@ -45,6 +46,7 @@ public class P09350XP09DedsOutput implements Serializable {
     private String glXrefClaimNbr;           // X(20)
     private String glXrefDate;               // X(10)
 
+    public String glCashRecBalInd;
     private BigDecimal glCashRecBal;         // S9(9)V99 COMP-3
     private String glCorp;                   // X(2)
 

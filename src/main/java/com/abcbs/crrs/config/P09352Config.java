@@ -307,11 +307,11 @@ public class P09352Config {
                 "%05d" + "%07d" + "%-5s" +
                 "%-2s" + "%-3s" + "%-10s" + "%-4s" + "%-2s" +
                 "%-35s" + "%-12s" + "%-3s" +
-                "%-13s" +
+                "%-1s"+"%-11s" +
                 "%-10s" + "%-2s" + "%-2s" +
                 "%-15s" + "%-11s" + "%-12s" +
                 "%-2s" + "%-20s" + "%-10s" +
-                "%-13s" +
+                "%-1s" +"%-11s" +
                 "%-2s" + "%-8s"
         );
 
@@ -329,8 +329,8 @@ public class P09352Config {
                 fix(item.getGlBankAcctNbr(), 35),
                 fix(item.getGlAcctNbr(), 12),
                 fix(item.getGlActCode(), 3),
-
-                picS9v99AsText(item.getGlActAmt(), 13),
+                fix(item.getGlActAmtInd(),1),
+                picS9v99AsText(item.getGlActAmt(), 11),
                 fix(item.getGlActDate(), 10),
                 fix(item.getGlReportMo(), 2),
                 fix(item.getGlReportYr(), 2),
@@ -342,8 +342,8 @@ public class P09352Config {
                 fix(item.getGlXrefType(), 2),
                 fix(item.getGlXrefClaimNbr(), 20),
                 fix(item.getGlXrefDate(), 10),
-
-                picS9v99AsText(item.getGlCashRecBal(), 13),
+                fix(item.getGlActAmtInd(),1),
+                picS9v99AsText(item.getGlCashRecBal(), 11),
                 fix(item.getGlCorp(), 2),
                 fix(item.getGlFiller2(), 8)
         });
@@ -370,7 +370,7 @@ public class P09352Config {
                 "%-2s" + "%-6s" + "%-1s" +
                 "%-35s" +
                 "%-2s" + "%-6s" +
-                "%-10s" + "%-13s" +      // AMT AS STRING
+                "%-10s" + "%-12s" +      // AMT AS STRING
                 "%-9s" + "%-10s" + "%-36s" + "%-3s" +
                 "%-36s" + "%-36s" + "%-24s" + "%-2s" +
                 "%-5s" + "%-4s" +
@@ -411,7 +411,7 @@ public class P09352Config {
                 fix(item.getP07ChkNbr(), 6),
 
                 fix(item.getP07ChkDate(), 10),
-                picS9v99AsText(item.getP07ChkAmt(), 13),
+                picS9v99Signed(item.getP07ChkAmt()),
 
                 fix(item.getP07PayeeId(), 9),
                 fix(item.getP07Npi(), 10),
@@ -521,7 +521,20 @@ public class P09352Config {
     // ============================
     // helpers (COBOL-style)
     // ============================
+    private static String picS9v99Signed(BigDecimal amt) {
+        BigDecimal value = (amt == null) ? BigDecimal.ZERO : amt;
 
+        // COBOL PIC S9(9)V99 -> 11 digits + 1 sign/blank position = 12 chars total
+        BigDecimal abs = value.abs().setScale(2, RoundingMode.HALF_UP);
+        String digits = abs.movePointRight(2).setScale(0, RoundingMode.UNNECESSARY).toPlainString();
+
+        // 11 numeric positions
+        digits = String.format("%011d", new java.math.BigInteger(digits));
+
+        // positive => leading blank, negative => leading minus
+        return (value.signum() < 0 ? "-" : " ") + digits;
+    }
+    
     private static String fix(String s, int len) {
         if (s == null) s = "";
         if (s.length() > len) return s.substring(0, len);

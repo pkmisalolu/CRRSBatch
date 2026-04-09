@@ -400,6 +400,9 @@ public class P09352Processor implements ItemProcessor<P09352ControlCardInput, P0
 
         wsLastVoucherNbrPrefix = nvl(voucher.getInputLastVoucherNbrPrefix()).trim();
         wsLastVoucherNbrSuffix = voucher.getInputLastVoucherNbrSuffix();
+        log.error("Before Substring wsLastVoucherNbrPrefix", wsLastVoucherNbrPrefix);
+        log.error("Before Substring wsLastVoucherNbrSuffix", wsLastVoucherNbrSuffix);
+        
 
         if (wsLastVoucherNbrSuffix < 0) {
             cobolDisplayVoucherInvalid(String.valueOf(wsLastVoucherNbrSuffix));
@@ -1709,112 +1712,208 @@ private static BigDecimal nvl(BigDecimal v) { return v == null ? BigDecimal.ZERO
     private List<P09352XP07DedsOutput> perform532000CreateOccsDedsRcd(
             IssuedChkRow r,
             ExecutionContext ec,
-            P09CashReceipt cr,                 // holds CR-REM-* after 522500
-            String checkStatusCode,            // CHECK-STATUS-CODE
-            LocalDate checkStatusDate,         // CHECK-STATUS-DATE
-            String statusSourceCode,           // STATUS-SOURCE-CODE
-            String stDailyFlag,                // ST-DAILY ('Y'/'N')
-            LocalDate reportDate               // REPORT-DATE
+            P09CashReceipt cr,
+            String checkStatusCode,
+            LocalDate checkStatusDate,
+            String statusSourceCode,
+            String stDailyFlag,
+            LocalDate reportDate
     ) {
-     P09352XP07DedsOutput o = new P09352XP07DedsOutput();
+        P09352XP07DedsOutput o = new P09352XP07DedsOutput();
+        o.setP07Filler1("     ");
+        o.setP07ActionId("  ");
+        o.setP07BatchNbr("      ");
+        o.setP07FileCode(" ");
+        o.setP07AccountNbr(" ".repeat(35));
 
-     // ------------------------------------------------------------
-     // MOVE SPACES TO I-P07DEDS-RECORD  (explicitly set blanks)
-     // ------------------------------------------------------------
-     o.setP07Filler1("     ");
-     o.setP07ChkFiller("  ");
-     o.setP07Title("   ");
-     o.setP07FillerFinal(padRight("", 55));
+        o.setP07ChkFiller("  ");
+        o.setP07ChkNbr("      ");
+        o.setP07ChkDate("          ");
+        o.setP07ChkAmt(BigDecimal.ZERO);
 
-     // ------------------------------------------------------------
-     // PERFORM 561500-CALC-JULIAN-DATE + MOVE TIME
-     // ------------------------------------------------------------
-     o.setP07JulianDate(perform561500CalcJulianDate(ec));           // BigDecimal YYDDD
-     o.setP07TimeHhmmsss(BigDecimal.valueOf(calcHhMmSss()));        // BigDecimal HHMMSSS
+        o.setP07PayeeId("         ");
+        o.setP07Npi("          ");
+        o.setP07PayeeName(" ".repeat(36));
+        o.setP07Title("   ");
+        o.setP07Addr1(" ".repeat(36));
+        o.setP07Addr2(" ".repeat(36));
+        o.setP07City(" ".repeat(24));
+        o.setP07State("  ");
+        o.setP07Zip5("     ");
+        o.setP07Zip4("    ");
 
-     o.setP07ActionId("02");
-     String bankFull = nullToSpace(r.crBankAcctNbr);
-     o.setP07BatchNbr(padRight(nullToSpace(ecGetString(ec, "WS_DEDS_BATCH_NBR", "")), 6));
+        o.setP07ChkOrigin(" ");
+        o.setP07ChkType("  ");
+        o.setP07ChkStatus("  ");
+        o.setP07ChkStatusDate("          ");
+        o.setP07StatusSource("  ");
 
-     // ------------------------------------------------------------
-     // MOVE T-OCCS-FILE-INDICATOR TO I-P07DEDS-FILE
-     // ------------------------------------------------------------
-     o.setP07FileCode(padRight(nullToSpace(r.occsFileIndicator), 1));
+        o.setP07OsDaily(" ");
+        o.setP07StDaily(" ");
+        o.setP07SdDaily(" ");
+        o.setP07TsDaily(" ");
 
-     // ------------------------------------------------------------
-     // MOVE WS-BANK-ACCT-1 TO I-P07DEDS-ACCT  (first char, padded to 35)
-     // ------------------------------------------------------------
-     String bank1 = bankFull.isEmpty() ? "" : bankFull.substring(0, 1);
-     o.setP07AccountNbr(padRight(bank1, 35));
+        o.setP07StaleDate("          ");
+        o.setP07StaleOrigin(" ");
+        o.setP07TransferDate("          ");
+        o.setP07TransferOrigin(" ");
 
-     // ------------------------------------------------------------
-     // MOVE check fields
-     // ------------------------------------------------------------
-     o.setP07ChkNbr(padRight(nullToSpace(r.crCheckNbr), 6));        // after 2-char filler
-     o.setP07ChkDate(formatMMddyyyy(r.crCheckDate));
-     o.setP07ChkAmt(nvlBd(r.crCheckAmt));
+        o.setP07ReissueAcctNbr(" ".repeat(35));
+        o.setP07ReissueChkNbr("        ");
+        o.setP07ReissueChkDate("          ");
+        o.setP07ReissueChkType("  ");
 
-     // ------------------------------------------------------------
-     // MOVE CR-REM-* fields (from cash receipt after 522500)
-     // ------------------------------------------------------------
-     o.setP07PayeeId(padRight(nullToSpace(cr.getCrRemIdNbr()), 9));
-     o.setP07Npi(padRight(nullToSpace(cr.getCrRemNationalId()), 10));
-     o.setP07PayeeName(padRight(nullToSpace(cr.getCrRemAddressee()), 36));
+        o.setP07ReportDate("          ");
 
-     o.setP07Addr1(padRight(nullToSpace(cr.getCrRemAddress1()), 36));
-     o.setP07Addr2(padRight(nullToSpace(cr.getCrRemAddress2()), 36));
-     o.setP07City(padRight(nullToSpace(cr.getCrRemCity()), 24));
-     o.setP07State(padRight(nullToSpace(cr.getCrRemState()), 2));
-     o.setP07Zip5(padRight(nullToSpace(cr.getCrRemZip5()), 5));
-     o.setP07Zip4(padRight(nullToSpace(cr.getCrRemZip4()), 4));
+        o.setP07InitialAcctNbr(" ".repeat(35));
+        o.setP07InitialChkNbr("        ");
+        o.setP07InitialChkDate("          ");
+        o.setP07InitialChkType("  ");
 
-     // ------------------------------------------------------------
-     // MOVE CHECK-ORIGIN, receipt type, status, dates, source
-     // ------------------------------------------------------------
-     o.setP07ChkOrigin(resolveChkOrigin(cr));   // already 1-char (E/M)
-     o.setP07ChkType(padRight(nullToSpace(r.crReceiptType), 2));
-     o.setP07ChkStatus(padRight(nullToSpace(checkStatusCode), 2));
-     o.setP07ChkStatusDate(formatMMddyyyy(checkStatusDate));
-     o.setP07StatusSource(padRight(nullToSpace(statusSourceCode), 2));
+        o.setP07PpaDate("          ");
+        o.setP07PayeeIdType(" ");
+        o.setP07TaxIdNbr("         ");
 
-     // ------------------------------------------------------------
-     // MOVE 'N' TO OS-DAILY, MOVE ST-DAILY
-     // ------------------------------------------------------------
-     o.setP07OsDaily("N");
-     o.setP07StDaily(padRight(nullToSpace(stDailyFlag), 1));
+        o.setP07FillerFinal(" ".repeat(55));
 
-     // ------------------------------------------------------------
-     // NF fields: COBOL MOVE -1  (these are Integer in your entity)
-     // ------------------------------------------------------------
-     Integer minusOne = Integer.valueOf(-1);
+        // PERFORM 561500-CALC-JULIAN-DATE / MOVE TIME
+        o.setP07JulianDate(perform561500CalcJulianDate(ec));
+        o.setP07TimeHhmmsss(BigDecimal.valueOf(calcHhMmSss()));
 
-     o.setP07SdDailyNf(minusOne);
-     o.setP07TsDailyNf(minusOne);
-     o.setP07StaleDateNf(minusOne);
-     o.setP07StaleOriginNf(minusOne);
-     o.setP07TransferDateNf(minusOne);
-     o.setP07TransferOriginNf(minusOne);
-     o.setP07ReissueAcctNbrNf(minusOne);
-     o.setP07ReissueChkNbrNf(minusOne);
-     o.setP07ReissueChkDateNf(minusOne);
-     o.setP07ReissueChkTypeNf(minusOne);
+        // MOVE '02' TO I-P07DEDS-ACT-ID
+        o.setP07ActionId("02");
 
-     o.setP07ReportDate(formatMMddyyyy(reportDate));
+        // COBOL:
+        // MOVE T-CR-BANK-ACCT-NBR TO WS-BANK-ACCT-NBR
+        // MOVE WS-BANK-ACCT-NBR-5 TO WS-DEDS-BANK-ACCT-5
+        // MOVE WS-DEDS-BATCH-NBR TO I-P07DEDS-BATCH
+        String bank35 = padRight(nullToSpace(r.crBankAcctNbr), 35);
+        String dedsBankAcct5 = bank35.substring(7, 12);   // positions 8-12
+        o.setP07BatchNbr(dedsBankAcct5 + "B");
 
-     o.setP07InitialAcctNbrNf(minusOne);
-     o.setP07InitialChkNbrNf(minusOne);
-     o.setP07InitialChkDateNf(minusOne);
-     o.setP07InitialChkTypeNf(minusOne);
-     o.setP07PpaDateNf(minusOne);
+        // MOVE T-OCCS-FILE-INDICATOR TO I-P07DEDS-FILE
+        o.setP07FileCode(padRight(nullToSpace(r.occsFileIndicator), 1));
 
-     o.setP07PayeeIdType(padRight(nullToSpace(cr.getCrRemIdType()), 1));
-     o.setP07PayeeIdTypeNf(minusOne);
+        // COBOL:
+        // MOVE T-CR-BANK-ACCT-NBR TO WS-BANK-ACCT
+        // MOVE WS-BANK-ACCT-1 TO I-P07DEDS-ACCT
+        // WS-BANK-ACCT-1 PIC X(12)
+        String bankAcct1 = bank35.substring(0, 12);
+        o.setP07AccountNbr(padRight(bankAcct1, 35));
 
-     o.setP07TaxIdNbr(padRight(nullToSpace(cr.getCrRemTaxIdNbr()), 9));
-     o.setP07TaxIdNbrNf(minusOne);
+        // COBOL group move:
+        // T-CR-CHECK-NBR (8) -> filler(2) + chknum(6)
+        String chk8 = padRight(nullToSpace(r.crCheckNbr), 8);
+        o.setP07ChkFiller(chk8.substring(0, 2));
+        o.setP07ChkNbr(chk8.substring(2, 8));
 
-     return List.of(o);
- }
+        o.setP07ChkDate(formatIso(r.crCheckDate));
+        o.setP07ChkAmt(nvlBd(r.crCheckAmt));
+
+        // Use row values first (captured in 480000), then fall back to fresh CR
+        o.setP07PayeeId(padRight(firstNonBlank(
+                r.crRemIdNbr,
+                cr == null ? null : cr.getCrRemIdNbr()
+        ), 9));
+
+        o.setP07Npi(padRight(firstNonBlank(
+                r.crRemNationalId,
+                cr == null ? null : cr.getCrRemNationalId(),
+                r.nationalIdNbr
+        ), 10));
+
+        o.setP07PayeeName(padRight(firstNonBlank(
+                r.crRemAddressee,
+                cr == null ? null : cr.getCrRemAddressee(),
+                r.crRemittorName,
+                cr == null ? null : cr.getCrRemittorName()
+        ), 36));
+
+        // COBOL keeps TITLE blank here
+        o.setP07Title("   ");
+
+        o.setP07Addr1(padRight(firstNonBlank(
+                r.crRemAddress1,
+                cr == null ? null : cr.getCrRemAddress1(),
+                r.crChkAddress1
+        ), 36));
+
+        o.setP07Addr2(padRight(firstNonBlank(
+                r.crRemAddress2,
+                cr == null ? null : cr.getCrRemAddress2(),
+                r.crChkAddress2
+        ), 36));
+
+        o.setP07City(padRight(firstNonBlank(
+                r.crRemCity,
+                cr == null ? null : cr.getCrRemCity(),
+                r.crChkCity
+        ), 24));
+
+        o.setP07State(padRight(firstNonBlank(
+                r.crRemState,
+                cr == null ? null : cr.getCrRemState(),
+                r.crChkState
+        ), 2));
+
+        o.setP07Zip5(padRight(firstNonBlank(
+                r.crRemZip5,
+                cr == null ? null : cr.getCrRemZip5(),
+                r.crChkZip5
+        ), 5));
+
+        o.setP07Zip4(padRight(firstNonBlank(
+                r.crRemZip4,
+                cr == null ? null : cr.getCrRemZip4(),
+                r.crChkZip4
+        ), 4));
+
+        o.setP07ChkOrigin(padRight(nullToSpace(resolveChkOrigin(cr)), 1));
+        o.setP07ChkType(padRight(nullToSpace(r.crReceiptType), 2));
+        o.setP07ChkStatus(padRight(nullToSpace(checkStatusCode), 2));
+        o.setP07ChkStatusDate(formatIso(checkStatusDate));
+        o.setP07StatusSource(padRight(nullToSpace(statusSourceCode), 2));
+
+        o.setP07OsDaily("N");
+        o.setP07StDaily(padRight(nullToSpace(stDailyFlag), 1));
+
+        Integer minusOne = Integer.valueOf(-1);
+
+        o.setP07SdDailyNf(minusOne);
+        o.setP07TsDailyNf(minusOne);
+        o.setP07StaleDateNf(minusOne);
+        o.setP07StaleOriginNf(minusOne);
+        o.setP07TransferDateNf(minusOne);
+        o.setP07TransferOriginNf(minusOne);
+        o.setP07ReissueAcctNbrNf(minusOne);
+        o.setP07ReissueChkNbrNf(minusOne);
+        o.setP07ReissueChkDateNf(minusOne);
+        o.setP07ReissueChkTypeNf(minusOne);
+
+        o.setP07ReportDate(formatIso(reportDate));
+
+        o.setP07InitialAcctNbrNf(minusOne);
+        o.setP07InitialChkNbrNf(minusOne);
+        o.setP07InitialChkDateNf(minusOne);
+        o.setP07InitialChkTypeNf(minusOne);
+        o.setP07PpaDateNf(minusOne);
+
+        o.setP07PayeeIdType(padRight(firstNonBlank(
+                r.crRemIdType,
+                cr == null ? null : cr.getCrRemIdType(),
+                r.crRemittorType
+        ), 1));
+        o.setP07PayeeIdTypeNf(minusOne);
+
+        o.setP07TaxIdNbr(padRight(firstNonBlank(
+                r.crRemTaxIdNbr,
+                cr == null ? null : cr.getCrRemTaxIdNbr(),
+                r.crTaxIdNbr
+        ), 9));
+        o.setP07TaxIdNbrNf(minusOne);
+
+        return List.of(o);
+    }
     
  // 540000 - insert CAN activity when OCCS status indicates cancel (COBOL DB-STORE) using JPA save()
     private void perform540000InsrtCanActRcd(IssuedChkRow r, ExecutionContext ec, LocalDate checkStatusDate) {
@@ -1991,6 +2090,15 @@ private static BigDecimal nvl(BigDecimal v) { return v == null ? BigDecimal.ZERO
 
      // MOVE T-NEW-CR-RECEIPT-BAL TO GL-CASH-REC-BAL
      gl.setGlCashRecBal(nvlBd(r.newCrReceiptBal));
+     if (gl.getGlCashRecBal().compareTo(BigDecimal.ZERO) > 0) {
+    	 gl.setGlCashRecBalInd(" ");		    
+		} else if (gl.getGlCashRecBal().compareTo(BigDecimal.ZERO) < 0) {
+			gl.setGlCashRecBalInd("-");
+			gl.setGlCashRecBal(gl.getGlCashRecBal().abs());
+		} else {
+			gl.setGlCashRecBalInd(" ");
+			gl.setGlCashRecBal(gl.getGlCashRecBal().abs());
+		}
 
      // MOVE T-CORP TO GL-CORP
      gl.setGlCorp(padRight(safeStr(r.crCorp), 2));
@@ -2033,6 +2141,15 @@ private static BigDecimal nvl(BigDecimal v) { return v == null ? BigDecimal.ZERO
      }
 
      gl.setGlActAmt(nvlBd(r.actActivityAmt));
+     if (gl.getGlActAmt().compareTo(BigDecimal.ZERO) > 0) {
+    	 gl.setGlActAmtInd(" ");		    
+		} else if (gl.getGlActAmt().compareTo(BigDecimal.ZERO) < 0) {
+			gl.setGlActAmtInd("-");
+			gl.setGlActAmt(gl.getGlActAmt().abs());
+		} else {
+			gl.setGlActAmtInd(" ");
+			gl.setGlActAmt(gl.getGlActAmt().abs());
+		}
      return gl;
  }
 
@@ -2049,6 +2166,15 @@ private static BigDecimal nvl(BigDecimal v) { return v == null ? BigDecimal.ZERO
 
      // COMPUTE GL-ACT-AMT = (activityAmt * -1)
      gl.setGlActAmt(nvlBd(r.actActivityAmt).negate());
+     if (gl.getGlActAmt().compareTo(BigDecimal.ZERO) > 0) {
+    	 gl.setGlActAmtInd(" ");		    
+		} else if (gl.getGlActAmt().compareTo(BigDecimal.ZERO) < 0) {
+			gl.setGlActAmtInd("-");
+			gl.setGlActAmt(gl.getGlActAmt().abs());
+		} else {
+			gl.setGlActAmtInd(" ");
+			gl.setGlActAmt(gl.getGlActAmt().abs());
+		}
      return gl;
  }
 
@@ -2066,13 +2192,31 @@ private static BigDecimal nvl(BigDecimal v) { return v == null ? BigDecimal.ZERO
      P09352XP09DedsOutput debit = cloneGl(base);
      debit.setGlActCode("CAN");
      debit.setGlAcctNbr(padRight(occsDebitAcct, 12));
-     debit.setGlActAmt(amt);
+     debit.setGlActAmt(nvlBd(amt));
+     if (debit.getGlActAmt().compareTo(BigDecimal.ZERO) > 0) {
+    	 debit.setGlActAmtInd(" ");		    
+		} else if (debit.getGlActAmt().compareTo(BigDecimal.ZERO) < 0) {
+			debit.setGlActAmtInd("-");
+			debit.setGlActAmt(debit.getGlActAmt().abs());
+		} else {
+			debit.setGlActAmtInd(" ");
+			debit.setGlActAmt(debit.getGlActAmt().abs());
+		}
 
      // credit
      P09352XP09DedsOutput credit = cloneGl(base);
      credit.setGlActCode("CAN");
      credit.setGlAcctNbr(padRight(safeStr(r.crGlAcctNbr), 12));
      credit.setGlActAmt(amt.negate());
+     if (credit.getGlActAmt().compareTo(BigDecimal.ZERO) > 0) {
+    	 credit.setGlActAmtInd(" ");		    
+     } else if (credit.getGlActAmt().compareTo(BigDecimal.ZERO) < 0) {
+    	 credit.setGlActAmtInd("-");
+    	 credit.setGlActAmt(credit.getGlActAmt().abs());
+     } else {
+    	 credit.setGlActAmtInd(" ");
+    	 credit.setGlActAmt(credit.getGlActAmt().abs());
+     }
 
      return List.of(debit, credit);
  }
@@ -2104,7 +2248,7 @@ private static BigDecimal nvl(BigDecimal v) { return v == null ? BigDecimal.ZERO
 	        List<P09Option> opts = optionRepository.findOptions(recordType, likeValue);
 	        if (opts != null && !opts.isEmpty()) {
 	            P09Option opt = opts.get(0);
-	            String glAcct = safeStr(opt.getOptFieldName());
+	            String glAcct = safeStr(opt.getOptFieldNarr().substring(13, 25));
 	            if (!glAcct.isBlank()) {
 	                return glAcct;
 	            }
@@ -2132,13 +2276,31 @@ private static BigDecimal nvl(BigDecimal v) { return v == null ? BigDecimal.ZERO
      P09352XP09DedsOutput debit = cloneGl(base);
      debit.setGlActCode("CAN");
      debit.setGlAcctNbr("127500000000");
-     debit.setGlActAmt(amt);
+     debit.setGlActAmt(nvlBd(amt));
+     if (debit.getGlActAmt().compareTo(BigDecimal.ZERO) > 0) {
+    	 debit.setGlActAmtInd(" ");		    
+		} else if (debit.getGlActAmt().compareTo(BigDecimal.ZERO) < 0) {
+			debit.setGlActAmtInd("-");
+			debit.setGlActAmt(debit.getGlActAmt().abs());
+		} else {
+			debit.setGlActAmtInd(" ");
+			debit.setGlActAmt(debit.getGlActAmt().abs());
+		}
 
      // credit: MOVE CR-GL-ACCT-NBR, AMT * -1
      P09352XP09DedsOutput credit = cloneGl(base);
      credit.setGlActCode("CAN");
      credit.setGlAcctNbr(padRight(safeStr(r.crGlAcctNbr), 12));
-     credit.setGlActAmt(amt.negate());
+     credit.setGlActAmt(nvlBd(amt.negate()));
+     if (credit.getGlActAmt().compareTo(BigDecimal.ZERO) > 0) {
+    	 credit.setGlActAmtInd(" ");		    
+		} else if (credit.getGlActAmt().compareTo(BigDecimal.ZERO) < 0) {
+			credit.setGlActAmtInd("-");
+			credit.setGlActAmt(credit.getGlActAmt().abs());
+		} else {
+			credit.setGlActAmtInd(" ");
+			credit.setGlActAmt(credit.getGlActAmt().abs());
+		}
 
      return List.of(debit, credit);
  }
@@ -2154,13 +2316,31 @@ private static BigDecimal nvl(BigDecimal v) { return v == null ? BigDecimal.ZERO
      P09352XP09DedsOutput debit = cloneGl(base);
      debit.setGlActCode("CAN");
      debit.setGlAcctNbr("274900000000");
-     debit.setGlActAmt(amt);
+     debit.setGlActAmt(nvlBd(amt));
+     if (debit.getGlActAmt().compareTo(BigDecimal.ZERO) > 0) {
+    	 debit.setGlActAmtInd(" ");		    
+		} else if (debit.getGlActAmt().compareTo(BigDecimal.ZERO) < 0) {
+			debit.setGlActAmtInd("-");
+			debit.setGlActAmt(debit.getGlActAmt().abs());
+		} else {
+			debit.setGlActAmtInd(" ");
+			debit.setGlActAmt(debit.getGlActAmt().abs());
+		}
 
      // credit: MOVE CR-GL-ACCT-NBR, AMT * -1
      P09352XP09DedsOutput credit = cloneGl(base);
      credit.setGlActCode("CAN");
      credit.setGlAcctNbr(padRight(safeStr(r.crGlAcctNbr), 12));
-     credit.setGlActAmt(amt.negate());
+     credit.setGlActAmt(nvlBd(amt.negate()));
+     if (credit.getGlActAmt().compareTo(BigDecimal.ZERO) > 0) {
+    	 credit.setGlActAmtInd(" ");		    
+		} else if (credit.getGlActAmt().compareTo(BigDecimal.ZERO) < 0) {
+			credit.setGlActAmtInd("-");
+			credit.setGlActAmt(credit.getGlActAmt().abs());
+		} else {
+			credit.setGlActAmtInd(" ");
+			credit.setGlActAmt(credit.getGlActAmt().abs());
+		}
 
      return List.of(debit, credit);
  }
@@ -2254,7 +2434,7 @@ private P09352ApInterfaceOutput perform570000CreateApInterface(IssuedChkRow r, E
   ap.setOChkType(padRight(safeStr(r.crReceiptType), 2));
 
   // MOVE T-CR-CHECK-DATE TO O-CHK-DATE.
-  ap.setOChkDate(padRight(formatMMddyyyy(r.crCheckDate), 10));
+  ap.setOChkDate(padRight(formatIso(r.crCheckDate), 10));
 
   // MOVE T-CR-CHECK-NBR TO O-CHK-NBR.
   ap.setOChkNbr(padRight(safeStr(r.crCheckNbr), 8));
@@ -2270,7 +2450,7 @@ private P09352ApInterfaceOutput perform570000CreateApInterface(IssuedChkRow r, E
 
   // MOVE refund/cntrl/member/name fields
   ap.setORefundType(padRight(safeStr(r.crRefundType), 3));
-  ap.setOCntrlDate(padRight(formatMMddyyyy(r.crCntrlDate), 10));
+  ap.setOCntrlDate(padRight(formatIso(r.crCntrlDate), 10));
   ap.setOCntrlNbr(padRight(safeStr(r.crCntrlNbr), 4));
   ap.setOMemberId(padRight(safeStr(r.crMbrIdNbr), 12));
   ap.setOLname(padRight(safeStr(r.crPatientLname), 15));
@@ -2390,7 +2570,16 @@ private LocalDate resolveControlCardOrToday(ExecutionContext ec) {
      d.setGlBankAcctNbr(src.getGlBankAcctNbr());
      d.setGlAcctNbr(src.getGlAcctNbr());
      d.setGlActCode(src.getGlActCode());
-     d.setGlActAmt(src.getGlActAmt());
+     d.setGlActAmt(nvlBd(src.getGlActAmt()));
+     if (d.getGlActAmt().compareTo(BigDecimal.ZERO) > 0) {
+    	 d.setGlActAmtInd(" ");		    
+		} else if (d.getGlActAmt().compareTo(BigDecimal.ZERO) < 0) {
+			d.setGlActAmtInd("-");
+			d.setGlActAmt(d.getGlActAmt().abs());
+		} else {
+			d.setGlActAmtInd(" ");
+			d.setGlActAmt(d.getGlActAmt().abs());
+		}
      d.setGlActDate(src.getGlActDate());
      d.setGlReportMo(src.getGlReportMo());
      d.setGlReportYr(src.getGlReportYr());
@@ -2400,7 +2589,16 @@ private LocalDate resolveControlCardOrToday(ExecutionContext ec) {
      d.setGlXrefType(src.getGlXrefType());
      d.setGlXrefClaimNbr(src.getGlXrefClaimNbr());
      d.setGlXrefDate(src.getGlXrefDate());
-     d.setGlCashRecBal(src.getGlCashRecBal());
+     d.setGlCashRecBal(nvlBd(src.getGlCashRecBal()));
+     if (d.getGlCashRecBal().compareTo(BigDecimal.ZERO) > 0) {
+			d.setGlCashRecBalInd(" ");		    
+		} else if (d.getGlActAmt().compareTo(BigDecimal.ZERO) < 0) {
+			d.setGlCashRecBalInd("-");
+			d.setGlCashRecBal(d.getGlCashRecBal().abs());
+		} else {
+			d.setGlCashRecBalInd(" ");
+			d.setGlCashRecBal(d.getGlCashRecBal().abs());
+		}
      d.setGlCorp(src.getGlCorp());
      d.setGlFiller2(src.getGlFiller2());
      return d;
@@ -2660,4 +2858,13 @@ private LocalDate resolveControlCardOrToday(ExecutionContext ec) {
         return P09352ReportWriter.RefundCategory.OTHER;
     }
 
+    private String firstNonBlank(String... values) {
+        if (values == null) return "";
+        for (String v : values) {
+            if (v != null && !v.trim().isEmpty()) {
+                return v;
+            }
+        }
+        return "";
+    }
 }
