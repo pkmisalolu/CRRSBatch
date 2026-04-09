@@ -38,9 +38,9 @@ public class P09305ReportWriter implements ItemWriter<P09305OutputRecord>, StepE
 
     // Per-clerk totals
     private long clerkCnt = 0;
-    private BigDecimal clerkActAmt = BigDecimal.ZERO;
-    private BigDecimal clerkWorkBal = BigDecimal.ZERO;
-    private BigDecimal clerkCashBal = BigDecimal.ZERO;
+    private BigDecimal clerkActAmt = null;
+    private BigDecimal clerkWorkBal = null;
+    private BigDecimal clerkCashBal = null;
 
     // Grand totals (by refund type + overall)
     private long grandCnt = 0;
@@ -94,9 +94,20 @@ public class P09305ReportWriter implements ItemWriter<P09305OutputRecord>, StepE
             // accumulate per-clerk + grand
             clerkCnt++;
             grandCnt++;
-            clerkActAmt = clerkActAmt.add(nz(r.getActActivityAmt()));
-            clerkWorkBal = nz(r.getActWorkingBal());   // last seen balance per line (ending bal on page)
-            clerkCashBal = nz(r.getCrReceiptBal());
+            
+            
+            if (r.getActActivityAmt() != null) {
+            	clerkActAmt = clerkActAmt.add(r.getActActivityAmt());
+            }
+
+            if (r.getActWorkingBal()!= null) {
+            	clerkWorkBal = clerkWorkBal.add(r.getActWorkingBal());
+            }
+                      
+            
+            if (r.getCrReceiptBal()!= null) {
+            	clerkCashBal = clerkCashBal.add(r.getCrReceiptBal());
+            }
 
             if (r.getCrCntrldAmt() != null) {
                 grandByRefund.computeIfAbsent(blank(r.getCrRefundType()), k -> new Tot())
@@ -204,9 +215,9 @@ public class P09305ReportWriter implements ItemWriter<P09305OutputRecord>, StepE
         String act = pad(blank(r.getActActivity()), 3);
         String xref = pad(blank(r.getCrXrefNbr()), 20);
         String xrefDate = r.getActXrefDate() == null ? "         " : r.getActXrefDate().format(DateTimeFormatter.ofPattern("MM/dd/yy"));
-        String actAmt = right(AMT.format(nz(r.getActActivityAmt())), 15);
-        String workBal = right(AMT.format(nz(r.getActWorkingBal())), 15);
-        String cashBal = right(AMT.format(nz(r.getCrReceiptBal())), 15);
+        String actAmt  = fmtAmt(r.getActActivityAmt(), 15);
+        String workBal = fmtAmt(r.getActWorkingBal(), 15);
+        String cashBal = fmtAmt(r.getCrReceiptBal(), 15);
 
         String line = String.format(" %8s  %-4s  %-4s %14s   %8s  %s  %-20s  %9s %15s %15s %15s",
                 ctrlDate, cnbr, rtype, ctrlAmt, actDate, act, xref, xrefDate, actAmt, workBal, cashBal);
@@ -216,7 +227,7 @@ public class P09305ReportWriter implements ItemWriter<P09305OutputRecord>, StepE
 
     private void writeClerkTotals() throws Exception {
         writeFixed("");
-        writeFixed(String.format(" TOTAL RECEIPT ACTIVITY FOR CLERK: %s %38s %10s %16s %16s",
+        writeFixed(String.format(" TOTAL RECEIPT ACTIVITY FOR CLERK: %s %45s %10s %16s %16s",
                 blank(currentClerk),
                 right(CNT.format(clerkCnt), 10),
                 right(AMT.format(clerkActAmt), 10),
@@ -270,7 +281,8 @@ public class P09305ReportWriter implements ItemWriter<P09305OutputRecord>, StepE
 
         // Right columns (aligned with header)
         putAt(buf, countCol(),  right(CNT.format(count), COUNT_WIDTH));
-        putAt(buf, amountCol(), right(AMT.format(nz(amount)), AMOUNT_WIDTH));
+        
+        putAt(buf, amountCol(), fmtAmt(amount, AMOUNT_WIDTH));
 
         writeFixed(new String(buf));
     }
@@ -373,7 +385,14 @@ public class P09305ReportWriter implements ItemWriter<P09305OutputRecord>, StepE
     private static String pad(String s, int n) { if (s == null) s = ""; return s.length() >= n ? s.substring(0, n) : s + " ".repeat(n - s.length()); }
     private static String right(String s, int w) { if (s == null) s = ""; return s.length() >= w ? s.substring(s.length() - w) : " ".repeat(w - s.length()) + s; }
     private static String blank(String s) { return s == null ? "" : s; }
-    private static BigDecimal nz(BigDecimal b) { return b == null ? BigDecimal.ZERO : b; }
+    
+    private static String fmtAmt(BigDecimal b, int width) {
+        if (b == null || BigDecimal.ZERO.compareTo(b) == 0) {
+            return " ".repeat(width);   // blank column
+        }
+        return right(AMT.format(b), width);
+    }
+    
     private static String repeat(char c, int n){ return String.valueOf(c).repeat(n); }
 
     private static final class Tot {
