@@ -1,20 +1,116 @@
  REPORT #  P09305-A                                   ARKANSAS BLUE CROSS AND BLUE SHIELD                                  PAGE     1
- RUN DATE: 04/01/26                                    FINANCIAL ACTIVITY REPORT                                   RUN TIME: 20:28:47
+ RUN DATE: 04/09/26                                    FINANCIAL ACTIVITY REPORT                                   RUN TIME: 20:05:30
+ CORP 01 - BCBS                                                                                                                      
+                                                                                                                                     
+ CLERK ID:    SYST                                                                                                                   
+                                                          RECEIPT ACTIVITY                                                           
+  CONTROL  CNTL  REF      CONTROL      ACTIVITY              XREF                       ACTIVITY        WORKING       CASH RECEIPTS  
+   DATE      #   TYPE     AMOUNT         DATE    ACT        NUMBER          XREF DATE    AMOUNT         BALANCE         BALANCE      
+ --------  ----  ---- --------------   --------  ---  --------------------  --------- --------------- --------------- ---------------
+ 03/31/26  451   SPO          $32.86   04/06/26  CAN  00002402               04/06/26                                                
+ 03/31/26  452   SPO          $58.00   04/06/26  CAN  00002934               04/06/26                                                
+ 03/31/26  600   SPO          $48.00   04/07/26  CAN  00010740               04/07/26                                                
+ 03/31/26  601   SPO          $16.26   04/07/26  CAN  00011053               04/07/26                                                
+ 03/31/26  602   SPO          $31.00   04/07/26  CAN  00003599               04/07/26                                                
+ 03/31/26  660   SPO           $2.34   04/08/26  CAN  00011269               04/08/26                                                
+ 03/31/26  661   SPO         $205.00   04/08/26  CAN  00013203               04/08/26                                                
+ 03/31/26  662   SPO         $265.92   04/08/26  CAN  00000231               04/08/26                                                
+ 03/31/26  660   SPO           $2.34   04/08/26  FR                                             $2.34                                
+ 03/31/26  601   SPO          $16.26   04/07/26  FR                                            $16.26                                
+ 03/31/26  602   SPO          $31.00   04/07/26  FR                                            $31.00                                
+ 03/31/26  451   SPO          $32.86   04/06/26  FR                                            $32.86                                
+ 03/31/26  600   SPO          $48.00   04/07/26  FR                                            $48.00                                
+ 03/31/26  452   SPO          $58.00   04/06/26  FR                                            $58.00                                
+ 03/31/26  661   SPO         $205.00   04/08/26  FR                                           $205.00                                
+ 03/31/26  662   SPO         $265.92   04/08/26  FR                                           $265.92                                
+                                                                                                                                     
+ TOTAL RECEIPT ACTIVITY FOR CLERK:    SYST                                            16    $659.38            $0.00            $0.00
+ REPORT #  P09305-A                                   ARKANSAS BLUE CROSS AND BLUE SHIELD                                  PAGE     2
+ RUN DATE: 04/09/26                                    FINANCIAL ACTIVITY REPORT                                   RUN TIME: 20:05:30
+ CORP 01 - BCBS                                                                                                                      
+                                                                                                                                     
+ CLERK ID: RSGOBER                                                                                                                   
+                                                          RECEIPT ACTIVITY                                                           
+  CONTROL  CNTL  REF      CONTROL      ACTIVITY              XREF                       ACTIVITY        WORKING       CASH RECEIPTS  
+   DATE      #   TYPE     AMOUNT         DATE    ACT        NUMBER          XREF DATE    AMOUNT         BALANCE         BALANCE      
+ --------  ----  ---- --------------   --------  ---  --------------------  --------- --------------- --------------- ---------------
+ 03/31/26  660   SPO           $2.34   04/08/26  FRR  STOP PAY REISSUE       03/31/26           $2.34                                
+ 03/31/26  601   SPO          $16.26   04/07/26  FRR  STOP PAY REISSUE       03/31/26          $16.26                                
+ 03/31/26  602   SPO          $31.00   04/07/26  FRR  STOP PAY REISSUE       03/31/26          $31.00                                
+ 03/31/26  451   SPO          $32.86   04/06/26  FRR  STOP PAY REISSUE       03/31/26          $32.86                                
+ 03/31/26  600   SPO          $48.00   04/07/26  FRR  STOP PAY REISSUE       03/31/26          $48.00                                
+ 03/31/26  452   SPO          $58.00   04/06/26  FRR  STOP PAY REISSUE       03/31/26          $58.00                                
+ 03/25/26  006   PER          $75.00   04/08/26  FRR                         03/31/26          $75.00                          $75.00
+ 03/25/26  002   PER         $100.00   04/08/26  FRR                         03/31/26         $100.00                         $100.00
+ 03/31/26  661   SPO         $205.00   04/08/26  FRR  STOP PAY REISSUE       03/31/26         $205.00                                
+ 03/31/26  662   SPO         $265.92   04/08/26  FRR  STOP PAY REISSUE       03/31/26         $265.92                                
+ 03/31/26  451   SPO          $32.86   04/06/26  MOD  CHECK STATE                                                                    
+                                       04/06/26  MOD  CHECK STATE                                                                    
+ 03/31/26  502   SPO         $686.00   04/06/26  MOD  CHECK STATE                                                             $686.00
+                                       04/08/26  MOD  CHECK CITY                                                              $686.00
+                                       04/08/26  MOD  CHECK STATE                                                             $686.00
+                                       04/08/26  MOD  CHECK ZIP                                                               $686.00
+ 03/19/26  003   UND         $251.00   04/08/26  PRR  REISSUE                03/19/26         $200.00                         $251.00
+ 03/31/26  660   SPO           $2.34   04/08/26  RCK  STOP PAY REISSUE       03/31/26           $2.34                                
+ 03/31/26  601   SPO          $16.26   04/07/26  RCK  STOP PAY REISSUE       03/31/26          $16.26                                
+ 03/31/26  602   SPO          $31.00   04/07/26  RCK  STOP PAY REISSUE       03/31/26          $31.00                                
+ 03/31/26  451   SPO          $32.86   04/06/26  RCK  STOP PAY REISSUE       03/31/26          $32.86                                
+ 03/31/26  600   SPO          $48.00   04/07/26  RCK  STOP PAY REISSUE       03/31/26          $48.00                                
+ 03/31/26  452   SPO          $58.00   04/06/26  RCK  STOP PAY REISSUE       03/31/26          $58.00                                
+ 03/25/26  006   PER          $75.00   04/08/26  RCK                         03/31/26          $75.00                          $75.00
+ 03/25/26  002   PER         $100.00   04/08/26  RCK                         03/31/26         $100.00                         $100.00
+ 03/31/26  661   SPO         $205.00   04/08/26  RCK  STOP PAY REISSUE       03/31/26         $205.00                                
+ 03/31/26  662   SPO         $265.92   04/08/26  RCK  STOP PAY REISSUE       03/31/26         $265.92                                
+                                                                                                                                     
+ TOTAL RECEIPT ACTIVITY FOR CLERK: RSGOBER                                            27  $1,868.76            $0.00        $3,345.00
+ REPORT #  P09305-A                                   ARKANSAS BLUE CROSS AND BLUE SHIELD                                  PAGE     3
+ RUN DATE: 04/09/26                                    FINANCIAL ACTIVITY REPORT                                   RUN TIME: 20:05:30
+ CORP 01 - BCBS                                                                                                                      
+                                                                                                                                     
+ CLERK ID: TEST                                                                                                                      
+                                                          RECEIPT ACTIVITY                                                           
+  CONTROL  CNTL  REF      CONTROL      ACTIVITY              XREF                       ACTIVITY        WORKING       CASH RECEIPTS  
+   DATE      #   TYPE     AMOUNT         DATE    ACT        NUMBER          XREF DATE    AMOUNT         BALANCE         BALANCE      
+ --------  ----  ---- --------------   --------  ---  --------------------  --------- --------------- --------------- ---------------
+ 07/22/20  803   UND       $3,935.50   04/08/26  MOD  LETTER DATE                                                           $3,935.50
+                                       04/08/26  MOD  ACT REC DATE                                                          $3,935.50
+                                       04/08/26  MOD  LETTER DATE                                                           $3,935.50
+                                       04/08/26  MOD  ACT REC DATE                                                          $3,935.50
+                                       04/08/26  MOD  REMAIL STATE                                                          $3,935.50
+                                       04/08/26  MOD  LETTER DATE                                                           $3,935.50
+                                       04/08/26  MOD  ACT REC DATE                                                          $3,935.50
+                                       04/08/26  MOD  ACCT REC NBR                                                          $3,935.50
+                                       04/08/26  MOD  REMAIL STATE                                                          $3,935.50
+ 10/06/20  061   PER          $80.35   04/08/26  MOD  REMAIL STATE                                                             $80.35
+ 03/31/26  001   SPO           $9.00   04/08/26  MOD  CHK ADDRESS2                                                                   
+ 03/31/26  450   SPO           $8.96   04/08/26  MOD  CHK ADDRESS2                                                              $8.96
+                                       04/08/26  MOD  REM ADDRESS1                                                              $8.96
+                                       04/08/26  MOD  REM ADDRESS2                                                              $8.96
+                                       04/08/26  MOD  CHECK CITY                                                                $8.96
+                                       04/08/26  MOD  CHECK STATE                                                               $8.96
+                                       04/08/26  MOD  CHECK ZIP                                                                 $8.96
+                                       04/08/26  MOD  REMAIL CITY                                                               $8.96
+                                       04/08/26  MOD  REMAIL STATE                                                              $8.96
+                                       04/08/26  MOD  REMAIL ZIP                                                                $8.96
+                                                                                                                                     
+ TOTAL RECEIPT ACTIVITY FOR CLERK: TEST                                            20      $0.00            $0.00       $35,580.49   
+ REPORT #  P09305-A                                   ARKANSAS BLUE CROSS AND BLUE SHIELD                                  PAGE     4
+ RUN DATE: 04/09/26                                    FINANCIAL ACTIVITY REPORT                                   RUN TIME: 20:05:30
                                                                                                                                      
                                                                                                                                      
                                                                                                                                      
                                                                                                           NUMBER       AMOUNT        
-        G R A N D    T O T A L    OF ALL RECEIPT ACTIVITY FOR REFUND TYPE        PERSONALS  IS                       0          $0.00
-        G R A N D    T O T A L    OF ALL RECEIPT ACTIVITY FOR REFUND TYPE          RETURNS  IS                       0          $0.00
-        G R A N D    T O T A L    OF ALL RECEIPT ACTIVITY FOR REFUND TYPE   UNDELIVERABLES  IS                       0          $0.00
-        G R A N D    T O T A L    OF ALL RECEIPT ACTIVITY FOR REFUND TYPE           OTHERS  IS                       0          $0.00
-        G R A N D    T O T A L    OF ALL RECEIPT ACTIVITY FOR REFUND TYPE           OFFSET  IS                       0          $0.00
-        G R A N D    T O T A L    OF ALL RECEIPT ACTIVITY FOR REFUND TYPE     STOP PAYMENT  IS                       0          $0.00
-        G R A N D    T O T A L    OF ALL RECEIPT ACTIVITY FOR REFUND TYPE    ARK PYMT INIT  IS                       0          $0.00
+        G R A N D    T O T A L    OF ALL RECEIPT ACTIVITY FOR REFUND TYPE        PERSONALS  IS                       5        $430.35
+        G R A N D    T O T A L    OF ALL RECEIPT ACTIVITY FOR REFUND TYPE          RETURNS  IS                       0               
+        G R A N D    T O T A L    OF ALL RECEIPT ACTIVITY FOR REFUND TYPE   UNDELIVERABLES  IS                       2      $4,186.50
+        G R A N D    T O T A L    OF ALL RECEIPT ACTIVITY FOR REFUND TYPE           OTHERS  IS                       0               
+        G R A N D    T O T A L    OF ALL RECEIPT ACTIVITY FOR REFUND TYPE           OFFSET  IS                       0               
+        G R A N D    T O T A L    OF ALL RECEIPT ACTIVITY FOR REFUND TYPE     STOP PAYMENT  IS                      36      $3,374.34
+        G R A N D    T O T A L    OF ALL RECEIPT ACTIVITY FOR REFUND TYPE    ARK PYMT INIT  IS                       0               
                                                                                                                                      
                                                                                                                                      
                                                                                                           NUMBER       AMOUNT        
-                                      G R A N D    T O T A L     OF ALL RECEIPT ACTIVITY IS                          0          $0.00
+                                      G R A N D    T O T A L     OF ALL RECEIPT ACTIVITY IS                         63      $7,991.19
                                                                                                                                      
                                                                                                                                      
                                                                                                                                      

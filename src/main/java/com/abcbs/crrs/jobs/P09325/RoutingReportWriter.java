@@ -10,6 +10,7 @@ import java.text.DecimalFormat;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.time.temporal.ChronoUnit;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -63,13 +64,13 @@ public class RoutingReportWriter implements AutoCloseable {
         String nbr    = right(nz(r.getControlNbr()), 6);
         String chkNbr = right(nz(r.getCheckNbr()), 10);
         String days   = right(nzi(r.getStatusText()), 5);
-        String loc    = right(nz(r.getClerk()), 3);
-        String house  = right(nz(r.getArea()), 4);
+        String loc    = right(nz(numberOfDays(r.getLocationDate())), 3);
+        String house  = right(nz(numberOfDays(r.getRecvDate())), 4);
 
         // Matches expected headings layout:
 
         write(String.format(
-            "  %-3s   %8s %6s  %12s  %-10s %-8s %-12s  %-18s  %-3s  %-5s %10s  %-6s  %3s  %4s",
+            "  %-3s   %8s %6s  %12s  %-10s %-8s %-12s  %-18s  %-4s %-5s %10s  %-6s  %3s  %4s",
             nz(r.getRefundType()),              // REFUND TYPE
             date8(r.getRecvDate()),             // DATE
             nbr,                             // NUMBER (tight 6)
@@ -88,6 +89,13 @@ public class RoutingReportWriter implements AutoCloseable {
 
         secCnt++;
         secAmt = secAmt.add(nvl(r.getControlAmt()));
+    }
+    
+    public String numberOfDays(LocalDate locDate) {
+    	LocalDate locationDate =   locDate; 
+    	LocalDate today = LocalDate.now();
+    	Long daysBetween = ChronoUnit.DAYS.between(locationDate,today);
+    	return daysBetween.toString();
     }
 
     public void noteCheckpoint(String key, long cnt) throws IOException {
