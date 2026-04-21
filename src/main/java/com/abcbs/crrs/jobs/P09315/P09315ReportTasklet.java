@@ -42,26 +42,31 @@ public class P09315ReportTasklet implements Tasklet {
 		List<String> refundOrder = List.of("PER", "RET", "UND", "OTH", "OFF", "SPO", "API");
 
 		// === 000100-ESTABLISHED ===
-		List<ActivityAggView> established = repo.fetchEstablished(corp.corpNo());
+//		List<ActivityAggView> established = repo.fetchEstablished(corp.corpNo());
+		List<ActivityAggView> established = repo.fetchCombinationSearch(List.of("EST"));
+		
 		writer.writeEstablished(established, refundOrder);
 
-//		// === 000200-MANUAL-RECON ===
-		List<ActivityAggView> manualRecon = repo.fetchManualRecon(corp.corpNo());
-		writer.writeManualRecon(manualRecon, List.of("ACC", "APP", "REM", "DEL", "LOG", "FRR", "PRR"), refundOrder);
-
-//		// === 000300-SYSTEM-RECON ===
-		List<ActivityAggView> systemRecon = repo.fetchSystemRecon(corp.corpNo());
-		writer.writeSystemRecon(systemRecon, List.of("FR", "PR"), refundOrder);
-
-		// === 000400-MANUAL-REQUEST ===
-//		List<ActivityAgg> manualRequest = repo.fetchManualRequest(corp.corpNo());
-		writer.writeManualRequest(systemRecon, List.of("RAA", "RAD", "RAR", "RCK", "OTH", "RRE", "PEN", "CAN", "MOD"),
-				refundOrder);
+////		// === 000200-MANUAL-RECON ===
+//		List<ActivityAggView> manualRecon = repo.fetchManualRecon(corp.corpNo());
+//		List<ActivityAggView> established = repo.fetchEstablished(corp.corpNo());
+//		writer.writeManualRecon(manualRecon, List.of("ACC", "APP", "REM", "DEL", "LOG", "FRR", "PRR"), refundOrder);
+//
+////		// === 000300-SYSTEM-RECON ===
+//		List<ActivityAggView> systemRecon = repo.fetchSystemRecon(corp.corpNo());
+//		List<ActivityAggView> established = repo.fetchEstablished(corp.corpNo());
+//		writer.writeSystemRecon(systemRecon, List.of("FR", "PR"), refundOrder);
+//
+////		// === 000400-MANUAL-REQUEST ===
+//		List<ActivityAggView> manualRequest = repo.fetchManualRequest(corp.corpNo());
+//		List<ActivityAggView> established = repo.fetchEstablished(corp.corpNo());
+//		writer.writeManualRequest(manualRequest, List.of("RAA", "RAD", "RAR", "RCK", "OTH", "RRE", "PEN", "CAN", "MOD"),
+//				refundOrder);
 
 		// === 000500-UPDATE-TABLE ===
 
-			int n = repo.clearDailyFlag(corp.corpNo());
-			writer.noteUpdate(n);
+//			int n = repo.clearDailyFlag(corp.corpNo());
+//			writer.noteUpdate(n);
 		
 
 //		// === 000600-FINALIZATION ===

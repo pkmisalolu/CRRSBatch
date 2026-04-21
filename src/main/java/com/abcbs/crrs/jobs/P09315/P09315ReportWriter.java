@@ -9,6 +9,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
+import java.text.NumberFormat;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -64,41 +65,30 @@ public class P09315ReportWriter implements Closeable {
 		// Row order & labels must match the sample page 1
 		List<String> labels = List.of("PERSONAL CHECKS", "RETURNED CHECKS", "RETURNED/UNDELIVERABLES", "OTH    C/R",
 				"OFFSET", "STOP PAYMENT", "ARKANSAS PYMT INITIATIVE");
-		for (int i = 0; i < refundOrder.size(); i++) {
-			String rt = refundOrder.get(i);
-			String label = labels.get(i);
-			ActivityAggView man = m.get(rt + "|ACC");
-	        ActivityAggView sys = m.get(rt + "|APP");
-	        
-	        long manCnt = man == null ? 0 : man.getCount();
-	        BigDecimal manAmt = man == null ? BigDecimal.ZERO : man.getAmount();
-	        
-	        long sysCnt = sys == null ? 0 : sys.getCount();
-	        BigDecimal sysAmt = sys == null ? BigDecimal.ZERO : sys.getAmount();
-	        
-	        fixed(String.format(
-	                " %-24s %12s %11s%11s %11s",
-	                label,
-	                CNT.format(manCnt),
-	                AMT.format(manAmt),
-	                CNT.format(sysCnt),
-	                AMT.format(sysAmt)
-	        ));
-		}
-		
-		// Totals line (MAN/SYS totals shown on sample)
-		// :contentReference[oaicite:23]{index=23}
-		long manCnt = 0, sysCnt = 0;
-		BigDecimal manAmt = BigDecimal.ZERO, sysAmt = BigDecimal.ZERO;
-		  for (ActivityAggView a : rows) {
-		        if ("MAN".equals(a.getActivity())) {
-		            manCnt += a.getCount();
-		            manAmt = manAmt.add(a.getAmount());
-		        } else if ("SYS".equals(a.getActivity())) {
-		            sysCnt += a.getCount();
-		            sysAmt = sysAmt.add(a.getAmount());
-		        }
+
+
+		// iterate all entries for this refund type
+		long manCnt = 0;
+		BigDecimal manAmt = BigDecimal.ZERO;
+
+		long sysCnt = 0;
+		BigDecimal sysAmt = BigDecimal.ZERO;
+
+		for (Map.Entry<String, ActivityAggView> e : m.entrySet()) {
+
+		    String activity = e.getKey();   // ONLY activity
+		    ActivityAggView val = e.getValue();
+
+		    if ("EST".equals(activity)) {
+		        // MANUAL
+		        manCnt += val.getCount();
+		        manAmt = manAmt.add(val.getAmount());
+		    } else {
+		        // SYSTEM
+		        sysCnt += val.getCount();
+		        sysAmt = sysAmt.add(val.getAmount());
 		    }
+		}
 
 		fixed(String.format(" %24s %12s %11s %10s%12s", "TOTALS", CNT.format(manCnt), AMT.format(manAmt),
 				CNT.format(sysCnt), AMT.format(sysAmt)));
@@ -209,9 +199,19 @@ public class P09315ReportWriter implements Closeable {
 			                m.getOrDefault(act + "|" + colsCodes.get(i), ActivityAggView.ZERO);
 				
 				totalCnt[i] += ag.getCount();
-				totalAmt[i] = totalAmt[i].add(ag.getAmount());
-				c[i] = CNT.format(ag.getCount());
-				a[i] = AMT.format(ag.getAmount());
+				
+				BigDecimal amount = ag.getAmount();
+
+				if (amount == null) {
+				    amount = BigDecimal.ZERO;
+				}
+				
+				totalAmt[i] = totalAmt[i].add(amount);
+				c[i] = CNT.format(ag.getCount());				
+				
+				Object amtObj = ag.getAmount();
+				BigDecimal amountValue = (amtObj instanceof BigDecimal)? (BigDecimal) amtObj: BigDecimal.ZERO;
+				a[i] = AMT.format(amountValue);
 			}
 
 			fixed(String.format(ROW_FMT4, lbl, c[0], a[0], c[1], a[1], c[2], a[2], c[3], a[3]));
@@ -234,7 +234,7 @@ public class P09315ReportWriter implements Closeable {
 		blank();
 		blank();
 	}
-
+	
 	private static String fit28(String s) {
 		if (s == null)
 			return "";
