@@ -49,54 +49,94 @@ public class P09315ReportWriter implements Closeable {
 		}
 		
 	}
-
-//	 --- Section 1: MANUAL/SYSTEM ESTABLISHED (page 1 top) ---
+	
+	
 	public void writeEstablished(List<ActivityAggView> rows, List<String> refundOrder) throws IOException {
-		nextPage(); // Page 1 header
-		headerBanner();
-		fixed("                                 " + padRight("MANUAL ESTABLISHED", 27) + "  " // 3 spaces gap
-				+ padRight("SYSTEM ESTABLISHED", 30));
-		fixed(String.format(" %-21s%16s%13s%10s%13s", "", "#", "AMOUNT", "#", "AMOUNT"));
-		blank();
-		// Map (refund, side) -> agg
-		Map<String, ActivityAggView> m = new HashMap<>();
-		for (ActivityAggView a : rows)
-			m.put(a.getRefundType() + "|" + a.getActivity(), a);
-		// Row order & labels must match the sample page 1
-		List<String> labels = List.of("PERSONAL CHECKS", "RETURNED CHECKS", "RETURNED/UNDELIVERABLES", "OTH    C/R",
-				"OFFSET", "STOP PAYMENT", "ARKANSAS PYMT INITIATIVE");
 
+	    nextPage();
+	    headerBanner();
 
-		// iterate all entries for this refund type
-		long manCnt = 0;
-		BigDecimal manAmt = BigDecimal.ZERO;
+	    fixed("                                 " + padRight("MANUAL ESTABLISHED", 27) + "  "
+	            + padRight("SYSTEM ESTABLISHED", 30));
+	    fixed(String.format(" %-21s%16s%13s%10s%13s", "", "#", "AMOUNT", "#", "AMOUNT"));
+	    blank();
 
-		long sysCnt = 0;
-		BigDecimal sysAmt = BigDecimal.ZERO;
+	    // Map: refundType → manual/system buckets
+	    Map<String, Long> manCntMap = new HashMap<>();
+	    Map<String, BigDecimal> manAmtMap = new HashMap<>();
 
-		for (Map.Entry<String, ActivityAggView> e : m.entrySet()) {
+	    Map<String, Long> sysCntMap = new HashMap<>();
+	    Map<String, BigDecimal> sysAmtMap = new HashMap<>();
 
-		    String activity = e.getKey();   // ONLY activity
-		    ActivityAggView val = e.getValue();
+	    for (ActivityAggView a : rows) {
 
-		    if ("EST".equals(activity)) {
-		        // MANUAL
-		        manCnt += val.getCount();
-		        manAmt = manAmt.add(val.getAmount());
-		    } else {
-		        // SYSTEM
-		        sysCnt += val.getCount();
-		        sysAmt = sysAmt.add(val.getAmount());
-		    }
-		}
+	        String rt = a.getRefundType();
+	        String act = a.getActivity();
 
-		fixed(String.format(" %24s %12s %11s %10s%12s", "TOTALS", CNT.format(manCnt), AMT.format(manAmt),
-				CNT.format(sysCnt), AMT.format(sysAmt)));
-		blank();
-		blank();
-		blank();
+	        // ✅ ONLY EST → MANUAL
+	        if ("EST".equals(act)) {
+	            manCntMap.merge(rt, a.getCount(), Long::sum);
+	            manAmtMap.merge(rt, a.getAmount(), BigDecimal::add);
+	        } 
+	        // ⚠️ SYSTEM should NOT be blindly "else"
+	        else {
+	            // Only include if your dataset truly represents SYSTEM
+	            sysCntMap.merge(rt, a.getCount(), Long::sum);
+	            sysAmtMap.merge(rt, a.getAmount(), BigDecimal::add);
+	        }
+	    }
+
+	    List<String> labels = List.of(
+	            "PERSONAL CHECKS",
+	            "RETURNED CHECKS",
+	            "RETURNED/UNDELIVERABLES",
+	            "OTH    C/R",
+	            "OFFSET",
+	            "STOP PAYMENT",
+	            "ARKANSAS PYMT INITIATIVE"
+	    );
+
+	    for (int i = 0; i < refundOrder.size(); i++) {
+
+	        String rt = refundOrder.get(i);
+	        String label = labels.get(i);
+
+	        long manCnt = manCntMap.getOrDefault(rt, 0L);
+	        BigDecimal manAmt = manAmtMap.getOrDefault(rt, BigDecimal.ZERO);
+
+	        long sysCnt = sysCntMap.getOrDefault(rt, 0L);
+	        BigDecimal sysAmt = sysAmtMap.getOrDefault(rt, BigDecimal.ZERO);
+
+	        fixed(String.format(
+	                " %-24s %12s %11s%11s %11s",
+	                label,
+	                CNT.format(manCnt),
+	                AMT.format(manAmt),
+	                CNT.format(sysCnt),
+	                AMT.format(sysAmt)
+	        ));
+	    }
+
+	    // TOTALS
+	    long manCnt = manCntMap.values().stream().mapToLong(Long::longValue).sum();
+	    BigDecimal manAmt = manAmtMap.values().stream().reduce(BigDecimal.ZERO, BigDecimal::add);
+
+	    long sysCnt = sysCntMap.values().stream().mapToLong(Long::longValue).sum();
+	    BigDecimal sysAmt = sysAmtMap.values().stream().reduce(BigDecimal.ZERO, BigDecimal::add);
+
+	    fixed(String.format(
+	            " %24s %12s %11s %10s%12s",
+	            "TOTALS",
+	            CNT.format(manCnt),
+	            AMT.format(manAmt),
+	            CNT.format(sysCnt),
+	            AMT.format(sysAmt)
+	    ));
+
+	    blank();
+	    blank();
+	    blank();
 	}
-
 
 	public void writeManualRecon(List<ActivityAggView> rows, List<String> actsOrder, List<String> refundOrder)
 			throws IOException {

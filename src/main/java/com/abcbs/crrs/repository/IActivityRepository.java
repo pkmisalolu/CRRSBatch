@@ -138,24 +138,7 @@ public interface IActivityRepository extends JpaRepository<P09Activity, Activity
 			@Param("activityDate") LocalDate activityDate, @Param("activity") String activity,
 			@Param("actTimestamp") LocalDateTime actTimestamp);
 
-	@Query("""
-			  SELECT
-			      a.aId.crRefundType AS refundType,
-			      a.aId.actActivity  AS activity,
-			      COUNT(a)       AS count,
-			      SUM(a.actActivityAmt) AS amount
-			  FROM P09Activity a
-			  JOIN P09CashReceipt b
-			    ON a.aId.crRefundType = b.crId.crRefundType
-						AND a.aId.crCntrlDate  = b.crId.crCntrlDate
-				           AND a.aId.crCntrlNbr   = b.crId.crCntrlNbr
-			  WHERE b.crCorp = :corp
-			  
-					AND a.aId.actActivity IN ('EST')
-			  GROUP BY a.aId.crRefundType,a.aId.actActivity
-			  ORDER BY a.aId.actActivity, a.aId.crRefundType
-			""")
-	List<ActivityAggView> fetchEstablished(@Param("corp") String corp);
+
 
 	@Query("""
 			    SELECT
@@ -172,88 +155,17 @@ public interface IActivityRepository extends JpaRepository<P09Activity, Activity
 			      	AND a.aId.crCntrlDate  = b.crId.crCntrlDate
 			      	AND a.aId.crCntrlNbr   = b.crId.crCntrlNbr
 
-			    WHERE b.crCorp = '01'
-			      
+			    WHERE b.crCorp = :corp
+			      AND a.actDailyInd = :actDailyInd
 			      AND a.aId.actActivity IN :activities
 			    GROUP BY a.aId.crRefundType, a.aId.actActivity, a.aId.crCntrlDate,a.aId.crCntrlNbr,b.crCorp 
 			    ORDER BY a.aId.actActivity, a.aId.crRefundType
 			""")
-	List<ActivityAggView> fetchCombinationSearch( @Param("activities") List<String> activities);
+	List<ActivityAggView> fetchCombinationSearch( @Param("activities") List<String> activities, @Param("corp") String corp,
+												  @Param("actDailyInd") String actDailyInd);	
 	
 	
 	
-	@Query("""
-		    SELECT
-		        a.aId.crRefundType        AS refundType,
-		        a.aId.actActivity         AS activity,
-		        a.aId.crCntrlDate         AS cntrlDate,
-		        a.aId.crCntrlNbr          AS cntrlNbr,
-		        COUNT(DISTINCT a.aId.actActivity) AS count,
-		        SUM(a.actActivityAmt) AS amount,
-		        b.crCorp crCorp
-		    FROM P09Activity a
-		    JOIN P09CashReceipt b
-		      ON a.aId.crRefundType = b.crId.crRefundType
-		      	AND a.aId.crCntrlDate  = b.crId.crCntrlDate
-		      	AND a.aId.crCntrlNbr   = b.crId.crCntrlNbr
-
-		    WHERE b.crCorp = :corp
-		      
-		      AND a.aId.actActivity IN ('ACC','APP','REM','DEL','LOG','FRR','PRR')
-		    GROUP BY a.aId.crRefundType, a.aId.actActivity, a.aId.crCntrlDate,a.aId.crCntrlNbr,b.crCorp 
-		    ORDER BY a.aId.actActivity, a.aId.crRefundType
-		""")
-List<ActivityAggView> fetchManualRecon(@Param("corp") String corp);
-	
-	
-	
-	@Query("""
-			
-			 SELECT
-			        a.aId.crRefundType         AS refundType,
-			        a.aId.actActivity         AS activity,
-			        a.aId.crCntrlDate         AS cntrlDate,
-			        a.aId.crCntrlNbr          AS cntrlNbr,
-			        COUNT(DISTINCT a.aId.actActivity) AS count,
-			        SUM(a.actActivityAmt) AS amount,
-			        b.crCorp crCorp
-			        
-			    FROM P09Activity a
-			    JOIN P09CashReceipt b
-			      ON a.aId.crRefundType = b.crId.crRefundType
-			     AND a.aId.crCntrlDate  = b.crId.crCntrlDate
-			     AND a.aId.crCntrlNbr    = b.crId.crCntrlNbr
-			    WHERE b.crCorp = '01'
-			      
-			      AND a.aId.actActivity IN ('RAA','RAD','RAR','RCK','OTH','RRE','CAN','MOD','PEN')
-			    GROUP BY a.aId.crRefundType, a.aId.actActivity, a.aId.crCntrlDate,a.aId.crCntrlNbr,b.crCorp 
-			    ORDER BY a.aId.actActivity, a.aId.crRefundType
-			
-		""")
-List<ActivityAggView> fetchManualRequest(@Param("corp") String corp);
-
-	@Query("""
-			    SELECT
-			        a.aId.crRefundType         AS refundType,
-			        a.aId.actActivity         AS activity,
-			        a.aId.crCntrlDate         AS cntrlDate,
-			        a.aId.crCntrlNbr          AS cntrlNbr,
-			        COUNT(DISTINCT a.aId.actActivity) AS count,
-			        SUM(a.actActivityAmt) AS amount,
-			        b.crCorp crCorp
-			        
-			    FROM P09Activity a
-			    JOIN P09CashReceipt b
-			      ON a.aId.crRefundType = b.crId.crRefundType
-			     AND a.aId.crCntrlDate  = b.crId.crCntrlDate
-			     AND a.aId.crCntrlNbr    = b.crId.crCntrlNbr
-			    WHERE b.crCorp = :corp
-			      
-			      AND TRIM(a.aId.actActivity) IN ('FR','PR')
-			    GROUP BY a.aId.crRefundType, a.aId.actActivity, a.aId.crCntrlDate,a.aId.crCntrlNbr,b.crCorp 
-			    ORDER BY a.aId.actActivity, a.aId.crRefundType
-			""")
-	List<ActivityAggView> fetchSystemRecon(@Param("corp") String corp);
 
 	@Modifying
 	@Transactional
