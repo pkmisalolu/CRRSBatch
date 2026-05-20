@@ -72,7 +72,7 @@ public class RoutingReportWriter implements AutoCloseable {
         write(String.format(
             "  %-3s   %8s %6s  %12s  %-10s %-8s %-12s  %-18s  %-4s %-5s %10s  %-6s  %3s  %4s",
             nz(r.getRefundType()),              // REFUND TYPE
-            date8(r.getRecvDate()),             // DATE
+            date8(r.getCntrlDate()),             // DATE 
             nbr,                             // NUMBER (tight 6)
             amt,                             // AMOUNT (12, right)
             last,                            // LAST (10)

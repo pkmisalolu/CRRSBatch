@@ -60,6 +60,9 @@ public class P09345FileWriter implements Tasklet {
 	private final String OutputFile;
 
 	private final IP09ControlRepository controlRepo;
+	private String currentRefundType;
+	private static final int PAGE_SIZE = 55;
+	
 
 	/* ===== IO ===== */
 	private BufferedWriter out;
@@ -333,11 +336,45 @@ public class P09345FileWriter implements Tasklet {
 
 	/* ================= UTIL ================= */
 
+//	private void writeLine(String s) throws IOException {
+//		out.write(pad(s, RECORD_LEN));
+//		out.newLine();
+//		lineNo++;
+//	}
+	
+	
+	
 	private void writeLine(String s) throws IOException {
-		out.write(pad(s, RECORD_LEN));
-		out.newLine();
-		lineNo++;
+
+	    checkPageOverflow(currentRefundType);
+
+	    writeRawLine(s);
+
+	    lineNo++;
 	}
+
+	private void writeRawLine(String s) throws IOException {
+	    out.write(pad(s, RECORD_LEN));
+	    out.newLine();
+	}
+	
+	private void checkPageOverflow(String refundType) throws IOException {
+
+	    if (lineNo >= PAGE_SIZE) {
+
+	        out.write('\f');
+
+	        pageNo++;
+
+	        lineNo = 0;
+
+	        printPageHeader(refundType);
+
+	        printColumnHeaders();
+	    }
+	}
+	
+	
 
 	private void writeCentered(String s) throws IOException {
 		int pad = (RECORD_LEN - s.length()) / 2;
